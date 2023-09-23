@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 .content-primary{
-  height: 170%;
+  height: 100%;
   background-image: url("https://i.postimg.cc/26cgLjDx/pexels-steven-arenas-379419.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  font-family: 'Poppins', sans-serif;
   /*background-color: #302F35;*/
 }
 .contenedor{
@@ -21,7 +24,7 @@
   padding: 15px;
   justify-content: center;
   align-content: center;
-  max-width: 500px;
+  max-width: 700px;
 }
 .section-button{
 
