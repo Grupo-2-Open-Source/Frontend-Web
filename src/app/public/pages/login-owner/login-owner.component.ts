@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-owner.component.css']
 })
 export class LoginOwnerComponent {
-
+  email='';
+  password='';
 }

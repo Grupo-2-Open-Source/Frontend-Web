@@ -1,1 +1,67 @@
-<p>register-tenant works!</p>
+<!--color:-->
+<!--#FF7A00 -naranaja-->
+<!--#14131B -negro-->
+<!--<a mat-button-->
+<!--   [routerLink]="['/about']">chancar</a>  Para las rutas-->
+
+
+<div class="content-primary" >
+  <mat-toolbar style="color: #FF7A00;background-color: #14131B ">
+    <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
+    <div class="mat-spacer"></div>
+  </mat-toolbar>
+
+
+  <br><br>
+  <mat-card class="contenedor">
+    <mat-card-content >
+      <div class="content-2">
+
+        <section >
+          <div class="example-button-row section-button">
+
+            <button mat-button id="btnn" [routerLink]="['/register-tenant']">Arrendatario</button>
+            <button mat-button id="btnn" [routerLink]="['/register-owner']" style="margin-left: 1em">Propietario</button>
+          </div>
+        </section>
+        <br><br>
+        <mat-label style="text-align: center;font-size: 30px;color: #14131B"><b>Registrate</b></mat-label>
+        <br>
+        <mat-label style="text-align:left">Nombres</mat-label>
+        <mat-form-field>
+          <input matInput [(ngModel)]="name" type="text" placeholder="Nombres" class="input"   >
+        </mat-form-field>
+
+        <mat-label style="text-align:left">Apellidos</mat-label>
+        <mat-form-field>
+          <input matInput [(ngModel)]="lastname" type="text" placeholder="Apellidos" class="input"   >
+        </mat-form-field>
+
+        <mat-label style="text-align:left">Fecha de Nacimiento</mat-label>
+        <mat-form-field>
+          <input matInput [(ngModel)]="birthdate" type="date"  class="input"   >
+        </mat-form-field>
+
+        <mat-label style="text-align:left">Teléfono</mat-label>
+        <mat-form-field>
+          <input matInput [(ngModel)]="phone" type="number" placeholder="Teléfono" class="input"   >
+        </mat-form-field>
+
+        <mat-label style="text-align:left">Correo</mat-label>
+        <mat-form-field>
+          <input matInput [(ngModel)]="email" type="text" placeholder="Correo electrónico" class="input"   >
+        </mat-form-field>
+
+        <mat-label style="text-align:left">Contraseña</mat-label>
+        <mat-form-field>
+          <input matInput [(ngModel)]="password" type="password" placeholder="Contraseña" class="input" >
+        </mat-form-field>
+
+        <button mat-button style="color: white;background-color: #FF7A00">Registrate como Arrendatario</button>
+
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+

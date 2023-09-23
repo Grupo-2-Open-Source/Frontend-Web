@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./register-owner.component.css']
 })
 export class RegisterOwnerComponent {
-
+  name='';
+  lastname='';
+  birthdate='';
+  phone='';
+  email='';
+  password='';
 }
