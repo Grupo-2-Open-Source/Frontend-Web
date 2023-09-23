@@ -19,6 +19,9 @@ import { FormsModule } from "@angular/forms";
 
 import { RecoverPasswordTenantComponent } from './public/pages/login/recover-password-tenant/recover-password-tenant.component';
 import { RecoverPasswordOwnerComponent } from './public/pages/login/recover-password-owner/recover-password-owner.component';
+import { RestoreTenantComponent } from './public/pages/login/restore-tenant/restore-tenant.component';
+import { RestoreOwnerComponent } from './public/pages/login/restore-owner/restore-owner.component';
+import { ValidationComponent } from './public/pages/login/validation/validation.component';
 
 
 @NgModule({
@@ -31,6 +34,9 @@ import { RecoverPasswordOwnerComponent } from './public/pages/login/recover-pass
     PageNotFoundComponent,
     RecoverPasswordTenantComponent,
     RecoverPasswordOwnerComponent,
+    RestoreTenantComponent,
+    RestoreOwnerComponent,
+    ValidationComponent,
 
   ],
   imports: [

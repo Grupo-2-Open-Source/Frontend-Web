@@ -35,7 +35,7 @@
         <mat-form-field>
           <input matInput [(ngModel)]="password" type="password" placeholder="Contraseña" class="input" >
         </mat-form-field>
-        <mat-label style="color: #14131B;justify-content: right;text-align: right;"> <a mat-button> <b style="font-family: 'Poppins', sans-serif"> ¿Has olvidado tu contraseña?</b></a></mat-label> <br>
+        <mat-label style="color: #14131B;justify-content: right;text-align: right;"> <a mat-button> <b style="font-family: 'Poppins', sans-serif" [routerLink]="['/recover-password-tenant']"> ¿Has olvidado tu contraseña?</b></a></mat-label> <br>
         <button mat-button style="color: white;background-color: #FF7A00">Iniciar Sesión como Arrendatario</button>
 
       </div>

@@ -20,5 +20,8 @@ export class AppComponent {
     {path:'/register-owner',title: 'REGISTER2'},
     {path: '/recover-password-tenant',title:'RecoverPasswordTenantComponent'},
     {path: '/recover-password-owner',title:'RecoverPasswordOwnerComponent'},
+    {path: '/restore-owner',title:'RESTORE-OWNER'},
+    {path: '/restore-tenant',title:'RESTORE-TENANT'},
+    {path: '/validation',title:'VALIDATION'},
   ]
 }

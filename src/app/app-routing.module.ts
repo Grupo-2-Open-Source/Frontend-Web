@@ -12,6 +12,9 @@ import {
 import {
   RecoverPasswordOwnerComponent
 } from "./public/pages/login/recover-password-owner/recover-password-owner.component";
+import {RestoreOwnerComponent} from "./public/pages/login/restore-owner/restore-owner.component";
+import {RestoreTenantComponent} from "./public/pages/login/restore-tenant/restore-tenant.component";
+import {ValidationComponent} from "./public/pages/login/validation/validation.component";
 
 
 
@@ -22,6 +25,9 @@ const routes:Routes=[
   {path: 'register-owner',component:RegisterOwnerComponent},
   {path: 'recover-password-tenant',component:RecoverPasswordTenantComponent},
   {path: 'recover-password-owner',component:RecoverPasswordOwnerComponent},
+  {path: 'restore-owner',component:RestoreOwnerComponent},
+  {path: 'restore-tenant',component:RestoreTenantComponent},
+  {path: 'validation',component:ValidationComponent},
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent},
   // al final colocar pagenout

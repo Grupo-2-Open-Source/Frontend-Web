@@ -1,0 +1,46 @@
+<!--color:-->
+<!--#FF7A00 -naranaja-->
+<!--#14131B -negro-->
+<!--<a mat-button-->
+<!--   [routerLink]="['/about']">chancar</a>  Para las rutas-->
+
+
+<div class="content-primary" >
+  <mat-toolbar style="color: #FF7A00;background-color: #14131B ">
+    <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
+    <div class="mat-spacer"></div>
+  </mat-toolbar>
+
+
+  <br><br>
+  <mat-card class="contenedor">
+    <mat-card-content >
+      <div class="content-2">
+
+        <br>
+        <mat-label style="text-align: center;font-size: 30px;color: #14131B;"><b>Reestablecer contraseña</b></mat-label>
+        <br>
+        <mat-label style="text-align: center">Arrendatario</mat-label>
+        <br>
+        <mat-label style="text-align: center;font-size: 20px;color: #14131B"> <br>Digite su nueva contraseña</mat-label>
+        <br>
+
+        <mat-label style="text-align: left">Nueva Contraseña</mat-label>
+        <mat-form-field>
+          <input matInput [(ngModel)]="password" type="text" placeholder="Contraseña" class="input" >
+        </mat-form-field>
+
+        <br>
+        <mat-label style="text-align: left">Verificar contraseña</mat-label>
+        <mat-form-field>
+          <input matInput [(ngModel)]="newpassword" type="text" placeholder="Contraseña" class="input" >
+        </mat-form-field>
+        <br>
+        <button mat-button style="color: white;background-color: #FF7A00;font-family: 'Poppins', sans-serif" [routerLink]="['/validation']">Cambiar Contraseña</button>
+
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+
