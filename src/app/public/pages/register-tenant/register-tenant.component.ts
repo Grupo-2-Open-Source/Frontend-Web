@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./register-tenant.component.css']
 })
 export class RegisterTenantComponent {
-
+  name='';
+  lastname='';
+  birthdate='';
+  phone='';
+  email='';
+  password='';
 }
