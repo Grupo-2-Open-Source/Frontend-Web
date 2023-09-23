@@ -27,7 +27,7 @@
         <br><br>
         <mat-label style="text-align: center;font-size: 30px;color: #14131B"><b>Ingrese a su cuenta</b></mat-label>
         <br>
-        <mat-label style="text-align: center;font-size: 15px;color: #14131B">¿Todavia no estas registrado? <a [routerLink]="['/register-owner']" style="color: #14131B;text-decoration: none"> <b>CREARCUENTA</b></a> </mat-label>
+        <mat-label style="text-align: center;font-size: 15px;color: #14131B">¿Todavia no estas registrado? <a [routerLink]="['/register-tenant']" style="color: #14131B;text-decoration: none"> <b>CREARCUENTA</b></a> </mat-label>
         <br>
         <mat-form-field>
           <input matInput [(ngModel)]="email" type="text" placeholder="Correo electrónico" class="input"   >
@@ -35,8 +35,8 @@
         <mat-form-field>
           <input matInput [(ngModel)]="password" type="password" placeholder="Contraseña" class="input" >
         </mat-form-field>
-        <mat-label style="color: #14131B;justify-content: right;text-align: right"> <a mat-button> <b> ¿Has olvidado tu contraseña?</b></a></mat-label> <br>
-        <button mat-button style="color: white;background-color: #FF7A00">Iniciar Sesión como Propietario</button>
+        <mat-label style="color: #14131B;justify-content: right;text-align: right;"> <a mat-button> <b style="font-family: 'Poppins', sans-serif"> ¿Has olvidado tu contraseña?</b></a></mat-label> <br>
+        <button mat-button style="color: white;background-color: #FF7A00">Iniciar Sesión como Arrendatario</button>
 
       </div>
 

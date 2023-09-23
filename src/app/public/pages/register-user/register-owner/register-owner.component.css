@@ -1,5 +1,6 @@
+
 .content-primary{
-  height: 100%;
+  height: 170%;
   background-image: url("https://i.postimg.cc/26cgLjDx/pexels-steven-arenas-379419.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -21,7 +22,7 @@
   padding: 15px;
   justify-content: center;
   align-content: center;
-  max-width: 700px;
+  max-width: 500px;
 }
 .section-button{
 
