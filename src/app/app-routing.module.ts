@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Routes,RouterModule} from "@angular/router";
-import {LoginTenantComponent} from "./public/pages/login-tenant/login-tenant.component";
-import {LoginOwnerComponent} from "./public/pages/login-owner/login-owner.component";
-import {RegisterTenantComponent} from "./public/pages/register-tenant/register-tenant.component";
-import {RegisterOwnerComponent} from "./public/pages/register-owner/register-owner.component";
+import {LoginTenantComponent} from "./public/pages/login/login-tenant/login-tenant.component";
+import {LoginOwnerComponent} from "./public/pages/login/login-owner/login-owner.component";
+import {RegisterTenantComponent} from "./public/pages/register-user/register-tenant/register-tenant.component";
+import {RegisterOwnerComponent} from "./public/pages/register-user/register-owner/register-owner.component";
 import {PageNotFoundComponent} from "./public/pages/page-not-found/page-not-found.component";
+import {
+  RecoverPasswordTenantComponent
+} from "./public/pages/login/recover-password-tenant/recover-password-tenant.component";
+import {
+  RecoverPasswordOwnerComponent
+} from "./public/pages/login/recover-password-owner/recover-password-owner.component";
 
 
 
@@ -14,6 +20,8 @@ const routes:Routes=[
   {path: 'login-owner',component:LoginOwnerComponent},
   {path: 'register-tenant',component:RegisterTenantComponent},
   {path: 'register-owner',component:RegisterOwnerComponent},
+  {path: 'recover-password-tenant',component:RecoverPasswordTenantComponent},
+  {path: 'recover-password-owner',component:RecoverPasswordOwnerComponent},
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent},
   // al final colocar pagenout
