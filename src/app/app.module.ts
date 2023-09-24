@@ -34,6 +34,7 @@ import { MaintenanceTenantComponent } from './public/pages/main-page-tenant/main
 import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
 import {NgbCarousel, NgbCarouselModule, NgbModule, NgbSlide} from '@ng-bootstrap/ng-bootstrap';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { MainPageOwnerComponent } from './public/pages/main-page-owner/main-page-owner.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     MainPageTenantComponent,
     ShareAutoTenantComponent,
     MaintenanceTenantComponent,
+    MainPageOwnerComponent,
 
 
 
