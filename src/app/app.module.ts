@@ -16,7 +16,6 @@ import { NgOptimizedImage } from "@angular/common";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { FormsModule } from "@angular/forms";
-
 import { RecoverPasswordTenantComponent } from './public/pages/login/recover-password-tenant/recover-password-tenant.component';
 import { RecoverPasswordOwnerComponent } from './public/pages/login/recover-password-owner/recover-password-owner.component';
 import { RestoreTenantComponent } from './public/pages/login/restore-tenant/restore-tenant.component';
