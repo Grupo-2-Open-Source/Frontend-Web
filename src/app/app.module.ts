@@ -22,7 +22,12 @@ import { RecoverPasswordOwnerComponent } from './public/pages/login/recover-pass
 import { RestoreTenantComponent } from './public/pages/login/restore-tenant/restore-tenant.component';
 import { RestoreOwnerComponent } from './public/pages/login/restore-owner/restore-owner.component';
 import { ValidationComponent } from './public/pages/login/validation/validation.component';
-
+import { MainPageTenantComponent } from './public/pages/main-page-tenant/main-page-tenant.component';
+import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import { ShareAutoTenantComponent } from './public/pages/main-page-tenant/share-auto-tenant/share-auto-tenant.component';
+import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module";
 
 @NgModule({
   declarations: [
@@ -37,6 +42,8 @@ import { ValidationComponent } from './public/pages/login/validation/validation.
     RestoreTenantComponent,
     RestoreOwnerComponent,
     ValidationComponent,
+    MainPageTenantComponent,
+    ShareAutoTenantComponent,
 
   ],
   imports: [
@@ -49,8 +56,16 @@ import { ValidationComponent } from './public/pages/login/validation/validation.
     NgOptimizedImage,
     MatInputModule,
     MatSelectModule,
-    FormsModule
+    MatIconModule,
+    FormsModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MyRoutingModule
 
+  ],
+  exports:[
+  MatButtonModule,
+  MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

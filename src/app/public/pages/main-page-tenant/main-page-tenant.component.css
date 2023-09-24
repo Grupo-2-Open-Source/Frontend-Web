@@ -1,0 +1,25 @@
+.toolbarr{
+  background-color: whitesmoke;
+  box-shadow: #14131B;
+
+}
+.mat-spacer{
+  flex: 1.1 auto;
+
+  box-shadow: #14131B;
+}
+.buttonnav{
+  color: #14131B;
+  margin: 10px;
+  list-style-type: none;
+}
+.buttonnav:focus{
+  color: #FF7A00;
+}
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
