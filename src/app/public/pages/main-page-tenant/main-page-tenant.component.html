@@ -1,24 +1,3 @@
-<!--<div>-->
-<!--  <h2>Componente Padre</h2>-->
-<!--  <nav>-->
-<!--    <a [routerLink]="['/main-page-tenant']" >Ir al Padre</a>-->
-<!--    <a [routerLink]="['/main-page-tenant/validation']" >Ir al Hijo</a>-->
-<!--  </nav>-->
-<!--  <router-outlet></router-outlet> &lt;!&ndash; Aquí se mostrará el componente hijo &ndash;&gt;-->
-<!--</div>-->
-
-
-
-<!--<mat-toolbar class="toolbarr">-->
-
-<!--&lt;!&ndash;  <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">&ndash;&gt;-->
-<!--&lt;!&ndash;  <div class="mat-spacer"></div>&ndash;&gt;-->
-
-<!--  <a mat-button *ngFor="let option of options"-->
-<!--     [routerLink]="option.path" class="buttonnav">{{option.title}}</a>-->
-<!--</mat-toolbar>-->
-<!--<router-outlet></router-outlet>-->
-
 <div style="height: 100vh;">
 
 
@@ -31,7 +10,7 @@
       <span class="example-spacer"></span>
       <div fxShow="true" fxHide.lt-md="true">
         <a  class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
-        <a  class="buttonnav" mat-button [routerLink]="['/validation']">BUSCAR AUTOS</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/share-auto-tenant']">BUSCAR AUTOS</a>
         <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
         <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
         <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
