@@ -8,6 +8,8 @@ import { RegisterTenantComponent } from './public/pages/register-user/register-t
 import { RegisterOwnerComponent } from './public/pages/register-user/register-owner/register-owner.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import { RouterOutlet } from "@angular/router";
+
+
 import { AppRoutingModule } from "./app-routing.module";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
@@ -27,6 +29,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ShareAutoTenantComponent } from './public/pages/main-page-tenant/share-auto-tenant/share-auto-tenant.component';
 import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module";
+import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
 
 @NgModule({
   declarations: [
@@ -59,7 +62,8 @@ import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module
     FormsModule,
     FlexLayoutModule,
     MatSidenavModule,
-    MyRoutingModule
+    MyRoutingModule,
+    MdbCarouselModule
 
   ],
   exports:[
