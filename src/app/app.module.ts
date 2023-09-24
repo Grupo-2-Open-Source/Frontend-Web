@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {bootstrapApplication, BrowserModule} from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginTenantComponent } from './public/pages/login/login-tenant/login-tenant.component';
@@ -14,7 +14,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
-import { NgOptimizedImage } from "@angular/common";
+import {NgIf, NgOptimizedImage} from "@angular/common";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { FormsModule } from "@angular/forms";
@@ -32,6 +32,8 @@ import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module
 
 import { MaintenanceTenantComponent } from './public/pages/main-page-tenant/maintenance-tenant/maintenance-tenant.component';
 import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
+import {NgbCarousel, NgbCarouselModule, NgbModule, NgbSlide} from '@ng-bootstrap/ng-bootstrap';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
     ShareAutoTenantComponent,
     MaintenanceTenantComponent,
 
+
+
   ],
   imports: [
     AppRoutingModule,
@@ -66,8 +70,12 @@ import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
     FlexLayoutModule,
     MatSidenavModule,
     MyRoutingModule,
-    MdbCarouselModule
-
+    NgbCarousel,
+    NgbCarouselModule,
+    NgIf,
+    NgbSlide,
+    NgbModule,
+    SlickCarouselModule
   ],
   exports:[
   MatButtonModule,

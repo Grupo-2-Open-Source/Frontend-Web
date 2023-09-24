@@ -61,16 +61,19 @@
         <mat-label  style="font-size: 25px;text-align: center;color: #FF7A00"><b>Marcas de autos disponibles</b></mat-label>
         <br><br>
 
-<!--COLOCAR CARRUSEL DE IMAGNES-->
+        <mat-card>
+              <mat-card-content style="text-align: center;box-shadow:transparent;border-radius: 0">
 
-
+                <a href="/page-not-found"><img src="https://i.postimg.cc/63LBcjtc/RT-V-e45f4ad2949c4f70b4e021cf91e716e3.jpg" class="imagen1"></a>
+                <a href="/page-not-found"><img src="https://i.postimg.cc/Xqj4zfvb/RT-V-0c7166c16ff74073b65851f7f0b360ed.jpg" class="imagen1"></a>
+                <a href="/page-not-found"> <img src="https://i.postimg.cc/bw31JhM0/plateado-metalico-377a03d3.png" style="max-width: 210px;margin-left: 15px;margin-top: 20px"></a>
+              </mat-card-content>
+        </mat-card>
+        <br><br>
+<!--        <mat-label  style="font-size: 50px;text-align: center;color:#14131B "><b>PUBLICIDAD</b></mat-label><br><br>-->
       </mat-card-content>
     </mat-card>
-
-
-
-
-
+    
     <mat-sidenav #sidenav fxLayout="column">
       <div fxLayout="column">
         <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
