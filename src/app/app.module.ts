@@ -35,6 +35,7 @@ import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
 import {NgbCarousel, NgbCarouselModule, NgbModule, NgbSlide} from '@ng-bootstrap/ng-bootstrap';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MainPageOwnerComponent } from './public/pages/main-page-owner/main-page-owner.component';
+import { NotificationsOwnerComponent } from './public/pages/main-page-owner/notifications-owner/notifications-owner.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { MainPageOwnerComponent } from './public/pages/main-page-owner/main-page
     ShareAutoTenantComponent,
     MaintenanceTenantComponent,
     MainPageOwnerComponent,
+    NotificationsOwnerComponent,
 
 
 
