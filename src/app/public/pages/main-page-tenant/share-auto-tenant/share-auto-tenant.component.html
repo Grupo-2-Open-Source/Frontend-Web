@@ -1,1 +1,39 @@
-<p>share-auto-tenant works!</p>
+<div style="height: 100vh;">
+
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-toolbar class="toolbarr">
+      <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
+      <div class="mat-spacer"></div>
+
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a  class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/validation']">BUSCAR AUTOS</a>
+        <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
+        <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
+      </div>
+
+      <div fxShow="true" fxHide.gt-sm="true">
+        <a  (click)="sidenav.toggle()"><mat-icon>home</mat-icon></a>
+      </div>
+      <router-outlet></router-outlet>
+    </mat-toolbar>
+
+
+    <mat-sidenav #sidenav fxLayout="column">
+      <div fxLayout="column">
+        <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
+        <a class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/share-tenant']">BUSCAR AUTOS</a>
+        <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
+        <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
+      </div>
+
+    </mat-sidenav>
+
+  </mat-sidenav-container>
+</div>

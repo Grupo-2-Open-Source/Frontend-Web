@@ -29,6 +29,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ShareAutoTenantComponent } from './public/pages/main-page-tenant/share-auto-tenant/share-auto-tenant.component';
 import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module";
+
+import { MaintenanceTenantComponent } from './public/pages/main-page-tenant/maintenance-tenant/maintenance-tenant.component';
 import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
 
 @NgModule({
@@ -46,6 +48,7 @@ import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
     ValidationComponent,
     MainPageTenantComponent,
     ShareAutoTenantComponent,
+    MaintenanceTenantComponent,
 
   ],
   imports: [
