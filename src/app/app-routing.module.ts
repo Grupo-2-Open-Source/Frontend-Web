@@ -17,6 +17,9 @@ import {RestoreTenantComponent} from "./public/pages/login/restore-tenant/restor
 import {ValidationComponent} from "./public/pages/login/validation/validation.component";
 import {MainPageTenantComponent} from "./public/pages/main-page-tenant/main-page-tenant.component";
 import {MainPageOwnerComponent} from "./public/pages/main-page-owner/main-page-owner.component";
+import {
+  NotificationsOwnerComponent
+} from "./public/pages/main-page-owner/notifications-owner/notifications-owner.component";
 
 
 
@@ -32,6 +35,7 @@ const routes:Routes=[
   {path: 'validation',component:ValidationComponent},
   {path: 'main-page-tenant',component:MainPageTenantComponent},
   {path: 'main-page-owner',component:MainPageOwnerComponent},
+  {path: 'notifications-owner',component:NotificationsOwnerComponent},
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent},
   // al final colocar pagenout
