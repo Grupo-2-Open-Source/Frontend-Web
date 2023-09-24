@@ -1,13 +1,3 @@
-<!--<div>-->
-<!--  <h2>Componente Padre</h2>-->
-<!--  <nav>-->
-<!--    <a [routerLink]="['/main-page-tenant']" >Ir al Padre</a>-->
-<!--    <a [routerLink]="['/main-page-tenant/validation']" >Ir al Hijo</a>-->
-<!--  </nav>-->
-<!--  <router-outlet></router-outlet> &lt;!&ndash; Aquí se mostrará el componente hijo &ndash;&gt;-->
-<!--</div>-->
-
-
 
 <!--<mat-toolbar class="toolbarr">-->
 
@@ -20,7 +10,6 @@
 <!--<router-outlet></router-outlet>-->
 
 <div style="height: 100vh;">
-
 
   <mat-sidenav-container fxFlexFill class="example-container">
 
@@ -35,6 +24,7 @@
         <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
         <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
         <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
+        <a mat-button  [routerLink]="['/perfil-tenant']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
       </div>
 
       <div fxShow="true" fxHide.gt-sm="true">
@@ -42,6 +32,42 @@
       </div>
       <router-outlet></router-outlet>
     </mat-toolbar>
+
+
+
+    <mat-card class="contenedor-principal" >
+      <mat-card-content class="contenedor">
+
+          <br><br>
+          <mat-label  class="letter1"><b>Alquila autos</b></mat-label>
+          <br><br>
+          <mat-label  class="letter2"><b>cercanos facilmente</b></mat-label>
+          <br><br>
+          <mat-label style="text-align: left">Ubicación</mat-label>
+          <mat-form-field >
+            <input matInput [(ngModel)]="country" type="text" placeholder="Ubicación" class="input" >
+          </mat-form-field> <button mat-button style="background-color: #14131B;color: white"> BUSCAR UN AUTO</button>
+
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card style="border-radius: 0">
+      <mat-card-content class="contenedor2">
+
+        <br><br>
+        <mat-label  style="font-size: 25px;text-align: center;color: #14131B"><b>El auto perfecto para ti esta más cerca que nunca</b></mat-label>
+        <br><br>
+        <mat-label  style="font-size: 25px;text-align: center;color: #FF7A00"><b>Marcas de autos disponibles</b></mat-label>
+        <br><br>
+
+<!--COLOCAR CARRUSEL DE IMAGNES-->
+
+
+      </mat-card-content>
+    </mat-card>
+
+
+
 
 
     <mat-sidenav #sidenav fxLayout="column">
@@ -52,11 +78,14 @@
         <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
         <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
         <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
+        <a class="buttonnav" mat-button [routerLink]="['/perfil-tenant']">PERFIL</a>
       </div>
 
     </mat-sidenav>
-
   </mat-sidenav-container>
+
+
+
 </div>
 
 

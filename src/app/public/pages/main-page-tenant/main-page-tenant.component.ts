@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+
 
 @Component({
   selector: 'app-main-page-tenant',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-page-tenant.component.css']
 })
 export class MainPageTenantComponent {
+  country='';
+
 
 
 
