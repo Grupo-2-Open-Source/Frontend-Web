@@ -1,0 +1,28 @@
+<div class="tenant-principal">
+  <div class="Profile-tenant">
+    <h1> PERFIL DE USUARIO</h1>
+    <h3>Arrendatario</h3>
+    <mat-list role="list">
+      <mat-list role="list">Nombre: </mat-list>
+      <mat-list role="list">Apellido:</mat-list>
+      <mat-list role="list">celular:</mat-list>
+      <mat-list role="list">Correo:</mat-list>
+      <mat-list role="list">Can. de veh. alquilado:</mat-list>
+    </mat-list>
+
+    <div class="boton_Profile">
+      <button mat-button id="btnn">Actualizar Datos</button>
+      <button mat-button id="btnn">Subir Documentos de antecedentes Penales</button>
+      <button mat-button id="btnn" [routerLink]="['/register-tenant']">Cerrar Sesión</button>
+    </div>
+  </div>
+
+  <div class="card_profile">
+    <mat-card class="photo_perfil">
+      <img mat-card-image src="" alt="Photo del usuario">
+      <mat-card-actions>
+        <button mat-button>Cambiar foto perfil</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

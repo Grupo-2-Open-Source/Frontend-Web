@@ -27,6 +27,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ShareAutoTenantComponent } from './public/pages/main-page-tenant/share-auto-tenant/share-auto-tenant.component';
 import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module";
+import { ProfileTenantComponent } from './public/pages/profile-user/profile-tenant/profile-tenant.component';
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module
     ValidationComponent,
     MainPageTenantComponent,
     ShareAutoTenantComponent,
+    ProfileTenantComponent,
 
   ],
   imports: [
@@ -59,7 +62,8 @@ import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module
     FormsModule,
     FlexLayoutModule,
     MatSidenavModule,
-    MyRoutingModule
+    MyRoutingModule,
+    MatListModule
 
   ],
   exports:[
