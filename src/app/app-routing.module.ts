@@ -20,6 +20,10 @@ import {MainPageOwnerComponent} from "./public/pages/main-page-owner/main-page-o
 import {
   NotificationsOwnerComponent
 } from "./public/pages/main-page-owner/notifications-owner/notifications-owner.component";
+import {ShareAutoTenantComponent} from "./public/pages/main-page-tenant/share-auto-tenant/share-auto-tenant.component";
+import {
+  MaintenanceTenantComponent
+} from "./public/pages/main-page-tenant/maintenance-tenant/maintenance-tenant.component";
 
 
 
@@ -36,6 +40,8 @@ const routes:Routes=[
   {path: 'main-page-tenant',component:MainPageTenantComponent},
   {path: 'main-page-owner',component:MainPageOwnerComponent},
   {path: 'notifications-owner',component:NotificationsOwnerComponent},
+  {path: 'share-auto-tenant', component: ShareAutoTenantComponent},
+  {path: 'maintenance-tenant', component: MaintenanceTenantComponent},
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent},
   // al final colocar pagenout
