@@ -1,0 +1,92 @@
+<div style="height: 100vh;">
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-toolbar class="toolbarr">
+      <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
+      <div class="mat-spacer"></div>
+
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a  class="buttonnav" mat-button [routerLink]="['/main-page-owner']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/vehicle-registration-owner']">REGISTRO VEHICULAR</a>
+        <a class="buttonnav" mat-button [routerLink]="['/notifications-owner']">NOTIFICACIONES</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-owner']">ALQUILER</a>
+        <a mat-button  [routerLink]="['/perfil-owner']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
+      </div>
+
+      <div fxShow="true" fxHide.gt-sm="true">
+        <a  (click)="sidenav.toggle()"><mat-icon>home</mat-icon></a>
+      </div>
+      <router-outlet></router-outlet>
+    </mat-toolbar>
+
+    <mat-sidenav #sidenav fxLayout="column">
+      <div fxLayout="column">
+        <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
+        <a  class="buttonnav" mat-button [routerLink]="['/main-page-owner']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/vehicle-registration-owner']">REGISTRO VEHICULAR</a>
+        <a class="buttonnav" mat-button [routerLink]="['/notifications-owner']">NOTIFICACIONES</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-owner']">ALQUILER</a>
+        <a class="buttonnav" mat-button [routerLink]="['/perfil-owner']">PERFIL</a>
+      </div>
+    </mat-sidenav>
+
+    <div fxLayout="row">
+      <!-- Primera columna -->
+      <mat-card fxFlex="50%">
+        <div class="center-content">
+          <mat-label style="font-size: 20px;color: #14131B; font-family: 'Poppins',sans-serif;"><b>CONTRATO DE ALQUILER</b></mat-label><br>
+          <p style="font-family: 'Poppins',sans-serif;">Cree el contrato de alquiler que mejor le parezca</p>
+          <button mat-raised-button style="margin-top: 20px; background-color: #14131B;color: white;font-family: 'Poppins',sans-serif;" >Generar contrato predeterminado</button>
+          <button mat-raised-button style="margin-top: 20px; background-color: #14131B;color: white; font-family: 'Poppins',sans-serif;">Subir contrato manual en PDF</button>
+          <br><br><br><br>
+          <mat-label style="font-size: 20px;color: #14131B;font-family: 'Poppins',sans-serif;"><b>Vehiculo a compartir</b></mat-label><br>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0HbJoi3q8SuPYSM9VcLUpLFMKGMh4bjTTNw" alt="Imagen del vehículo">
+          <p style="margin-top: 20px;font-family: 'Poppins',sans-serif;">Marca/Modelo: Toyota/Prius 2023</p>
+        </div>
+      </mat-card>
+
+      <!-- Segunda columna -->
+      <mat-card fxFlex="50%" style="background-color: #dcdcdc;">
+        <div class="rectangle" style="font-family: 'Poppins',sans-serif; margin-left: 20px; margin-right: 20px;">
+          <br>
+          <mat-label style="font-size: 20px;color: #14131B; text-align: center; display: block;"><b>Contrato de alquiler</b></mat-label><br>
+          <p>Partes del contrato:</p>
+          <p>El presente contrato de alquiler de automóvil (en adelante, el "Contrato") se celebra entre:</p>
+          <p><strong>El Arrendador:</strong> [Nombre del Arrendador]</p>
+          <p><strong>Dirección del Arrendador:</strong> [Dirección del Arrendador]</p>
+          <p><strong>Número de contacto del Arrendador:</strong> [Número de contacto del Arrendador]</p>
+          <p><strong>Y</strong></p>
+          <p><strong>El Arrendatario:</strong> [Nombre del Arrendatario]</p>
+          <p><strong>Dirección del Arrendatario:</strong> [Dirección del Arrendatario]</p>
+          <p><strong>Número de contacto del Arrendatario:</strong> [Número de contacto del Arrendatario]</p>
+          <p>Ambas partes acuerdan lo siguiente:</p>
+          <p><strong>1. Descripción del vehículo:</strong></p>
+          <p>El Arrendador acuerda alquilar al Arrendatario el siguiente vehículo:</p>
+          <p><strong>2. Duración del alquiler:</strong></p>
+          <p>El período de alquiler comenzará a partir de la fecha [Fecha de inicio] y finalizará el [Fecha de finalización]. El Arrendatario se compromete a devolver el vehículo en la misma condición en la que lo recibió, salvo el desgaste normal.</p>
+          <p><strong>3. Pago y tarifas:</strong></p>
+          <p>El Arrendatario acuerda pagar al Arrendador la cantidad de [Monto del alquiler] por el período de alquiler. El pago se realizará de la siguiente manera: [Detalles del pago].</p>
+          <p><strong>4. Uso del vehículo:</strong></p>
+          <p>El vehículo se utilizará únicamente para fines personales y no comerciales. El Arrendatario se compromete a no utilizar el vehículo para actividades ilegales o peligrosas.</p>
+          <p><strong>5. Mantenimiento y responsabilidad:</strong></p>
+          <p>El Arrendatario es responsable de mantener el vehículo en buen estado durante el período de alquiler. Cualquier daño o gasto incurrido debido a negligencia será responsabilidad del Arrendatario.</p>
+          <p><strong>6. Devolución del vehículo:</strong></p>
+          <p>El Arrendatario se compromete a devolver el vehículo al Arrendador en la fecha y hora acordadas al final del período de alquiler.</p>
+          <p style="text-align: center;"><br><br><br><strong>Firma de las partes:<br><br></strong></p>
+          <p style="text-align: center;"><em>(Firma del Arrendador)</em> <em>(Firma del Arrendatario)</em></p>
+          <p style="text-align: center;"><strong>Fecha:</strong> [Fecha de firma del contrato]</p>
+          <br><br>
+          <div style="text-align: center; font-family: 'Poppins',sans-serif;">
+            <button mat-raised-button style="background-color: #FF7A00;color: white">Subir Contrato</button>
+          </div>
+          <br><br>
+        </div>
+      </mat-card>
+    </div>
+  </mat-sidenav-container>
+</div>
+
+
+
