@@ -1,0 +1,125 @@
+<div style="height: 100vh;">
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-toolbar class="toolbarr">
+      <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
+      <div class="mat-spacer"></div>
+
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a  class="buttonnav" mat-button [routerLink]="['/main-page-owner']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/vehicle-registration-owner']">REGISTRO VEHICULAR</a>
+        <a class="buttonnav" mat-button [routerLink]="['/notifications-owner']">NOTIFICACIONES</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-owner']">ALQUILER</a>
+        <a mat-button  [routerLink]="['/perfil-owner']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
+      </div>
+
+      <div fxShow="true" fxHide.gt-sm="true">
+        <a  (click)="sidenav.toggle()"><mat-icon>home</mat-icon></a>
+      </div>
+      <router-outlet></router-outlet>
+    </mat-toolbar>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="letter1" style="font-family: 'Poppins',sans-serif;">
+          REGISTRO DE VEHÍCULO
+        </mat-card-title>
+      </mat-card-header>
+
+      <div fxLayout="row" fxLayoutAlign="start start">
+
+        <!-- Formulario -->
+        <div class="form-container" fxFlex="50%">
+          <form fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="20px">
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Marca</mat-label>
+              <input matInput placeholder="Marca del vehículo">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Modelo</mat-label>
+              <input matInput placeholder="Modelo del vehículo">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Velocidad máxima</mat-label>
+              <input matInput placeholder="Velocidad máxima">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Consumo de combustible</mat-label>
+              <input matInput placeholder="Consumo de combustible">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Dimensiones (Largo/Ancho/Alto)</mat-label>
+              <input matInput placeholder="Dimensiones">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Peso</mat-label>
+              <input matInput placeholder="Peso">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Clase</mat-label>
+              <input matInput placeholder="Clase">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Transmisión</mat-label>
+              <input matInput placeholder="Transmisión">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Tiempo de alquiler</mat-label>
+              <input matInput placeholder="Tiempo de alquiler">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Costo de alquiler al mes</mat-label>
+              <input matInput placeholder="Costo de alquiler al mes">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Lugar de recojo del vehículo</mat-label>
+              <input matInput placeholder="Costo de alquiler al mes">
+            </mat-form-field>
+
+            <button mat-raised-button fxFlex="100%" class="registrar-button" mat-button style="background-color: #FF7A00;color: white;font-family: 'Poppins',sans-serif;">Registro</button>
+          </form>
+        </div>
+
+        <div class="button-container">
+          <button mat-raised-button class="center-button-subir-foto" mat-button style="background-color: #FF7A00;color: white;font-family: 'Poppins',sans-serif;">Subir Foto</button>
+
+          <button mat-raised-button class="center-button-crear-contrato" mat-button style="background-color: #14131B;color: white;font-family: 'Poppins',sans-serif;" [routerLink]="['/create-contract-owner']">Crear Contrato de Alquiler</button>
+        </div>
+      </div>
+    </mat-card>
+
+
+
+
+
+    <mat-sidenav #sidenav fxLayout="column">
+      <div fxLayout="column">
+        <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
+        <a  class="buttonnav" mat-button [routerLink]="['/main-page-owner']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/vehicle-registration-owner']">REGISTRO VEHICULAR</a>
+        <a class="buttonnav" mat-button [routerLink]="['/notifications-owner']">NOTIFICACIONES</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-owner']">ALQUILER</a>
+        <a class="buttonnav" mat-button [routerLink]="['/perfil-owner']">PERFIL</a>
+      </div>
+
+    </mat-sidenav>
+  </mat-sidenav-container>
+
+
+
+</div>
+
+
+

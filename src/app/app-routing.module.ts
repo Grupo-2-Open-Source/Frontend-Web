@@ -24,6 +24,15 @@ import {ShareAutoTenantComponent} from "./public/pages/main-page-tenant/share-au
 import {
   MaintenanceTenantComponent
 } from "./public/pages/main-page-tenant/maintenance-tenant/maintenance-tenant.component";
+import {
+  VehicleRegistrationOwnerComponent
+} from "./public/pages/main-page-owner/vehicle-registration-owner/vehicle-registration-owner.component";
+import {
+  CreateContractOwnerComponent
+} from "./public/pages/main-page-owner/create-contract-owner/create-contract-owner.component";
+import {RentOwnerComponent} from "./public/pages/main-page-owner/rent-owner/rent-owner.component";
+import {RentTenantComponent} from "./public/pages/main-page-tenant/rent-tenant/rent-tenant.component";
+import {PayCarRentalComponent} from "./public/pages/main-page-tenant/pay-car-rental/pay-car-rental.component";
 
 
 
@@ -42,6 +51,11 @@ const routes:Routes=[
   {path: 'notifications-owner',component:NotificationsOwnerComponent},
   {path: 'share-auto-tenant', component: ShareAutoTenantComponent},
   {path: 'maintenance-tenant', component: MaintenanceTenantComponent},
+  {path: 'vehicle-registration-owner', component: VehicleRegistrationOwnerComponent},
+  {path: 'create-contract-owner', component: CreateContractOwnerComponent},
+  {path: 'rent-owner', component: RentOwnerComponent},
+  {path: 'rent-tenant', component: RentTenantComponent},
+  {path: 'pay-car-rental', component: PayCarRentalComponent},
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent},
   // al final colocar pagenout
