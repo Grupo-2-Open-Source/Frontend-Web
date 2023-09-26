@@ -1,0 +1,97 @@
+<div style="height: 100vh;">
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-toolbar class="toolbarr">
+      <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
+      <div class="mat-spacer"></div>
+
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a  class="buttonnav" mat-button [routerLink]="['/main-page-owner']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/vehicle-registration-owner']">REGISTRO VEHICULAR</a>
+        <a class="buttonnav" mat-button [routerLink]="['/notifications-owner']">NOTIFICACIONES</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-owner']">ALQUILER</a>
+        <a mat-button  [routerLink]="['/perfil-owner']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
+      </div>
+
+      <div fxShow="true" fxHide.gt-sm="true">
+        <a  (click)="sidenav.toggle()"><mat-icon>home</mat-icon></a>
+      </div>
+      <router-outlet></router-outlet>
+    </mat-toolbar>
+
+    <mat-sidenav #sidenav fxLayout="column">
+      <div fxLayout="column">
+        <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
+        <a  class="buttonnav" mat-button [routerLink]="['/main-page-owner']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/vehicle-registration-owner']">REGISTRO VEHICULAR</a>
+        <a class="buttonnav" mat-button [routerLink]="['/notifications-owner']">NOTIFICACIONES</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-owner']">ALQUILER</a>
+        <a class="buttonnav" mat-button [routerLink]="['/perfil-owner']">PERFIL</a>
+      </div>
+    </mat-sidenav>
+
+    <mat-card fxFlex="100%" style="min-height: 15vh; display: grid; grid-template-areas:
+  'label p'
+  'button button';">
+
+      <mat-label style="grid-area: label; font-size: 20px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;"><b>ALQUILER</b></mat-label>
+
+      <p style="grid-area: p; text-align: right; font-family: 'Poppins', sans-serif; margin: 20px;">Agiliza tus pagos afiliando tu cuenta de banco con MODO</p>
+
+      <p style="grid-area: button; text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Ver autos compartidos</p>
+
+      <button mat-raised-button style="grid-area: button; align-self: end; margin: 20px; max-width: 200px; background-color: #14131B; color: white; font-family: 'Poppins', sans-serif; justify-self: end;">
+        Afiliar cuenta de banco con MODO
+      </button>
+
+    </mat-card>
+
+    <mat-card fxFlex="100%">
+      <div fxLayout="row wrap" fxLayoutGap="10px">
+        <mat-card fxFlex="calc(33.33% - 10px)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0HbJoi3q8SuPYSM9VcLUpLFMKGMh4bjTTNw" alt="Imagen" style="margin: 20px; max-width: 100%; max-height: 100%;"/>
+
+          <p style="grid-area: p; text-align: right; font-family: 'Poppins', sans-serif; margin: 20px;">Marca/Modelo: Toyota/Prius</p>
+          <mat-label style="grid-area: label; font-size: 20px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;">Estado: Pendiente</mat-label>
+
+          <button mat-raised-button style="margin: 20px; background-color: #14131B;color: white;font-family: 'Poppins',sans-serif;">Eliminar publicación</button>
+        </mat-card>
+        <mat-card fxFlex="calc(33.33% - 10px)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0HbJoi3q8SuPYSM9VcLUpLFMKGMh4bjTTNw" alt="Imagen" style="margin: 20px; max-width: 100%; max-height: 100%;"/>
+
+          <p style="grid-area: p; text-align: right; font-family: 'Poppins', sans-serif; margin: 20px;">Marca/Modelo: Toyota/Prius</p>
+          <mat-label style="grid-area: label; font-size: 20px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;">Estado: Pendiente</mat-label>
+
+          <button mat-raised-button style="margin: 20px; background-color: #14131B;color: white;font-family: 'Poppins',sans-serif;">Eliminar publicación</button>
+        </mat-card>
+        <mat-card fxFlex="calc(33.33% - 10px)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0HbJoi3q8SuPYSM9VcLUpLFMKGMh4bjTTNw" alt="Imagen" style="margin: 20px; max-width: 100%; max-height: 100%;"/>
+
+          <p style="grid-area: p; text-align: right; font-family: 'Poppins', sans-serif; margin: 20px;">Marca/Modelo: Toyota/Prius</p>
+          <mat-label style="grid-area: label; font-size: 20px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;">Estado: Pendiente</mat-label>
+
+          <button mat-raised-button style="margin: 20px; background-color: #14131B;color: white;font-family: 'Poppins',sans-serif;">Eliminar publicación</button>
+        </mat-card>
+        <mat-card fxFlex="calc(33.33% - 10px)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0HbJoi3q8SuPYSM9VcLUpLFMKGMh4bjTTNw" alt="Imagen" style="margin: 20px; max-width: 100%; max-height: 100%;"/>
+
+          <p style="grid-area: p; text-align: right; font-family: 'Poppins', sans-serif; margin: 20px;">Marca/Modelo: Toyota/Prius</p>
+          <mat-label style="grid-area: label; font-size: 20px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;">Estado: Pendiente</mat-label>
+
+          <button mat-raised-button style="margin: 20px; background-color: #14131B;color: white;font-family: 'Poppins',sans-serif;">Eliminar publicación</button>
+        </mat-card>
+        <mat-card fxFlex="calc(33.33% - 10px)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0HbJoi3q8SuPYSM9VcLUpLFMKGMh4bjTTNw" alt="Imagen" style="margin: 20px; max-width: 100%; max-height: 100%;"/>
+
+          <p style="grid-area: p; text-align: right; font-family: 'Poppins', sans-serif; margin: 20px;">Marca/Modelo: Toyota/Prius</p>
+          <mat-label style="grid-area: label; font-size: 20px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;">Estado: Pendiente</mat-label>
+
+          <button mat-raised-button style="margin: 20px; background-color: #14131B;color: white;font-family: 'Poppins',sans-serif;">Eliminar publicación</button>
+        </mat-card>
+      </div>
+    </mat-card>
+
+  </mat-sidenav-container>
+</div>

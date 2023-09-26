@@ -16,9 +16,23 @@ import {RestoreOwnerComponent} from "./public/pages/login/restore-owner/restore-
 import {RestoreTenantComponent} from "./public/pages/login/restore-tenant/restore-tenant.component";
 import {ValidationComponent} from "./public/pages/login/validation/validation.component";
 import {MainPageTenantComponent} from "./public/pages/main-page-tenant/main-page-tenant.component";
-import {ProfileTenantComponent} from "./public/pages/profile-user/profile-tenant/profile-tenant.component";
-import {ProfileOwnerComponent} from "./public/pages/profile-user/profile-owner/profile-owner/profile-owner.component";
-import {RequestTenantComponent} from "./public/pages/request/request-tenant/request-tenant/request-tenant.component";
+import {MainPageOwnerComponent} from "./public/pages/main-page-owner/main-page-owner.component";
+import {
+  NotificationsOwnerComponent
+} from "./public/pages/main-page-owner/notifications-owner/notifications-owner.component";
+import {ShareAutoTenantComponent} from "./public/pages/main-page-tenant/share-auto-tenant/share-auto-tenant.component";
+import {
+  MaintenanceTenantComponent
+} from "./public/pages/main-page-tenant/maintenance-tenant/maintenance-tenant.component";
+import {
+  VehicleRegistrationOwnerComponent
+} from "./public/pages/main-page-owner/vehicle-registration-owner/vehicle-registration-owner.component";
+import {
+  CreateContractOwnerComponent
+} from "./public/pages/main-page-owner/create-contract-owner/create-contract-owner.component";
+import {RentOwnerComponent} from "./public/pages/main-page-owner/rent-owner/rent-owner.component";
+import {RentTenantComponent} from "./public/pages/main-page-tenant/rent-tenant/rent-tenant.component";
+import {PayCarRentalComponent} from "./public/pages/main-page-tenant/pay-car-rental/pay-car-rental.component";
 
 
 
@@ -33,12 +47,17 @@ const routes:Routes=[
   {path: 'restore-tenant',component:RestoreTenantComponent},
   {path: 'validation',component:ValidationComponent},
   {path: 'main-page-tenant',component:MainPageTenantComponent},
-  {path:'requests-tenant', component:RequestTenantComponent},
-  {path:'profile-tenant',component:ProfileTenantComponent},
-  {path:'profile-owner',component:ProfileOwnerComponent},
+  {path: 'main-page-owner',component:MainPageOwnerComponent},
+  {path: 'notifications-owner',component:NotificationsOwnerComponent},
+  {path: 'share-auto-tenant', component: ShareAutoTenantComponent},
+  {path: 'maintenance-tenant', component: MaintenanceTenantComponent},
+  {path: 'vehicle-registration-owner', component: VehicleRegistrationOwnerComponent},
+  {path: 'create-contract-owner', component: CreateContractOwnerComponent},
+  {path: 'rent-owner', component: RentOwnerComponent},
+  {path: 'rent-tenant', component: RentTenantComponent},
+  {path: 'pay-car-rental', component: PayCarRentalComponent},
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent},
-
   // al final colocar pagenout
 ]
 

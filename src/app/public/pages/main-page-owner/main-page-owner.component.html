@@ -1,0 +1,96 @@
+
+
+<!--<mat-toolbar class="toolbarr">-->
+
+<!--&lt;!&ndash;  <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="mat-spacer"></div>&ndash;&gt;-->
+
+<!--  <a mat-button *ngFor="let option of options"-->
+<!--     [routerLink]="option.path" class="buttonnav">{{option.title}}</a>-->
+<!--</mat-toolbar>-->
+<!--<router-outlet></router-outlet>-->
+
+<div style="height: 100vh;">
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-toolbar class="toolbarr">
+      <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
+      <div class="mat-spacer"></div>
+
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a  class="buttonnav" mat-button [routerLink]="['/main-page-owner']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/vehicle-registration-owner']">REGISTRO VEHICULAR</a>
+        <a class="buttonnav" mat-button [routerLink]="['/notifications-owner']">NOTIFICACIONES</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-owner']">ALQUILER</a>
+        <a mat-button  [routerLink]="['/perfil-owner']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
+      </div>
+
+      <div fxShow="true" fxHide.gt-sm="true">
+        <a  (click)="sidenav.toggle()"><mat-icon>home</mat-icon></a>
+      </div>
+      <router-outlet></router-outlet>
+    </mat-toolbar>
+
+
+
+    <mat-card class="contenedor-principal" >
+      <mat-card-content class="contenedor">
+
+        <br><br>
+        <mat-label  class="letter1"><b>Convierte tu auto</b></mat-label>
+        <br><br>
+        <mat-label  class="letter2"><b>en dinero extra</b></mat-label>
+        <br><br>
+        <mat-label style="text-align: left">Ubicación</mat-label>
+        <mat-form-field >
+          <input matInput [(ngModel)]="country" type="text" placeholder="Ubicación" class="input" >
+        </mat-form-field> <button mat-button style="background-color: #14131B;color: white"> COMPARTE TU AUTO</button>
+
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card style="border-radius: 0">
+      <mat-card-content class="contenedor2">
+        <br>
+        <mat-label style="font-size: 20px;color: #14131B"> <b> NOTIFICACIONES</b></mat-label><br>
+        <mat-card>
+          <mat-card-content style="box-shadow:#14131B;border-radius: 5px;background-color: whitesmoke;">
+            <mat-card-title style="  font-family: 'Poppins',sans-serif;">Piero Torres Arias envio una solicitud de alquiler del
+              vehículo Toyota Prius  </mat-card-title>
+            <mat-card-subtitle style="text-align: end"><a mat-button [routerLink]="['/notifications-owner']" style="color: #FF7A00">VER NOTIFICACION</a></mat-card-subtitle>
+          </mat-card-content>
+        </mat-card><br><br>
+
+        <mat-card>
+          <mat-card-content style="box-shadow:#14131B;border-radius: 5px;background-color: whitesmoke;">
+            <mat-card-title style="  font-family: 'Poppins',sans-serif;">Jorge Paredes Cano envio una solicitud de alquiler del
+              vehículo Toyota Prius  </mat-card-title>
+            <mat-card-subtitle style="text-align: end"><a mat-button [routerLink]="['/notifications-owner']" style="color: #FF7A00">VER NOTIFICACION</a></mat-card-subtitle>
+          </mat-card-content>
+        </mat-card>
+        <br><br>
+        <!--        <mat-label  style="font-size: 50px;text-align: center;color:#14131B "><b>PUBLICIDAD</b></mat-label><br><br>-->
+      </mat-card-content>
+    </mat-card>
+
+    <mat-sidenav #sidenav fxLayout="column">
+      <div fxLayout="column">
+        <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
+        <a  class="buttonnav" mat-button [routerLink]="['/main-page-owner']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/vehicle-registration-owner']">REGISTRO VEHICULAR</a>
+        <a class="buttonnav" mat-button [routerLink]="['/notifications-owner']">NOTIFICACIONES</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-owner']">ALQUILER</a>
+        <a class="buttonnav" mat-button [routerLink]="['/perfil-owner']">PERFIL</a>
+      </div>
+
+    </mat-sidenav>
+  </mat-sidenav-container>
+
+
+
+</div>
+
+
+

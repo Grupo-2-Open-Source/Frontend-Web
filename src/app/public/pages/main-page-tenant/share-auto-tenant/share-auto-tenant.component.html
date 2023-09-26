@@ -1,1 +1,92 @@
-<p>share-auto-tenant works!</p>
+<div style="height: 100vh;">
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-toolbar class="toolbarr">
+      <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
+      <div class="mat-spacer"></div>
+
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a  class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/share-auto-tenant']">BUSCAR AUTOS</a>
+        <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
+        <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
+        <a mat-button  [routerLink]="['/perfil-tenant']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
+      </div>
+
+      <div fxShow="true" fxHide.gt-sm="true">
+        <a  (click)="sidenav.toggle()"><mat-icon>home</mat-icon></a>
+      </div>
+      <router-outlet></router-outlet>
+    </mat-toolbar>
+
+    <div style="display: flex; height: 130vh">
+      <mat-card class="card-share">
+        <mat-card-header>
+          <mat-card-title class="letter1">
+            BUSCA UN AUTO
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="letter2">
+          <mat-card-subtitle >Ubicación</mat-card-subtitle>
+          <div style="display: flex; align-items: center;">
+            <mat-form-field class="input" >
+              <input matInput placeholder="Escribe aquí...">
+            </mat-form-field>
+            <button mat-button class="button" style="background-color: #14131B; color: white;">BUSCAR</button>
+          </div>
+          <mat-card-subtitle>Precio</mat-card-subtitle>
+          <mat-form-field class="input">
+            <input matInput placeholder="Escribe aquí...">
+          </mat-form-field>
+          <mat-card-subtitle>Tiempo de Alquiler</mat-card-subtitle>
+          <mat-form-field class="input">
+            <input matInput placeholder="Escribe aquí...">
+          </mat-form-field>
+          <mat-card-subtitle>Marca</mat-card-subtitle>
+          <mat-form-field class="input">
+            <input matInput placeholder="Escribe aquí...">
+          </mat-form-field>
+          <mat-card-subtitle>Modelo</mat-card-subtitle>
+          <mat-form-field class="input">
+            <input matInput placeholder="Escribe aquí...">
+          </mat-form-field>
+          <mat-card-subtitle>Clase</mat-card-subtitle>
+          <mat-form-field class="input">
+            <input matInput placeholder="Escribe aquí...">
+          </mat-form-field>
+          <mat-card-subtitle>Transmisión</mat-card-subtitle>
+          <mat-form-field class="input">
+            <input matInput placeholder="Escribe aquí...">
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+
+
+      <mat-card class="card-share2">
+        <mat-card-content></mat-card-content>
+      </mat-card>
+    </div>
+
+    <mat-sidenav #sidenav fxLayout="column">
+      <div fxLayout="column">
+        <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
+        <a class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/share-tenant']">BUSCAR AUTOS</a>
+        <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
+        <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
+        <a class="buttonnav" mat-button [routerLink]="['/perfil-tenant']">PERFIL</a>
+      </div>
+
+    </mat-sidenav>
+  </mat-sidenav-container>
+
+
+
+</div>
+
+
+

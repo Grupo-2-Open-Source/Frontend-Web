@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {bootstrapApplication, BrowserModule} from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginTenantComponent } from './public/pages/login/login-tenant/login-tenant.component';
@@ -8,11 +9,13 @@ import { RegisterTenantComponent } from './public/pages/register-user/register-t
 import { RegisterOwnerComponent } from './public/pages/register-user/register-owner/register-owner.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import { RouterOutlet } from "@angular/router";
+
+
 import { AppRoutingModule } from "./app-routing.module";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
-import { NgOptimizedImage } from "@angular/common";
+import {NgIf, NgOptimizedImage} from "@angular/common";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { FormsModule } from "@angular/forms";
@@ -27,10 +30,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ShareAutoTenantComponent } from './public/pages/main-page-tenant/share-auto-tenant/share-auto-tenant.component';
 import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module";
-import { ProfileTenantComponent } from './public/pages/profile-user/profile-tenant/profile-tenant.component';
-import {MatListModule} from "@angular/material/list";
-import { ProfileOwnerComponent } from './public/pages/profile-user/profile-owner/profile-owner/profile-owner.component';
-import { RequestTenantComponent } from './public/pages/request/request-tenant/request-tenant/request-tenant.component';
+
+import { MaintenanceTenantComponent } from './public/pages/main-page-tenant/maintenance-tenant/maintenance-tenant.component';
+import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
+import {NgbCarousel, NgbCarouselModule, NgbModule, NgbSlide} from '@ng-bootstrap/ng-bootstrap';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { MainPageOwnerComponent } from './public/pages/main-page-owner/main-page-owner.component';
+import { NotificationsOwnerComponent } from './public/pages/main-page-owner/notifications-owner/notifications-owner.component';
+import { VehicleRegistrationOwnerComponent } from './public/pages/main-page-owner/vehicle-registration-owner/vehicle-registration-owner.component';
+import { CreateContractOwnerComponent } from './public/pages/main-page-owner/create-contract-owner/create-contract-owner.component';
+import { RentOwnerComponent } from './public/pages/main-page-owner/rent-owner/rent-owner.component';
+import { RentTenantComponent } from './public/pages/main-page-tenant/rent-tenant/rent-tenant.component';
+import { PayCarRentalComponent } from './public/pages/main-page-tenant/pay-car-rental/pay-car-rental.component';
 
 @NgModule({
   declarations: [
@@ -47,9 +58,16 @@ import { RequestTenantComponent } from './public/pages/request/request-tenant/re
     ValidationComponent,
     MainPageTenantComponent,
     ShareAutoTenantComponent,
-    ProfileTenantComponent,
-    ProfileOwnerComponent,
-    RequestTenantComponent,
+    MaintenanceTenantComponent,
+    MainPageOwnerComponent,
+    NotificationsOwnerComponent,
+    VehicleRegistrationOwnerComponent,
+    CreateContractOwnerComponent,
+    RentOwnerComponent,
+    RentTenantComponent,
+    PayCarRentalComponent,
+
+
 
   ],
   imports: [
@@ -67,14 +85,19 @@ import { RequestTenantComponent } from './public/pages/request/request-tenant/re
     FlexLayoutModule,
     MatSidenavModule,
     MyRoutingModule,
-    MatListModule
-
+    NgbCarousel,
+    NgbCarouselModule,
+    NgIf,
+    NgbSlide,
+    NgbModule,
+    SlickCarouselModule,
+    MatSnackBarModule
   ],
   exports:[
   MatButtonModule,
   MatIconModule,
   ],
-  providers: [],
+  providers: [MatSnackBarModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {

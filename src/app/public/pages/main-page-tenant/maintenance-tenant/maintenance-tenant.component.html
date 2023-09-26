@@ -1,0 +1,112 @@
+<div style="height: 100vh;">
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-toolbar class="toolbarr">
+      <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
+      <div class="mat-spacer"></div>
+
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a  class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/share-auto-tenant']">BUSCAR AUTOS</a>
+        <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
+        <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
+        <a mat-button  [routerLink]="['/perfil-tenant']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
+      </div>
+
+      <div fxShow="true" fxHide.gt-sm="true">
+        <a  (click)="sidenav.toggle()"><mat-icon>home</mat-icon></a>
+      </div>
+      <router-outlet></router-outlet>
+    </mat-toolbar>
+
+    <div style="display: flex; height: 90vh">
+      <mat-card class="card-share">
+        <mat-card-header>
+          <mat-card-title class="letter1">
+            MANTENIMIENTO
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="letter2">
+            Cree una solicitud para su<br>
+            arrendador en<br>
+            minutos con información<br>
+            detallada sobre el<br>
+            problema y fotografías<br>
+            relevantes.<br>
+            Además puede comunicarse<br>
+            con el arrendador cuano le<br>
+            sea necesario.<br>
+          </p>
+          <mat-card-subtitle class="letter3">
+            Vea la respuesta del<br>
+            propietario en su<br>
+            correo electrónico<br>
+          </mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+
+
+      <mat-card class="card-share2">
+        <mat-card-content>
+          <mat-card-subtitle class="letter4">Seleccionar nombre del propietario del auto alquilado</mat-card-subtitle>
+          <mat-form-field class="selector" >
+            <mat-select  [value]="'1'">
+              <mat-option value="1">Erick Ruiz Torres</mat-option>
+              <mat-option value="2">Samuel Chamorro Torres</mat-option>
+              <mat-option value="3">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field><button mat-button class="button" style="background-color: #14131B; color: white;">BUSCAR</button>
+
+          <mat-card class="centered-card">
+            <mat-card-content style="width: 600px">
+
+              <mat-card-subtitle>Tipo de problema</mat-card-subtitle>
+              <mat-form-field class="input">
+                <input matInput placeholder="Escribe aquí...">
+              </mat-form-field>
+
+              <mat-card-subtitle>Título</mat-card-subtitle>
+              <mat-form-field class="input">
+                <input matInput placeholder="Escribe aquí...">
+              </mat-form-field>
+
+              <mat-card-subtitle>Descripción</mat-card-subtitle>
+              <textarea class="input2" matInput placeholder="Descripción"></textarea>
+              <button mat-button class="button2" style="background-color: #14131B; color: white;">Agregar Fotos</button>
+              <button mat-button class="button2" style="background-color: #14131B; color: white;"
+                      (click)="openSnackBar('¡Se ha enviado Correctamente!', 'Cerrar')">Enviar</button>
+
+            </mat-card-content>
+          </mat-card>
+
+
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <mat-sidenav #sidenav fxLayout="column">
+      <div fxLayout="column">
+        <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
+        <a class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/share-tenant']">BUSCAR AUTOS</a>
+        <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
+        <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
+        <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
+        <a class="buttonnav" mat-button [routerLink]="['/perfil-tenant']">PERFIL</a>
+      </div>
+
+    </mat-sidenav>
+  </mat-sidenav-container>
+
+
+
+</div>
+
+
+
+
