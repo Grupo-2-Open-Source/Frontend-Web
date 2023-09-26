@@ -18,6 +18,7 @@ import {ValidationComponent} from "./public/pages/login/validation/validation.co
 import {MainPageTenantComponent} from "./public/pages/main-page-tenant/main-page-tenant.component";
 import {ProfileTenantComponent} from "./public/pages/profile-user/profile-tenant/profile-tenant.component";
 import {ProfileOwnerComponent} from "./public/pages/profile-user/profile-owner/profile-owner/profile-owner.component";
+import {RequestTenantComponent} from "./public/pages/request/request-tenant/request-tenant/request-tenant.component";
 
 
 
@@ -32,6 +33,7 @@ const routes:Routes=[
   {path: 'restore-tenant',component:RestoreTenantComponent},
   {path: 'validation',component:ValidationComponent},
   {path: 'main-page-tenant',component:MainPageTenantComponent},
+  {path:'requests-tenant', component:RequestTenantComponent},
   {path:'profile-tenant',component:ProfileTenantComponent},
   {path:'profile-owner',component:ProfileOwnerComponent},
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},
