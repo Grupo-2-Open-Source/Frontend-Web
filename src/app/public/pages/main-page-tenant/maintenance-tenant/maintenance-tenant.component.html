@@ -22,7 +22,7 @@
       <router-outlet></router-outlet>
     </mat-toolbar>
 
-    <div style="display: flex; height: 130vh">
+    <div style="display: flex; height: 90vh">
       <mat-card class="card-share">
         <mat-card-header>
           <mat-card-title class="letter1">
@@ -62,15 +62,28 @@
           </mat-form-field><button mat-button class="button" style="background-color: #14131B; color: white;">BUSCAR</button>
 
           <mat-card class="centered-card">
-            <mat-card-content >
+            <mat-card-content style="width: 600px">
 
-              <mat-card-subtitle>Precio</mat-card-subtitle>
+              <mat-card-subtitle>Tipo de problema</mat-card-subtitle>
               <mat-form-field class="input">
                 <input matInput placeholder="Escribe aquí...">
               </mat-form-field>
 
+              <mat-card-subtitle>Título</mat-card-subtitle>
+              <mat-form-field class="input">
+                <input matInput placeholder="Escribe aquí...">
+              </mat-form-field>
+
+              <mat-card-subtitle>Descripción</mat-card-subtitle>
+              <textarea class="input2" matInput placeholder="Descripción"></textarea>
+              <button mat-button class="button2" style="background-color: #14131B; color: white;">Agregar Fotos</button>
+              <button mat-button class="button2" style="background-color: #14131B; color: white;"
+                      (click)="openSnackBar('¡Se ha enviado Correctamente!', 'Cerrar')">Enviar</button>
+
             </mat-card-content>
           </mat-card>
+
+
 
         </mat-card-content>
       </mat-card>

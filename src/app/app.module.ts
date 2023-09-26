@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {bootstrapApplication, BrowserModule} from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -79,13 +80,14 @@ import { NotificationsOwnerComponent } from './public/pages/main-page-owner/noti
     NgIf,
     NgbSlide,
     NgbModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    MatSnackBarModule
   ],
   exports:[
   MatButtonModule,
   MatIconModule,
   ],
-  providers: [],
+  providers: [MatSnackBarModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {
