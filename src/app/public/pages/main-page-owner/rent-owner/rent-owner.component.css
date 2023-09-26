@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.toolbarr{
+  background-color: whitesmoke;
+  box-shadow: #14131B;
+
+}
+.contenedor-principal{
+  display: flex;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  background-image: url("https://i.postimg.cc/ZYsjSv1b/pexels-maria-orlova-4969878.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0;
+}
+.mat-spacer{
+  flex: 1.1 auto;
+
+  box-shadow: #14131B;
+}
+.buttonnav{
+  color: #14131B;
+  margin: 10px;
+  list-style-type: none;
+}
+.buttonnav:focus{
+  color: #FF7A00;
+}
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+
+.contenedor{
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: whitesmoke;
+  opacity: 100%;
+  border-radius: 30px;
+
+  box-shadow:#14131B ;
+  justify-content: center;
+
+}
+.contenedor2{
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  opacity: 100%;
+  border-radius: 30px;
+
+  box-shadow:#14131B ;
+  justify-content: center;
+
+}
+.section-button{
+
+  place-items: center;
+  display: flex;
+  margin: auto;
+
+  justify-content: center;
+}
+
+#btnn{
+
+  background-color: transparent;
+  border: none;
+
+  padding: 0;
+  flex-direction: column;
+  font-weight: bold;
+  color: black;
+  font-family: 'Poppins',sans-serif;
+  box-shadow: none;
+}
+
+.input{
+  display: flex;
+
+  border: none;
+  text-align: start;
+  justify-content: center;
+}
+.letter1{
+  text-align: center;
+  font-size: 40px;
+  display: flex;
+  flex-flow: column;
+  color: #FF7A00;
+
+  font-family: 'Poppins',sans-serif;
+}
+.letter2{
+  text-align: center;
+  font-size: 40px;
+  flex-flow: column;
+  display: flex;
+  color: #14131B;
+  font-family: 'Poppins',sans-serif;
+}
+.imagen1{
+  flex-direction: column;
+  margin-right:25px;
+  margin-left: 25px;
+
+  max-width: 190px;
+}
+

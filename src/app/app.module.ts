@@ -36,6 +36,11 @@ import {NgbCarousel, NgbCarouselModule, NgbModule, NgbSlide} from '@ng-bootstrap
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MainPageOwnerComponent } from './public/pages/main-page-owner/main-page-owner.component';
 import { NotificationsOwnerComponent } from './public/pages/main-page-owner/notifications-owner/notifications-owner.component';
+import { VehicleRegistrationOwnerComponent } from './public/pages/main-page-owner/vehicle-registration-owner/vehicle-registration-owner.component';
+import { CreateContractOwnerComponent } from './public/pages/main-page-owner/create-contract-owner/create-contract-owner.component';
+import { RentOwnerComponent } from './public/pages/main-page-owner/rent-owner/rent-owner.component';
+import { RentTenantComponent } from './public/pages/main-page-tenant/rent-tenant/rent-tenant.component';
+import { PayCarRentalComponent } from './public/pages/main-page-tenant/pay-car-rental/pay-car-rental.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +60,11 @@ import { NotificationsOwnerComponent } from './public/pages/main-page-owner/noti
     MaintenanceTenantComponent,
     MainPageOwnerComponent,
     NotificationsOwnerComponent,
+    VehicleRegistrationOwnerComponent,
+    CreateContractOwnerComponent,
+    RentOwnerComponent,
+    RentTenantComponent,
+    PayCarRentalComponent,
 
 
 
