@@ -30,6 +30,7 @@ import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module
 import { ProfileTenantComponent } from './public/pages/profile-user/profile-tenant/profile-tenant.component';
 import {MatListModule} from "@angular/material/list";
 import { ProfileOwnerComponent } from './public/pages/profile-user/profile-owner/profile-owner/profile-owner.component';
+import { RequestTenantComponent } from './public/pages/request/request-tenant/request-tenant/request-tenant.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ProfileOwnerComponent } from './public/pages/profile-user/profile-owner
     ShareAutoTenantComponent,
     ProfileTenantComponent,
     ProfileOwnerComponent,
+    RequestTenantComponent,
 
   ],
   imports: [
