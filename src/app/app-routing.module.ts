@@ -33,6 +33,9 @@ import {
 import {RentOwnerComponent} from "./public/pages/main-page-owner/rent-owner/rent-owner.component";
 import {RentTenantComponent} from "./public/pages/main-page-tenant/rent-tenant/rent-tenant.component";
 import {PayCarRentalComponent} from "./public/pages/main-page-tenant/pay-car-rental/pay-car-rental.component";
+import {ProfileOwnerComponent} from "./public/pages/profile-user/profile-owner/profile-owner/profile-owner.component";
+import {ProfileTenantComponent} from "./public/pages/profile-user/profile-tenant/profile-tenant.component";
+import {RequestTenantComponent} from "./public/pages/request/request-tenant/request-tenant/request-tenant.component";
 
 
 
@@ -56,6 +59,9 @@ const routes:Routes=[
   {path: 'rent-owner', component: RentOwnerComponent},
   {path: 'rent-tenant', component: RentTenantComponent},
   {path: 'pay-car-rental', component: PayCarRentalComponent},
+  {path:'requests-tenant', component: RequestTenantComponent},
+  {path:'perfil-owner',component: ProfileOwnerComponent},
+  {path:'perfil-tenant', component: ProfileTenantComponent },
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent},
   // al final colocar pagenout
