@@ -29,6 +29,7 @@ import { ShareAutoTenantComponent } from './public/pages/main-page-tenant/share-
 import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module";
 import { ProfileTenantComponent } from './public/pages/profile-user/profile-tenant/profile-tenant.component';
 import {MatListModule} from "@angular/material/list";
+import { ProfileOwnerComponent } from './public/pages/profile-user/profile-owner/profile-owner/profile-owner.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import {MatListModule} from "@angular/material/list";
     MainPageTenantComponent,
     ShareAutoTenantComponent,
     ProfileTenantComponent,
+    ProfileOwnerComponent,
 
   ],
   imports: [

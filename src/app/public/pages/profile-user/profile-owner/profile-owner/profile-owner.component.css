@@ -35,7 +35,7 @@
   flex: 1 1 auto;
 }
 
-.Profile-tenant{
+.Profile-owner{
   width: 40%;
   height: 100vh;
   padding-top: 20px;
@@ -45,7 +45,7 @@
   opacity: 100%;
 
 }
-.letter1{
+.letter1-ow{
   text-align: center;
   font-size: 40px;
   display: flex;
@@ -58,7 +58,7 @@
   margin-left: 50px;
 }
 
-.letter2{
+.letter2-ow{
   font-size: 20px;
   flex-flow: column;
   display: flex;
@@ -70,17 +70,17 @@
   margin-left: 50px;
 }
 
-.letter3{
-    font-size: 25px;
-    flex-flow: column;
-    display: flex;
-    font-family: 'Poppins',sans-serif;
-    font-weight: 500;
-    margin-left: 30px;
-    margin-top: 50px;
-    justify-content: space-evenly;
-    padding: 1px 8px;
-    margin-left: 80px;
+.letter3-ow{
+  font-size: 25px;
+  flex-flow: column;
+  display: flex;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 500;
+  margin-left: 30px;
+  margin-top: 50px;
+  justify-content: space-evenly;
+  padding: 1px 8px;
+  margin-left: 80px;
 }
 
 
@@ -99,19 +99,17 @@
   justify-content: space-evenly;
 }
 
-.boton_Profile{
+.boton_Profile-owner{
   width: 50%;
   margin-left: 150px;
   margin-top: 100px;
   display: flex;
-
 }
 
 .button_Image{
   background-color: black;
   width: 300px;
   padding: 20px;
-  flex: 1.1 auto;
 }
 .photo_perfil .img{
   width:300px;
@@ -138,4 +136,3 @@
     margin-left: 25%;
   }
 }
-

@@ -13,4 +13,5 @@ export class ProfileTenantComponent {
   iphone=0;
   gmail='';
   numbercar=0;
+  sidenav: any;
 }
