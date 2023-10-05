@@ -1,23 +1,49 @@
-<div class="card">
-  <p-carousel [value]="rented" >
-    <ng-template let-product pTemplate="item">
-      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
-        <div class="mb-3">
-          <img src="{{ product.img_src }}" [alt]="product.marca" class="w-6 shadow-2" />
-        </div>
-        <div>
-          <h4 class="mb-1">{{ product.modelo }}</h4>
-          <h6 class="mt-0 mb-3">{{ product.modelo }}</h6>
 
-          <div class="car-buttons mt-5">
-            <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
-            <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+<div style="height: 100vh;">
+
+
+
+<div >
+  <mat-card class="card-share">
+    <mat-card-header>
+      <mat-card-title class="letter1">
+        <mat-label class="title1" ><b>ALQUILER</b></mat-label>
+        <mat-label class="subtitle">Autos Alquilados</mat-label>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card style="box-shadow: none;border: none;margin-bottom: 20px">
+      <mat-card-title style="text-align: end;margin-right: 30px">
+        <button mat-button style="background-color:#14131B ;color: white" [routerLink]="['/tenant/share-auto-tenant']">Alquilar Nuevo auto</button>
+      </mat-card-title>
+    </mat-card>
+    <mat-card-content>
+      <p-carousel [value]="rented" [numVisible]="3" [numScroll]="1" [circular]="true"  [responsiveOptions]="responsiveOptions" >
+        <ng-template let-rent pTemplate="item" >
+          <div class="border-1 surface-border border-round m-2 text-center py-5 px-3" >
+            <div class="mb-3" style="border-radius: 10px;text-align: center;justify-content: center">
+              <img src="{{ rent.img_src }}" class="img_vehicule" />
+              <h4 class="mb-1"><b>MARCA:</b>{{ rent.marca }}</h4>
+              <h4 class="mt-0 mb-3"><b>MODELO:</b>{{ rent.modelo }}</h4>
+              <h4 class="mt-0 mb-3"><b>PROPIETARIO:</b>{{ rent.propietario }}</h4>
+              <h4 class="mt-0 mb-3"><b>CELULAR:</b>{{ rent.celular }}</h4>
+              <h4 class="mt-0 mb-3"><b>FECHA INICIO CONTRATO :</b>{{ rent.fecha_inicio_contrato }}</h4>
+              <h4 class="mt-0 mb-3"><b>FECHA FIN CONTRATO :</b>{{ rent.fecha_fin_contrato }}</h4>
+              <h4 class="mt-0 mb-3"><b>ESTADO SOLICITUD :</b>EN ESPERA</h4>
+            </div>
+
+            <!--                <div class="car-buttons mt-5">-->
+            <!--              <p-button> PAGAR </p-button>-->
+            <!--                </div>-->
           </div>
-        </div>
-      </div>
-    </ng-template>
-  </p-carousel>
+        </ng-template>
+      </p-carousel>
+    </mat-card-content>
+  </mat-card>
+
+
 </div>
+</div>
+
 
 
 

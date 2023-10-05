@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class RentTenantComponent  implements OnInit, AfterViewInit{
   Rented_Vehicles: RentedVehicles;
   rented: RentedVehicles[] = [];
-
+  responsiveOptions: any[] | undefined;
   constructor(private rentedService: RentdTenantService) {
     this.Rented_Vehicles = {} as RentedVehicles;
   }
@@ -20,6 +20,23 @@ export class RentTenantComponent  implements OnInit, AfterViewInit{
     }
   ngOnInit() {
     this.getAllRentedVehicule();
+    this.responsiveOptions = [
+      {
+        breakpoint: '1199px',
+        numVisible: 1,
+        numScroll: 1
+      },
+      {
+        breakpoint: '991px',
+        numVisible: 2,
+        numScroll: 1
+      },
+      {
+        breakpoint: '767px',
+        numVisible: 1,
+        numScroll: 1
+      }
+    ];
   }
   private getAllRentedVehicule(){
     this.rentedService.getAll().subscribe((response: any) =>{
