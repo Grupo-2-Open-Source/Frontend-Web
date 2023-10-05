@@ -1,38 +1,16 @@
 
 
-<!--<mat-toolbar class="toolbarr">-->
+<!--<mat-toolbar-tenant class="toolbarr">-->
 
 <!--&lt;!&ndash;  <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">&ndash;&gt;-->
 <!--&lt;!&ndash;  <div class="mat-spacer"></div>&ndash;&gt;-->
 
 <!--  <a mat-button *ngFor="let option of options"-->
 <!--     [routerLink]="option.path" class="buttonnav">{{option.title}}</a>-->
-<!--</mat-toolbar>-->
+<!--</mat-toolbar-tenant>-->
 <!--<router-outlet></router-outlet>-->
 
 <div style="height: 100vh;">
-
-  <mat-sidenav-container fxFlexFill class="example-container">
-
-    <mat-toolbar class="toolbarr">
-      <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
-      <div class="mat-spacer"></div>
-
-      <span class="example-spacer"></span>
-      <div fxShow="true" fxHide.lt-md="true">
-        <a  class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
-        <a  class="buttonnav" mat-button [routerLink]="['/share-auto-tenant']">BUSCAR AUTOS</a>
-        <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
-        <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
-        <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
-        <a mat-button  [routerLink]="['/perfil-tenant']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
-      </div>
-
-      <div fxShow="true" fxHide.gt-sm="true">
-        <a  (click)="sidenav.toggle()"><mat-icon>home</mat-icon></a>
-      </div>
-      <router-outlet></router-outlet>
-    </mat-toolbar>
 
 
 
@@ -47,7 +25,8 @@
           <mat-label style="text-align: left">Ubicación</mat-label>
           <mat-form-field >
             <input matInput [(ngModel)]="country" type="text" placeholder="Ubicación" class="input" >
-          </mat-form-field> <button mat-button style="background-color: #14131B;color: white"> BUSCAR UN AUTO</button>
+          </mat-form-field>
+        <button mat-button style="background-color: #14131B;color: white" [routerLink]="['/tenant/share-auto-tenant']"> BUSCAR UN AUTO</button>
 
       </mat-card-content>
     </mat-card>
@@ -74,19 +53,6 @@
       </mat-card-content>
     </mat-card>
 
-    <mat-sidenav #sidenav fxLayout="column">
-      <div fxLayout="column">
-        <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
-        <a class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
-        <a  class="buttonnav" mat-button [routerLink]="['/share-tenant']">BUSCAR AUTOS</a>
-        <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
-        <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
-        <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
-        <a class="buttonnav" mat-button [routerLink]="['/perfil-tenant']">PERFIL</a>
-      </div>
-
-    </mat-sidenav>
-  </mat-sidenav-container>
 
 
 
