@@ -53,6 +53,7 @@ import {ButtonModule} from "primeng/button";
 import {RentdTenantService} from "./public/services/rentd-tenant.service";
 import { NuevoComponent } from './public/pages/prueba/nuevo/nuevo.component';
 import {HttpClientModule} from "@angular/common/http";
+import {CardModule} from "primeng/card";
 
 @NgModule({
   declarations: [
@@ -111,6 +112,7 @@ import {HttpClientModule} from "@angular/common/http";
     CarouselModule,
     ButtonModule,
     HttpClientModule,
+    CardModule,
   ],
   exports:[
   MatButtonModule,
