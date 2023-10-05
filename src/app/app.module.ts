@@ -29,7 +29,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ShareAutoTenantComponent } from './public/pages/main-page-tenant/share-auto-tenant/share-auto-tenant.component';
-import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module";
+
 
 import { MaintenanceTenantComponent } from './public/pages/main-page-tenant/maintenance-tenant/maintenance-tenant.component';
 import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
@@ -46,6 +46,13 @@ import {ProfileOwnerComponent} from "./public/pages/profile-user/profile-owner/p
 import {ProfileTenantComponent} from "./public/pages/profile-user/profile-tenant/profile-tenant.component";
 import {MatListModule} from "@angular/material/list";
 import {RequestTenantComponent} from "./public/pages/request/request-tenant/request-tenant/request-tenant.component";
+import { ToolbarComponent } from './public/pages/component/toolbar-tenant/toolbar.component';
+import { ToolbarOwnerComponent } from './public/pages/component/toolbar-owner/toolbar-owner.component';
+import {CarouselModule} from "primeng/carousel";
+import {ButtonModule} from "primeng/button";
+import {RentdTenantService} from "./public/services/rentd-tenant.service";
+import { NuevoComponent } from './public/pages/prueba/nuevo/nuevo.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -73,6 +80,9 @@ import {RequestTenantComponent} from "./public/pages/request/request-tenant/requ
     RequestTenantComponent,
     ProfileOwnerComponent,
     ProfileTenantComponent,
+    ToolbarComponent,
+    ToolbarOwnerComponent,
+    NuevoComponent,
 
 
   ],
@@ -90,7 +100,6 @@ import {RequestTenantComponent} from "./public/pages/request/request-tenant/requ
     FormsModule,
     FlexLayoutModule,
     MatSidenavModule,
-    MyRoutingModule,
     NgbCarousel,
     NgbCarouselModule,
     NgIf,
@@ -98,13 +107,16 @@ import {RequestTenantComponent} from "./public/pages/request/request-tenant/requ
     NgbModule,
     SlickCarouselModule,
     MatSnackBarModule,
-    MatListModule
+    MatListModule,
+    CarouselModule,
+    ButtonModule,
+    HttpClientModule,
   ],
   exports:[
   MatButtonModule,
   MatIconModule,
   ],
-  providers: [MatSnackBarModule],
+  providers: [RentdTenantService,],
   bootstrap: [AppComponent]
 })
 export class AppModule {
