@@ -40,7 +40,7 @@ export class RentTenantComponent  implements OnInit, AfterViewInit{
   }
   private getAllRentedVehicule(){
     this.rentedService.getAll().subscribe((response: any) =>{
-      this.rented = response;
+      this.rented = response.rented_tenant;
     });
   }
 

@@ -1,8 +1,8 @@
-<div style="height: 100vh;">
 
 
 
-    <div style="display: flex; height: 90vh">
+
+    <div class="maintenance_t" >
       <mat-card class="card-share">
         <mat-card-header>
           <mat-card-title class="letter1">
@@ -56,8 +56,21 @@
 
               <mat-card-subtitle>Descripción</mat-card-subtitle>
               <textarea class="input2" matInput placeholder="Descripción"></textarea>
-              <button mat-button class="button2" style="background-color: #14131B; color: white;">Agregar Fotos</button>
-              <button mat-button class="button2" style="background-color: #14131B; color: white;"
+<!--              <button mat-button class="button2" style="background-color: #14131B; color: white;" type="file" >Agregar Fotos</button>-->
+
+              <div>
+                <input  type="file" (change)="onFileSelected($event)" style="display: none;" #fileInput>
+                <button mat-raised-button color="primary" class="button2" (click)="fileInput.click()">
+                  Seleccionar archivo
+                </button>
+                <span *ngIf="selectedFile">{{ selectedFile.name }}</span>
+                <button mat-raised-button color="primary" class="button2" (click)="onUpload()" [disabled]="!selectedFile">
+                  Subir archivo
+                </button>
+              </div>
+<!--              <p-fileUpload name="file" url="/upload" (onUpload)="handleFileUpload($event)" chooseLabel="Seleccionar archivo"></p-fileUpload>-->
+
+              <button mat-button class="button2" style="background-color: #FF7A00; color: white;"
                       (click)="openSnackBar('¡Se ha enviado Correctamente!', 'Cerrar')">Enviar</button>
 
             </mat-card-content>
@@ -69,7 +82,7 @@
       </mat-card>
     </div>
 
-</div>
+
 
 
 

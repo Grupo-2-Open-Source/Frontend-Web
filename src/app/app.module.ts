@@ -54,6 +54,9 @@ import {RentdTenantService} from "./public/services/rentd-tenant.service";
 import { NuevoComponent } from './public/pages/prueba/nuevo/nuevo.component';
 import {HttpClientModule} from "@angular/common/http";
 import {CardModule} from "primeng/card";
+import {ImageModule} from "primeng/image";
+import {RequestTenantService} from "./public/services/request-tenant.service";
+import {FileUploadModule} from "primeng/fileupload";
 
 @NgModule({
   declarations: [
@@ -113,12 +116,14 @@ import {CardModule} from "primeng/card";
     ButtonModule,
     HttpClientModule,
     CardModule,
+    ImageModule,
+    FileUploadModule,
   ],
   exports:[
   MatButtonModule,
   MatIconModule,
   ],
-  providers: [RentdTenantService,],
+  providers: [RentdTenantService,RequestTenantService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
