@@ -1,63 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-.toolbarr{
-  background-color: whitesmoke;
-  box-shadow: #14131B;
-
-}
-.contenedor-principal{
+.maintenance_t{
   display: flex;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  background-image: url("https://i.postimg.cc/ZYsjSv1b/pexels-maria-orlova-4969878.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 0;
+  height: 100vh;
+  width: 1490px;
 }
-.mat-spacer{
-  flex: 1.1 auto;
-
-  box-shadow: #14131B;
-}
-.buttonnav{
-  color: #14131B;
-  margin: 10px;
-  list-style-type: none;
-}
-.buttonnav:focus{
-  color: #FF7A00;
-}
-.example-icon {
-  padding: 0 14px;
-}
-
-.example-spacer {
-  flex: 1 1 auto;
-}
-
 .card-share{
+  display:flex;
   width: 35%;
-  height: 110vh;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  background-color: whitesmoke;
-  opacity: 100%;
-
 }
-
 .card-share2{
-  width: 65%;
-  height: 110vh;
-  display: flex;
-  flex-direction: column;
-  background-color: whitesmoke;
-  opacity: 100%;
+  display:flex;
+  width: 1000px;
+
 
 }
+
+
+/*.card-share{*/
+/*  width: 35%;*/
+/*  height: 110vh;*/
+/*  padding-top: 20px;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  background-color: whitesmoke;*/
+/*  opacity: 100%;*/
+
+/*}*/
+
+/*.card-share2{*/
+/*  width: 65%;*/
+/*  height: 110vh;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  background-color: whitesmoke;*/
+/*  opacity: 100%;*/
+
+/*}*/
 
 .centered-card{
-  width: 100%;
-  height: 80vh;
+
+  max-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,18 +76,7 @@
   justify-content: center;
 }
 
-#btnn{
 
-  background-color: transparent;
-  border: none;
-
-  padding: 0;
-  flex-direction: column;
-  font-weight: bold;
-  color: black;
-  font-family: 'Poppins',sans-serif;
-  box-shadow: none;
-}
 
 .letter1{
   text-align: center;
@@ -179,21 +150,39 @@
 
 
 
-@media (max-width: 1094px) {
-  .card-share, .card-share2, .centered-card{
-    width: 50%;
-  }
-}
+/*@media (max-width: 1094px) {*/
+/*  .card-share, .card-share2, .centered-card{*/
+/*    width: 50%;*/
+/*  }*/
+/*}*/
 
-@media (max-width: 1094px) {
-  .letter1, .letter2, .letter3, .letter4 {
-    font-size: 16px;
-  }
-}
+/*@media (max-width: 1094px) {*/
+/*  .letter1, .letter2, .letter3, .letter4 {*/
+/*    font-size: 16px;*/
+/*  }*/
+/*}*/
 
-@media (max-width: 1094px) {
-  .button, .button2 {
-    width: 50%;
-    margin-left: 25%;
+/*@media (max-width: 1094px) {*/
+/*  .button, .button2 {*/
+/*    width: 50%;*/
+/*    margin-left: 25%;*/
+/*  }*/
+/*}*/
+
+@media all and (max-width: 840px) {
+  .maintenance_t{
+    display:grid;
+
+    width: auto;
+  }
+  .card-share{
+    display:flex;
+    flex-direccion: column;
+    width: auto;
+  }
+  .card-share2{
+    display:flex;
+    flex-direccion: column;
+    width: auto;
   }
 }

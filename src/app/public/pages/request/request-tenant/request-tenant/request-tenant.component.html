@@ -1,19 +1,16 @@
-<div  style="height: 100vh; background-color: white; ">
-
-    <div >
-      <div class="titulo">
-        <h1 class="txt-1">SOLICITUDES</h1>
-      </div>
-
-      <div class="car">
-        <div class="title_derecha">
-          <h3 >Solicitud de alquiler del vehiculo Toyota Prius</h3>
+<div class="container">
+  <div *ngFor="let bundle of request" >
+    <mat-card class="container_1">
+      <mat-card-content class="container_2">
+        <div class="description_request">
+          <label  aria-label="descriptions" style="margin-right: 20px"> {{ bundle.descriptions }}</label>
         </div>
-        <div class="izquierda">
-          <img class="img" mat-card-image src="https://imgur.com/xWEj5ZJ.png" alt="photo-car" width="200px">
-          <h5>ESTATUS: EN ESPERA</h5>
+        <div  >
+          <img src='{{ bundle.img_src }}' width="150px">
+          <p aria-label="status"><strong>Status:</strong> {{ bundle.status }}</p>
         </div>
-      </div>
-
-    </div>
+      </mat-card-content>
+    </mat-card>
+    <br>
+  </div>
 </div>
