@@ -32,9 +32,9 @@ import { ShareAutoTenantComponent } from './public/pages/main-page-tenant/share-
 
 
 import { MaintenanceTenantComponent } from './public/pages/main-page-tenant/maintenance-tenant/maintenance-tenant.component';
-import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
-import {NgbCarousel, NgbCarouselModule, NgbModule, NgbSlide} from '@ng-bootstrap/ng-bootstrap';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+
+
+
 import { MainPageOwnerComponent } from './public/pages/main-page-owner/main-page-owner.component';
 import { NotificationsOwnerComponent } from './public/pages/main-page-owner/notifications-owner/notifications-owner.component';
 import { VehicleRegistrationOwnerComponent } from './public/pages/main-page-owner/vehicle-registration-owner/vehicle-registration-owner.component';
@@ -104,12 +104,7 @@ import {FileUploadModule} from "primeng/fileupload";
     FormsModule,
     FlexLayoutModule,
     MatSidenavModule,
-    NgbCarousel,
-    NgbCarouselModule,
     NgIf,
-    NgbSlide,
-    NgbModule,
-    SlickCarouselModule,
     MatSnackBarModule,
     MatListModule,
     CarouselModule,
