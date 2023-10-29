@@ -1,30 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-.toolbarr{
-  background-color: whitesmoke;
-  box-shadow: #14131B;
+.card-share{
+  /*width: 35%;*/
+  /*height: 110vh;*/
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  opacity: 100%;
+  box-shadow:none;
+  border:none;
 
 }
-.contenedor-principal{
+.letter1{
+  text-align: center;
   display: flex;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  background-image: url("https://i.postimg.cc/ZYsjSv1b/pexels-maria-orlova-4969878.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 0;
+  flex-flow: column;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 700;
+  margin-left: 20px;
+}
+.title1{
+  padding:0;
+  grid-area: label;
+  font-size: 40px;
+  color: #FF7A00;
+  font-family: 'Poppins', sans-serif;
+
+}
+.subtitle{
+  margin-top:30px;
+  grid-area: button;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: row;
+
+}
+.carousel{
+  width: 100px;
+}
+.card{
+  margin-top:30px;
+  background-color:red;
 }
 .mat-spacer{
   flex: 1.1 auto;
 
   box-shadow: #14131B;
-}
-.buttonnav{
-  color: #14131B;
-  margin: 10px;
-  list-style-type: none;
-}
-.buttonnav:focus{
-  color: #FF7A00;
 }
 .example-icon {
   padding: 0 14px;
@@ -33,85 +56,12 @@
 .example-spacer {
   flex: 1 1 auto;
 }
-
-
-
-.contenedor{
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  background-color: whitesmoke;
-  opacity: 100%;
-  border-radius: 30px;
-
-  box-shadow:#14131B ;
-  justify-content: center;
-
+.img_vehicule{
+  width:400px;
 }
-.contenedor2{
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  opacity: 100%;
-  border-radius: 30px;
+@media all and (max-width: 840px) {
 
-  box-shadow:#14131B ;
-  justify-content: center;
-
+  .img_vehicule{
+    width:250px;
+  }
 }
-.section-button{
-
-  place-items: center;
-  display: flex;
-  margin: auto;
-
-  justify-content: center;
-}
-
-#btnn{
-
-  background-color: transparent;
-  border: none;
-
-  padding: 0;
-  flex-direction: column;
-  font-weight: bold;
-  color: black;
-  font-family: 'Poppins',sans-serif;
-  box-shadow: none;
-}
-
-.input{
-  display: flex;
-
-  border: none;
-  text-align: start;
-  justify-content: center;
-}
-.letter1{
-  text-align: center;
-  font-size: 40px;
-  display: flex;
-  flex-flow: column;
-  color: #FF7A00;
-
-  font-family: 'Poppins',sans-serif;
-}
-.letter2{
-  text-align: center;
-  font-size: 40px;
-  flex-flow: column;
-  display: flex;
-  color: #14131B;
-  font-family: 'Poppins',sans-serif;
-}
-.imagen1{
-  flex-direction: column;
-  margin-right:25px;
-  margin-left: 25px;
-
-  max-width: 190px;
-}
-

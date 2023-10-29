@@ -30,10 +30,6 @@
               <h4 class="mt-0 mb-3"><b>FECHA FIN CONTRATO :</b>{{ rent.fecha_fin_contrato }}</h4>
               <h4 class="mt-0 mb-3"><b>ESTADO SOLICITUD :</b>EN ESPERA</h4>
             </div>
-
-            <!--                <div class="car-buttons mt-5">-->
-            <!--              <p-button> PAGAR </p-button>-->
-            <!--                </div>-->
           </div>
         </ng-template>
       </p-carousel>
@@ -43,110 +39,5 @@
 
 </div>
 </div>
-
-
-
-
-<!--<span>holassssssssssssssssssss</span>-->
-<!--<div class="container">-->
-<!--  <div *ngFor="let bundle of rented" class="student-card">-->
-<!--    <mat-card class="container_2">-->
-<!--      <mat-card-header>-->
-<!--        <mat-card-title style="color: blueviolet" aria-label="Title of bundles">{{ bundle.fecha_inicio_contrato }}</mat-card-title>-->
-<!--      </mat-card-header>-->
-<!--      <mat-card-content>-->
-<!--        <img src='{{ bundle.img_src }}' width="100px">-->
-<!--        <p aria-label="rating"><strong>Rating:</strong> {{ bundle.marca }}</p>-->
-<!--        <p aria-label="price"><strong>Precio:</strong> {{ bundle.modelo  }}</p>-->
-<!--        <p aria-label="You save"><strong>You Save :</strong> {{ bundle.propietario}}</p>-->
-<!--        <p aria-label="descriptions"><strong>Descripcion:</strong> {{ bundle.celular }}</p>-->
-<!--      </mat-card-content>-->
-<!--    </mat-card>-->
-<!--    <br>-->
-<!--  </div>-->
-<!--</div>-->
-
-
-
-
-
-
-
-<!--<div style="height: 100vh;">-->
-
-
-
-<!--    <mat-card fxFlex="100%" style="min-height: 15vh; display: grid; grid-template-areas:'label p' 'button button';">-->
-
-<!--      <mat-label style="grid-area: label; font-size: 20px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;"><b>ALQUILER</b></mat-label>-->
-
-<!--      <p style="grid-area: button; text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Autos alquilados actualmente</p>-->
-
-<!--    </mat-card>-->
-
-<!--    <mat-card fxFlex="100%">-->
-<!--      <div fxLayout="row wrap" fxLayoutGap="10px">-->
-<!--        <mat-card fxFlex="calc(33.33% - 10px)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">-->
-<!--          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0HbJoi3q8SuPYSM9VcLUpLFMKGMh4bjTTNw" alt="Imagen" style="margin: 20px; max-width: 100%; max-height: 100%;"/>-->
-
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Marca/Modelo: Toyota/Prius</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Propietario: Juan Pérez</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Celular: +123456789</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Fecha de inicio de contrato: 01/01/2023</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Fecha de fin de contrato: 01/02/2023</p>-->
-<!--          <mat-label style="font-size: 20px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;">Solicitud aceptada</mat-label>-->
-
-<!--          <button mat-raised-button style="margin: 20px; background-color: #14131B; color: white; font-family: 'Poppins', sans-serif;" [routerLink]="['/tenant/pay-car-rental']">PAGAR</button>-->
-<!--        </mat-card>-->
-
-<!--        <mat-card fxFlex="calc(33.33% - 10px)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">-->
-<!--          <img src="https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg" alt="Imagen" style="margin: 20px; max-width: 100%; max-height: 100%;"/>-->
-
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Marca/Modelo: Honda/Civic</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Propietario: María López</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Celular: +987654321</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Fecha de inicio de contrato: 05/02/2023</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Fecha de fin de contrato: 05/03/2023</p>-->
-<!--          <mat-label style="font-size: 20px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;">Solicitud aceptada</mat-label>-->
-
-<!--          <button mat-raised-button style="margin: 20px; background-color: #14131B; color: white; font-family: 'Poppins', sans-serif;" [routerLink]="['/pay-car-rental']">PAGAR</button>-->
-<!--        </mat-card>-->
-
-<!--        <mat-card fxFlex="calc(33.33% - 10px)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">-->
-<!--          <img src="https://www.autobild.es/sites/autobild.es/public/styles/main_element/public/dc/fotos/Ford_Fiesta_2022_02.jpg?itok=7w8cVeBq" alt="Imagen" style="margin: 20px; max-width: 100%; max-height: 100%;"/>-->
-
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Marca/Modelo: Ford/Fiesta</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Propietario: Carlos Rodríguez</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Celular: +555555555</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Fecha de inicio de contrato: 10/03/2023</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Fecha de fin de contrato: 10/04/2023</p>-->
-<!--          <mat-label style="font-size: 20px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;">Solicitud aceptada</mat-label>-->
-
-<!--          <button mat-raised-button style="margin: 20px; background-color: #14131B; color: white; font-family: 'Poppins', sans-serif;" [routerLink]="['/pay-car-rental']">PAGAR</button>-->
-<!--        </mat-card>-->
-
-<!--        <mat-card fxFlex="calc(33.33% - 10px)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">-->
-<!--          <img src="https://www.cars.com/i/large/in/v2/stock_photos/29aa41a1-8e67-4a7d-8424-10ae2f521512/a123e269-96be-4f60-9b80-26ee9011b090.png" alt="Imagen" style="margin: 20px; max-width: 100%; max-height: 100%;"/>-->
-
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Marca/Modelo: Nissan/Altima</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Propietario: Ana Martínez</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Celular: +111111111</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Fecha de inicio de contrato: 15/04/2023</p>-->
-<!--          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Fecha de fin de contrato: 15/05/2023</p>-->
-<!--          <mat-label style="font-size: 20px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;">Solicitud aceptada</mat-label>-->
-
-<!--          <button mat-raised-button style="margin: 20px; background-color: #14131B; color: white; font-family: 'Poppins', sans-serif;" [routerLink]="['/pay-car-rental']">PAGAR</button>-->
-<!--        </mat-card>-->
-
-<!--        <mat-card fxFlex="calc(33.33% - 10px)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">-->
-<!--          <button mat-raised-button style="margin: 20px; background-color: #14131B; color: white; font-family: 'Poppins', sans-serif;" [routerLink]="['/share-auto-tenant']">Alquilar un nuevo auto</button>-->
-<!--        </mat-card>-->
-<!--      </div>-->
-<!--    </mat-card>-->
-
-
-
-<!--</div>-->
-
 
 

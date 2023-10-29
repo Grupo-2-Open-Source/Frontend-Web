@@ -15,28 +15,6 @@
 
 }
 
-
-/*.card-share{*/
-/*  width: 35%;*/
-/*  height: 110vh;*/
-/*  padding-top: 20px;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  background-color: whitesmoke;*/
-/*  opacity: 100%;*/
-
-/*}*/
-
-/*.card-share2{*/
-/*  width: 65%;*/
-/*  height: 110vh;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  background-color: whitesmoke;*/
-/*  opacity: 100%;*/
-
-/*}*/
-
 .centered-card{
 
   max-height: 80vh;
@@ -72,7 +50,6 @@
   place-items: center;
   display: flex;
   margin: auto;
-
   justify-content: center;
 }
 
@@ -142,47 +119,19 @@
   font-family: 'Poppins',sans-serif;
   font-weight: 200;
 }
-
-
-
-
-
-
-
-
-/*@media (max-width: 1094px) {*/
-/*  .card-share, .card-share2, .centered-card{*/
-/*    width: 50%;*/
-/*  }*/
-/*}*/
-
-/*@media (max-width: 1094px) {*/
-/*  .letter1, .letter2, .letter3, .letter4 {*/
-/*    font-size: 16px;*/
-/*  }*/
-/*}*/
-
-/*@media (max-width: 1094px) {*/
-/*  .button, .button2 {*/
-/*    width: 50%;*/
-/*    margin-left: 25%;*/
-/*  }*/
-/*}*/
-
 @media all and (max-width: 840px) {
   .maintenance_t{
     display:grid;
-
     width: auto;
   }
   .card-share{
     display:flex;
-    flex-direccion: column;
+    flex-direction: column;
     width: auto;
   }
   .card-share2{
     display:flex;
-    flex-direccion: column;
+    flex-direction: column;
     width: auto;
   }
 }
