@@ -1,3 +1,4 @@
+<script src="share-auto-tenant.component.ts"></script>
 <div style="height: 100vh;">
 
     <div style="display: flex; height: 130vh">
@@ -44,8 +45,30 @@
 
 
       <mat-card class="card-share2">
-        <mat-card-content></mat-card-content>
+      <mat-card-content>
+        <p-carousel [value]="rented" [numVisible]="3" [numScroll]="1" [circular]="true"  [responsiveOptions]="responsiveOptions" >
+          <ng-template let-rent pTemplate="item" >
+            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3" >
+              <div class="mb-3" style="border-radius: 10px;text-align: center;justify-content: center">
+                <img src="{{ rent.img_src }}" class="img_vehicule" />
+                <h4 class="mb-1"><b>MARCA:</b>{{ rent.marca }}</h4>
+                <h4 class="mt-0 mb-3"><b>MODELO:</b>{{ rent.modelo }}</h4>
+                <h4 class="mt-0 mb-3"><b>PROPIETARIO:</b>{{ rent.propietario }}</h4>
+                <h4 class="mt-0 mb-3"><b>CELULAR:</b>{{ rent.celular }}</h4>
+                <button mat-button style="background-color:#14131B ;color: white" [routerLink]="['/fl']">Alquilar</button>
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </mat-card-content>
       </mat-card>
+
+      <!--      <mat-card class="card-share3">-->
+      <!--        <mat-card-content class="letter2">-->
+      <!--          -->
+      <!--        </mat-card-content>-->
+      <!--      </mat-card>-->
+
     </div>
 
 </div>

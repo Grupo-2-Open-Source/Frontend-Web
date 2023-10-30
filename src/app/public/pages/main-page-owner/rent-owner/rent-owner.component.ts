@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {RentedVehicles} from "../../../model/rented-vehicles";
 import {RentdTenantService} from "../../../services/rentd-tenant.service";
+import {RentdOwnerService} from "../../../services/rentd-owner.service";
 
 @Component({
   selector: 'app-rent-owner',
@@ -11,7 +12,7 @@ export class RentOwnerComponent implements OnInit, AfterViewInit{
   Rented_Vehicles: RentedVehicles;
   rented: RentedVehicles[] = [];
   responsiveOptions: any[] | undefined;
-  constructor(private rentedService: RentdTenantService) {
+  constructor(private rentedService: RentdOwnerService) {
     this.Rented_Vehicles = {} as RentedVehicles;
   }
   ngAfterViewInit() {

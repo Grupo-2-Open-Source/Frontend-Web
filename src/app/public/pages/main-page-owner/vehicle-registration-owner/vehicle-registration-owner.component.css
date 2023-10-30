@@ -94,6 +94,7 @@
   text-align: center;
   font-size: 40px;
   display: flex;
+  margin-bottom:20px;
   flex-flow: column;
   color: #FF7A00;
 
@@ -138,8 +139,11 @@
 }
 
 .form-container {
-  max-width: 50%;
+  max-width:50%;
   margin: 0 auto;
+  box-shadow:none;
+  border:none;
+
 }
 
 .align-left {
