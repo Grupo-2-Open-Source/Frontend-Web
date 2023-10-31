@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {LoginOwnerService} from "../../../../services/login-owner.service";
+import {RegisterOwnerService} from "../../../../services/register-owner.service";
 
 @Component({
   selector: 'app-profile-owner',
@@ -9,7 +9,7 @@ import {LoginOwnerService} from "../../../../services/login-owner.service";
 })
 export class ProfileOwnerComponent implements OnInit{
   user: any;
-  constructor(private route: ActivatedRoute, private userService: LoginOwnerService) {}
+  constructor(private route: ActivatedRoute, private userService: RegisterOwnerService) {}
 
   ngOnInit() {
     this.route.params.subscribe((params) => {

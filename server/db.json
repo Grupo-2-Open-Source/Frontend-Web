@@ -1,5 +1,15 @@
 {
   "users": [
+    {
+      "name": "erick",
+      "lastname": "ruiz",
+      "birthdate": "2001-06-13",
+      "phone": 434334343,
+      "email": "erickruiz13",
+      "password": "ericksito",
+      "userid": "owner",
+      "id": 1
+    }
   ],
   "tenant": {
     "request_tenant": [

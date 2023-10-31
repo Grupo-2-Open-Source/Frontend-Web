@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
-import {LoginOwnerService} from "../../../services/login-owner.service";
+import {RegisterOwnerService} from "../../../services/register-owner.service";
 
 @Component({
   selector: 'app-toolbar-owner',
@@ -8,7 +8,7 @@ import {LoginOwnerService} from "../../../services/login-owner.service";
   styleUrls: ['./toolbar-owner.component.css']
 })
 export class ToolbarOwnerComponent {
-  constructor(private router: Router, private authService: LoginOwnerService) {}
+  constructor(private router: Router, private authService: RegisterOwnerService) {}
 
   goToProfile() {
     // Obtén el ID del usuario del servicio

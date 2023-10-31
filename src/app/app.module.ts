@@ -57,6 +57,7 @@ import {CardModule} from "primeng/card";
 import {ImageModule} from "primeng/image";
 import {RequestTenantService} from "./public/services/request-tenant.service";
 import {FileUploadModule} from "primeng/fileupload";
+import {RegisterOwnerService} from "./public/services/register-owner.service";
 
 @NgModule({
   declarations: [
@@ -118,7 +119,7 @@ import {FileUploadModule} from "primeng/fileupload";
   MatButtonModule,
   MatIconModule,
   ],
-  providers: [RentdTenantService,RequestTenantService],
+  providers: [RentdTenantService,RequestTenantService,RegisterOwnerService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

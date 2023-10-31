@@ -34,10 +34,10 @@
 
 
           <mat-form-field>
-            <input matInput [(ngModel)]="user.email"  name="email" type="text" placeholder="Correo electrónico" class="input">
+            <input matInput [(ngModel)]="email"  name="email" type="text" placeholder="Correo electrónico" class="input">
           </mat-form-field>
           <mat-form-field>
-            <input matInput [(ngModel)]="user.password" name="password" type="password" placeholder="Contraseña" class="input">
+            <input matInput [(ngModel)]="password" name="password" type="password" placeholder="Contraseña" class="input">
           </mat-form-field>
           <mat-label style="color: #14131B; justify-content: right; text-align: right;">
             <a mat-button [routerLink]="['/recover-password-owner']">
@@ -45,11 +45,11 @@
             </a>
           </mat-label>
           <br>
-          <button mat-button style="color: white; background-color: #FF7A00" type="submit" (click)="onSubmit()">
-            Iniciar Sesión como Propietario
-          </button>
-
-
+<!--          <button mat-button style="color: white; background-color: #FF7A00" type="submit" (click)="onSubmit()">-->
+<!--            Iniciar Sesión como Propietario-->
+<!--          </button>-->
+        <button mat-button style="color: white;background-color: #FF7A00" [routerLink]="['/owner/main-page-owner/:id']">Iniciar Sesión como Propietario</button>
+<!--        <button mat-button style="color: white; background-color: #FF7A00" (click)="login()">Iniciar Sesión como Propietario</button>-->
 
 
       </div>
