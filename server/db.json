@@ -9,6 +9,46 @@
       "password": "ericksito",
       "userid": "owner",
       "id": 1
+    },
+    {
+      "name": "piero",
+      "lastname": "antonio",
+      "birthdate": "7332-02-23",
+      "phone": 2323323,
+      "email": "erickarroba",
+      "password": "334343dcd",
+      "userid": "owner",
+      "id": 2
+    },
+    {
+      "name": "erick2",
+      "lastname": "eruiz",
+      "birthdate": "",
+      "phone": 121212,
+      "email": "erixgg",
+      "password": "3ffefe",
+      "userid": "owner",
+      "id": 3
+    },
+    {
+      "name": "luis",
+      "lastname": "erere",
+      "birthdate": "4232-03-31",
+      "phone": 232323,
+      "email": "dsdsds",
+      "password": "223dsdds",
+      "userid": "owner",
+      "id": 4
+    },
+    {
+      "name": "ererer",
+      "lastname": "errer",
+      "birthdate": "2332-02-23",
+      "phone": 232323,
+      "email": "2323232effdf",
+      "password": "2vdvddd",
+      "userid": "owner",
+      "id": 5
     }
   ],
   "tenant": {
@@ -35,6 +75,7 @@
     "rented_tenant": [
       {
         "id": 1,
+        "useriduser": 1,
         "marca": "HONDA",
         "modelo": "CEE23",
         "propietario": "Marco Polo",
@@ -45,6 +86,7 @@
       },
       {
         "id": 2,
+        "useriduser": 1,
         "marca": "NISSAN",
         "modelo": "GRRE23",
         "propietario": "Carlos Perez",
@@ -55,6 +97,7 @@
       },
       {
         "id": 3,
+        "useriduser": 1,
         "marca": "KIA",
         "modelo": "CEE23",
         "propietario": "Erick Tato",
@@ -65,6 +108,7 @@
       },
       {
         "id": 4,
+        "useriduser": 2,
         "marca": "HONDA",
         "modelo": "CRICNR",
         "propietario": "Piero Ruiz",
@@ -75,6 +119,7 @@
       },
       {
         "id": 5,
+        "useriduser": 2,
         "marca": "MERCEDES",
         "modelo": "VNRVINR",
         "propietario": "Tony Campos",
@@ -85,6 +130,7 @@
       },
       {
         "id": 6,
+        "useriduser": 1,
         "marca": "HYUNDAI",
         "modelo": "CCRRC",
         "propietario": "Hernan Salas",
@@ -99,6 +145,7 @@
     "rented_owner": [
       {
         "id": 1,
+        "useriduser": 1,
         "marca": "HONDA",
         "modelo": "CEE23",
         "propietario": "Marco Polo",
@@ -109,6 +156,7 @@
       },
       {
         "id": 2,
+        "useriduser": 1,
         "marca": "NISSAN",
         "modelo": "GRRE23",
         "propietario": "Carlos Perez",
@@ -119,6 +167,7 @@
       },
       {
         "id": 3,
+        "useriduser": 1,
         "marca": "KIA",
         "modelo": "CEE23",
         "propietario": "Erick Tato",
@@ -129,6 +178,7 @@
       },
       {
         "id": 4,
+        "useriduser": 1,
         "marca": "HONDA",
         "modelo": "CRICNR",
         "propietario": "Piero Ruiz",
@@ -139,6 +189,7 @@
       },
       {
         "id": 5,
+        "useriduser": 2,
         "marca": "MERCEDES",
         "modelo": "VNRVINR",
         "propietario": "Tony Campos",
@@ -149,6 +200,7 @@
       },
       {
         "id": 6,
+        "useriduser": 2,
         "marca": "HYUNDAI",
         "modelo": "CCRRC",
         "propietario": "Hernan Salas",

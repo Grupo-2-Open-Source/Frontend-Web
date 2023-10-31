@@ -2,6 +2,8 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {RentedVehicles} from "../../../model/rented-vehicles";
 import {RentdTenantService} from "../../../services/rentd-tenant.service";
 import {RentdOwnerService} from "../../../services/rentd-owner.service";
+import {ActivatedRoute} from "@angular/router";
+import {RegisterOwnerService} from "../../../services/register-owner.service";
 
 @Component({
   selector: 'app-rent-owner',
@@ -12,13 +14,15 @@ export class RentOwnerComponent implements OnInit, AfterViewInit{
   Rented_Vehicles: RentedVehicles;
   rented: RentedVehicles[] = [];
   responsiveOptions: any[] | undefined;
-  constructor(private rentedService: RentdOwnerService) {
+  user: any;
+  constructor(private rentedService: RentdOwnerService,private route: ActivatedRoute,private userService:RegisterOwnerService) {
     this.Rented_Vehicles = {} as RentedVehicles;
   }
   ngAfterViewInit() {
     throw new Error('Method not implemented.');
   }
   ngOnInit() {
+
     this.getAllRentedVehicule();
     this.responsiveOptions = [
       {

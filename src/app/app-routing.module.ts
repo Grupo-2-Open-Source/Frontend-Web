@@ -95,7 +95,7 @@ const routes:Routes=[
     {path: 'notifications-owner',component:NotificationsOwnerComponent},
     {path: 'vehicle-registration-owner', component: VehicleRegistrationOwnerComponent},
     {path: 'create-contract-owner', component: CreateContractOwnerComponent},
-    {path: 'rent-owner', component: RentOwnerComponent},
+    {path: 'rent-owner/:id', component: RentOwnerComponent},
     {path:'perfil-owner/:id',component: ProfileOwnerComponent},
   ]
   },
