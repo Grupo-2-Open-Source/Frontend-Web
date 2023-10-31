@@ -9,11 +9,12 @@
 
       <span class="example-spacer"></span>
       <div fxShow="true" fxHide.lt-md="true">
-        <a  class="buttonnav" mat-button [routerLink]="['/owner/main-page-owner']">INICIO</a>
+        <a  class="buttonnav" mat-button [routerLink]="['/owner/main-page-owner/:id']">INICIO</a>
         <a  class="buttonnav" mat-button [routerLink]="['/owner/vehicle-registration-owner']">REGISTRO VEHICULAR</a>
         <a class="buttonnav" mat-button [routerLink]="['/owner/notifications-owner']">NOTIFICACIONES</a>
         <a class="buttonnav" mat-button [routerLink]="['/owner/rent-owner']">ALQUILER</a>
-        <a mat-button  [routerLink]="['/owner/perfil-owner']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
+        <a mat-button (click)="goToProfile()"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
+<!--        <a mat-button  [routerLink]="['/owner/perfil-owner/:id']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>-->
       </div>
 
       <div fxShow="true" fxHide.gt-sm="true">

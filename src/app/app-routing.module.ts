@@ -91,12 +91,12 @@ const routes:Routes=[
   {path:'owner',
   component:ToolbarOwnerComponent,
   children:[
-    {path: 'main-page-owner',component:MainPageOwnerComponent},
+    {path: 'main-page-owner/:id',component:MainPageOwnerComponent},
     {path: 'notifications-owner',component:NotificationsOwnerComponent},
     {path: 'vehicle-registration-owner', component: VehicleRegistrationOwnerComponent},
     {path: 'create-contract-owner', component: CreateContractOwnerComponent},
     {path: 'rent-owner', component: RentOwnerComponent},
-    {path:'perfil-owner',component: ProfileOwnerComponent},
+    {path:'perfil-owner/:id',component: ProfileOwnerComponent},
   ]
   },
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},

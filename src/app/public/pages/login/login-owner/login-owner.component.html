@@ -30,31 +30,27 @@
         <br>
         <mat-label style="text-align: center;font-size: 15px;color: #14131B">¿Todavia no estas registrado? <a [routerLink]="['/register-owner']" style="color: #14131B;text-decoration: none"> <b>CREARCUENTA</b></a> </mat-label>
         <br>
-<!--        <form (submit)="onSubmit()">-->
-<!--          <mat-form-field>-->
-<!--            <input matInput [(ngModel)]="email" type="text" placeholder="Correo electrónico" class="input">-->
-<!--          </mat-form-field>-->
-<!--          <mat-form-field>-->
-<!--            <input matInput [(ngModel)]="password" type="password" placeholder="Contraseña" class="input">-->
-<!--          </mat-form-field>-->
-<!--          <mat-label style="color: #14131B; justify-content: right; text-align: right;">-->
-<!--            <a mat-button [routerLink]="['/recover-password-owner']">-->
-<!--              <b style="font-family: 'Poppins', sans-serif">¿Has olvidado tu contraseña?</b>-->
-<!--            </a>-->
-<!--          </mat-label>-->
-<!--          <br>-->
-<!--          <button mat-button style="color: white; background-color: #FF7A00" type="submit">-->
-<!--            Iniciar Sesión como Propietario-->
-<!--          </button>-->
-<!--        </form>-->
-                <mat-form-field>
-                  <input matInput [(ngModel)]="email" type="text" placeholder="Correo electrónico" class="input"   >
-                </mat-form-field>
-                <mat-form-field>
-                  <input matInput [(ngModel)]="password" type="password" placeholder="Contraseña" class="input" >
-                </mat-form-field>
-                <mat-label style="color: #14131B;justify-content: right;text-align: right;"> <a mat-button [routerLink]="['/recover-password-owner']"> <b style="font-family: 'Poppins', sans-serif"> ¿Has olvidado tu contraseña?</b></a></mat-label> <br>
-                <button mat-button style="color: white;background-color: #FF7A00" [routerLink]="['/owner/main-page-owner']">Iniciar Sesión como Propietario</button>
+
+
+
+          <mat-form-field>
+            <input matInput [(ngModel)]="user.email"  name="email" type="text" placeholder="Correo electrónico" class="input">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="user.password" name="password" type="password" placeholder="Contraseña" class="input">
+          </mat-form-field>
+          <mat-label style="color: #14131B; justify-content: right; text-align: right;">
+            <a mat-button [routerLink]="['/recover-password-owner']">
+              <b style="font-family: 'Poppins', sans-serif">¿Has olvidado tu contraseña?</b>
+            </a>
+          </mat-label>
+          <br>
+          <button mat-button style="color: white; background-color: #FF7A00" type="submit" (click)="onSubmit()">
+            Iniciar Sesión como Propietario
+          </button>
+
+
+
 
       </div>
 

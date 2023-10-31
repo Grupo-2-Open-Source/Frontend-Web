@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {LoginOwnerService} from "../../../services/login-owner.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-owner',
@@ -7,28 +9,17 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./login-owner.component.css']
 })
 export class LoginOwnerComponent {
-  email='';
-  password='';
-  constructor(private http: HttpClient) {}
+  user = {email: '', password: '' };
 
-  // onSubmit() {
-  //   // Define el objeto userData con los datos del formulario
-  //   const userData = {
-  //     email: this.email,
-  //     password: this.password
-  //   };
-  //
-  //   // Realiza la solicitud HTTP POST para guardar los datos del usuario
-  //   this.http.post('http://localhost:3000/api/v1/users', userData).subscribe(
-  //     (response) => {
-  //       // Handle the response
-  //       console.log('Data saved:', response);
-  //     },
-  //     (error) => {
-  //       // Handle the error
-  //       console.error('Error:', error);
-  //     }
-  //   );
-  // }
+  constructor(private userService: LoginOwnerService, private router: Router) {}
+
+  onSubmit() {
+    this.userService.addUser(this.user).subscribe((data:any) => {
+      console.log('Usuario creado:', data);
+      this.user = { email: '', password: '' };
+      this.userService.setCurrentUserId(data.id);
+      this.router.navigate(['/owner/main-page-owner',data.id]);
+    });
+  }
 
 }
