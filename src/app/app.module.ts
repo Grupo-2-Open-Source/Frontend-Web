@@ -58,6 +58,8 @@ import {ImageModule} from "primeng/image";
 import {RequestTenantService} from "./public/services/request-tenant.service";
 import {FileUploadModule} from "primeng/fileupload";
 import {RegisterOwnerService} from "./public/services/register-owner.service";
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -114,6 +116,9 @@ import {RegisterOwnerService} from "./public/services/register-owner.service";
     CardModule,
     ImageModule,
     FileUploadModule,
+    //"locationId":"northamerica-northeast1"
+    provideFirebaseApp(() => initializeApp({"projectId":"autoyadeploy-324fd","appId":"1:135558029592:web:7199f449cbc52662153e6d","storageBucket":"autoyadeploy-324fd.appspot.com","apiKey":"AIzaSyBFENhb7mn8C0qMqS8WQgnhRd4jwg9rKuY","authDomain":"autoyadeploy-324fd.firebaseapp.com","messagingSenderId":"135558029592"})),
+    provideStorage(() => getStorage()),
   ],
   exports:[
   MatButtonModule,

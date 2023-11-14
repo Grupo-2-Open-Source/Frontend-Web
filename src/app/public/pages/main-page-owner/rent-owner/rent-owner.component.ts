@@ -15,7 +15,7 @@ export class RentOwnerComponent implements OnInit, AfterViewInit{
   rented: RentedVehicles[] = [];
   responsiveOptions: any[] | undefined;
   user: any;
-  constructor(private rentedService: RentdOwnerService,private route: ActivatedRoute,private userService:RegisterOwnerService) {
+  constructor(private route: ActivatedRoute,private userService:RegisterOwnerService) {
     this.Rented_Vehicles = {} as RentedVehicles;
   }
   ngAfterViewInit() {
@@ -23,7 +23,12 @@ export class RentOwnerComponent implements OnInit, AfterViewInit{
   }
   ngOnInit() {
 
-    this.getAllRentedVehicule();
+    this.route.params.subscribe((params) => {
+      const ownerId = params['id']; // Obtén el id del usuario de la URL
+      this.userService.getAlldata(ownerId).subscribe((data:any) => {
+        this.user= data;
+      });
+    });
     this.responsiveOptions = [
       {
         breakpoint: '1199px',
@@ -42,9 +47,18 @@ export class RentOwnerComponent implements OnInit, AfterViewInit{
       }
     ];
   }
-  private getAllRentedVehicule(){
-    this.rentedService.getAll().subscribe((response: any) =>{
-      this.rented = response.rented_owner;
-    });
+  eliminarVehiculo(ownerId: string, vehiculeId: string) {
+    this.userService.deltevehicule(ownerId, vehiculeId)
+      .subscribe({
+        next: (response: any) => {
+          console.log('Vehículo eliminado:', response);
+          this.user = this.user.filter((vehicle: any) => vehicle.id !== vehiculeId);
+        },
+        error: (error: any) => {
+          console.error('Error al eliminar el vehículo:', error);
+        }
+      });
   }
+
+
 }

@@ -13,9 +13,9 @@
         <mat-card-content class="letter3-ow" >
           <div *ngIf="user">
             <h2>Detalles del Usuario</h2>
-            <p><strong>Nombre y Apellidos:</strong> {{ user.name +" "+user.lastname}}</p>
-            <p><strong>Telefono:</strong> {{ user.phone }}</p>
-            <p><strong>Fecha de Nacimiento:</strong> {{ user.birthdate }}</p>
+            <p><strong>Nombre y Apellidos:</strong> {{ user.lastName +" "+user.firstName}}</p>
+            <p><strong>Telefono:</strong> {{ user.phoneNumber }}</p>
+            <p><strong>Fecha de Nacimiento:</strong> {{ user.birthDate }}</p>
             <p><strong>Correo:</strong> {{ user.email }}</p>
             <!-- Otros detalles del usuario -->
           </div>

@@ -8,13 +8,12 @@ import {RegisterOwnerService} from "../../../services/register-owner.service";
   styleUrls: ['./toolbar-owner.component.css']
 })
 export class ToolbarOwnerComponent {
-  constructor(private router: Router, private authService: RegisterOwnerService) {}
-
+  userId: number | null;
+  constructor(private router: Router, private authService: RegisterOwnerService) {
+    this.userId = this.authService.getOwnerId();
+  }
   goToProfile() {
-    // Obtén el ID del usuario del servicio
-    const userId = this.authService.getCurrentUserId();
-
-    // Redirige al usuario a la página de perfil con el ID del usuario
+    const userId = this.authService.getOwnerId()
     this.router.navigate(['/owner/perfil-owner', userId]);
   }
 }

@@ -58,7 +58,7 @@ const routes:Routes=[
     component:ToolbarComponent,
     children:[
       {
-        path:'main-page-tenant',
+        path:'main-page-tenant/:id',
         component:MainPageTenantComponent
       },
       {
@@ -82,7 +82,7 @@ const routes:Routes=[
         component: RequestTenantComponent
       },
       {
-        path:'perfil-tenant',
+        path:'perfil-tenant/:id',
         component: ProfileTenantComponent
       },
     ]
@@ -93,7 +93,7 @@ const routes:Routes=[
   children:[
     {path: 'main-page-owner/:id',component:MainPageOwnerComponent},
     {path: 'notifications-owner',component:NotificationsOwnerComponent},
-    {path: 'vehicle-registration-owner', component: VehicleRegistrationOwnerComponent},
+    {path: 'vehicle-registration-owner/:id', component: VehicleRegistrationOwnerComponent},
     {path: 'create-contract-owner', component: CreateContractOwnerComponent},
     {path: 'rent-owner/:id', component: RentOwnerComponent},
     {path:'perfil-owner/:id',component: ProfileOwnerComponent},

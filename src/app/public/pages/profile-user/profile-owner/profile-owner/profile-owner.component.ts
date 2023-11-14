@@ -19,13 +19,4 @@ export class ProfileOwnerComponent implements OnInit{
       });
     });
   }
-  //
-  // id=0;
-  // name='';
-  // lastName='';
-  // iphone=0;
-  // gmail='';
-  // numbercar=0;
-  // sidenav: any;
-
 }

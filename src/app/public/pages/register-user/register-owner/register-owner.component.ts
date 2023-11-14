@@ -9,12 +9,12 @@ import {Router} from "@angular/router";
 })
 export class RegisterOwnerComponent {
 
-  user = {name: '', lastname: '',birthdate:'',phone:'',email:'',password:'' };
+  user = {email: '', password: '',lastName:'',firstName:'',birthDate:'',phoneNumber:'' };
   constructor(private userService: RegisterOwnerService, private router: Router) {}
   onSubmit() {
     this.userService.addUser(this.user).subscribe((data:any) => {
       console.log('Usuario creado:', data);
-      this.user = { name: '', lastname: '',birthdate:'',phone:'',email:'',password:''  };
+      this.user = {email: '', password: '',lastName:'',firstName:'',birthDate:'',phoneNumber:'' };
       this.userService.setCurrentUserId(data.id);
       this.router.navigate(['/validation']);
     });
