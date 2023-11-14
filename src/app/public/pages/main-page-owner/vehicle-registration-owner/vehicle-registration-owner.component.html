@@ -8,73 +8,78 @@
         </mat-card-title>
       </mat-card-header>
 
-      <div fxLayout="row" fxLayoutAlign="start start">
+      <div fxLayout="row" fxLayoutAlign="start start" >
 
         <!-- Formulario -->
         <div class="form-container" fxFlex="50%">
           <form fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="20px">
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Marca</mat-label>
-              <input matInput placeholder="Marca del vehículo">
+              <input matInput [(ngModel)]="user.brand" name="brand" placeholder="Marca del vehículo"  >
             </mat-form-field>
 
-            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+            <mat-form-field  appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Modelo</mat-label>
-              <input matInput placeholder="Modelo del vehículo">
+              <input matInput [(ngModel)]="user.model" name="model" placeholder="Modelo del vehículo">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Velocidad máxima</mat-label>
-              <input matInput placeholder="Velocidad máxima">
+              <input matInput [(ngModel)]="user.maxVelocity" name="maxVelocity" placeholder="Velocidad máxima">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Consumo de combustible</mat-label>
-              <input matInput placeholder="Consumo de combustible">
+              <input matInput [(ngModel)]="user.fuelConsumption" name="fuelConsumption" placeholder="Consumo de combustible">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Dimensiones (Largo/Ancho/Alto)</mat-label>
-              <input matInput placeholder="Dimensiones">
+              <input matInput [(ngModel)]="user.dimensions"  name="dimensions" placeholder="Dimensiones">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Peso</mat-label>
-              <input matInput placeholder="Peso">
+              <input matInput [(ngModel)]="user.weight"  name="weight" placeholder="Peso">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Clase</mat-label>
-              <input matInput placeholder="Clase">
+              <input matInput [(ngModel)]="user.carClass"  name="carClass" placeholder="Clase">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Transmisión</mat-label>
-              <input matInput placeholder="Transmisión">
+              <input matInput [(ngModel)]="user.carTransmission" name="carTransmission" placeholder="Transmisión">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Tiempo de alquiler</mat-label>
-              <input matInput placeholder="Tiempo de alquiler">
+              <input matInput [(ngModel)]="user.time" name="time" placeholder="Tiempo de alquiler">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+              <mat-label>Tiempo de alquiler</mat-label>
+              <input matInput [(ngModel)]="user.amoutthetime" name="amoutthetime" placeholder="Tiempo de alquiler">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Costo de alquiler al mes</mat-label>
-              <input matInput placeholder="Costo de alquiler al mes">
+              <input matInput [(ngModel)]="user.price"  name="price" placeholder="Costo de alquiler al mes">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Lugar de recojo del vehículo</mat-label>
-              <input matInput placeholder="Costo de alquiler al mes">
+              <input matInput [(ngModel)]="user.location" name="location" placeholder="Costo de alquiler al mes">
             </mat-form-field>
 
-            <button mat-raised-button fxFlex="100%" class="registrar-button" mat-button style="background-color: #FF7A00;color: white;font-family: 'Poppins',sans-serif;">Registro</button>
+<!--            <button mat-raised-button fxFlex="100%" class="registrar-button" mat-button style="background-color: #FF7A00;color: white;font-family: 'Poppins',sans-serif;">Registro</button>-->
+            <button mat-raised-button fxFlex="100%" class="registrar-button" mat-button style="background-color: #FF7A00; color: white; font-family: 'Poppins', sans-serif;" (click)="onSubmitVehicule()">Registro</button>
           </form>
         </div>
 
         <div class="button-container">
-          <button mat-raised-button class="center-button-subir-foto" mat-button style="background-color: #FF7A00;color: white;font-family: 'Poppins',sans-serif;">Subir Foto</button>
-
+          <input type="file" (change)="onFileSelected($event)" accept="image/*">
           <button mat-raised-button class="center-button-crear-contrato" mat-button style="background-color: #14131B;color: white;font-family: 'Poppins',sans-serif;" [routerLink]="['/owner/create-contract-owner']">Crear Contrato de Alquiler</button>
         </div>
       </div>

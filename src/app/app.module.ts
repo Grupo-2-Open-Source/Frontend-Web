@@ -32,9 +32,9 @@ import { ShareAutoTenantComponent } from './public/pages/main-page-tenant/share-
 
 
 import { MaintenanceTenantComponent } from './public/pages/main-page-tenant/maintenance-tenant/maintenance-tenant.component';
-import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
-import {NgbCarousel, NgbCarouselModule, NgbModule, NgbSlide} from '@ng-bootstrap/ng-bootstrap';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+
+
+
 import { MainPageOwnerComponent } from './public/pages/main-page-owner/main-page-owner.component';
 import { NotificationsOwnerComponent } from './public/pages/main-page-owner/notifications-owner/notifications-owner.component';
 import { VehicleRegistrationOwnerComponent } from './public/pages/main-page-owner/vehicle-registration-owner/vehicle-registration-owner.component';
@@ -57,6 +57,9 @@ import {CardModule} from "primeng/card";
 import {ImageModule} from "primeng/image";
 import {RequestTenantService} from "./public/services/request-tenant.service";
 import {FileUploadModule} from "primeng/fileupload";
+import {RegisterOwnerService} from "./public/services/register-owner.service";
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -104,12 +107,7 @@ import {FileUploadModule} from "primeng/fileupload";
     FormsModule,
     FlexLayoutModule,
     MatSidenavModule,
-    NgbCarousel,
-    NgbCarouselModule,
     NgIf,
-    NgbSlide,
-    NgbModule,
-    SlickCarouselModule,
     MatSnackBarModule,
     MatListModule,
     CarouselModule,
@@ -118,12 +116,15 @@ import {FileUploadModule} from "primeng/fileupload";
     CardModule,
     ImageModule,
     FileUploadModule,
+    //"locationId":"northamerica-northeast1"
+    provideFirebaseApp(() => initializeApp({"projectId":"autoyadeploy-324fd","appId":"1:135558029592:web:7199f449cbc52662153e6d","storageBucket":"autoyadeploy-324fd.appspot.com","apiKey":"AIzaSyBFENhb7mn8C0qMqS8WQgnhRd4jwg9rKuY","authDomain":"autoyadeploy-324fd.firebaseapp.com","messagingSenderId":"135558029592"})),
+    provideStorage(() => getStorage()),
   ],
   exports:[
   MatButtonModule,
   MatIconModule,
   ],
-  providers: [RentdTenantService,RequestTenantService],
+  providers: [RentdTenantService,RequestTenantService,RegisterOwnerService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

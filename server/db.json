@@ -1,5 +1,57 @@
 {
-  "tenant":{
+  "users": [
+    {
+      "name": "erick",
+      "lastname": "ruiz",
+      "birthdate": "2001-06-13",
+      "phone": 434334343,
+      "email": "erickruiz13",
+      "password": "ericksito",
+      "userid": "owner",
+      "id": 1
+    },
+    {
+      "name": "piero",
+      "lastname": "antonio",
+      "birthdate": "7332-02-23",
+      "phone": 2323323,
+      "email": "erickarroba",
+      "password": "334343dcd",
+      "userid": "owner",
+      "id": 2
+    },
+    {
+      "name": "erick2",
+      "lastname": "eruiz",
+      "birthdate": "",
+      "phone": 121212,
+      "email": "erixgg",
+      "password": "3ffefe",
+      "userid": "owner",
+      "id": 3
+    },
+    {
+      "name": "luis",
+      "lastname": "erere",
+      "birthdate": "4232-03-31",
+      "phone": 232323,
+      "email": "dsdsds",
+      "password": "223dsdds",
+      "userid": "owner",
+      "id": 4
+    },
+    {
+      "name": "ererer",
+      "lastname": "errer",
+      "birthdate": "2332-02-23",
+      "phone": 232323,
+      "email": "2323232effdf",
+      "password": "2vdvddd",
+      "userid": "owner",
+      "id": 5
+    }
+  ],
+  "tenant": {
     "request_tenant": [
       {
         "id": 1,
@@ -23,132 +75,140 @@
     "rented_tenant": [
       {
         "id": 1,
+        "useriduser": 1,
         "marca": "HONDA",
         "modelo": "CEE23",
         "propietario": "Marco Polo",
         "celular": "9024242424",
         "fecha_inicio_contrato": "23/07/2021",
-        "fecha_fin_contrato":"23/08/2021",
+        "fecha_fin_contrato": "23/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
       },
       {
         "id": 2,
+        "useriduser": 1,
         "marca": "NISSAN",
         "modelo": "GRRE23",
         "propietario": "Carlos Perez",
         "celular": "90343445424",
         "fecha_inicio_contrato": "12/07/2021",
-        "fecha_fin_contrato":"12/08/2021",
+        "fecha_fin_contrato": "12/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
       },
       {
         "id": 3,
+        "useriduser": 1,
         "marca": "KIA",
         "modelo": "CEE23",
         "propietario": "Erick Tato",
         "celular": "9982992424",
         "fecha_inicio_contrato": "03/07/2021",
-        "fecha_fin_contrato":"03/08/2021",
+        "fecha_fin_contrato": "03/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
       },
       {
         "id": 4,
+        "useriduser": 2,
         "marca": "HONDA",
         "modelo": "CRICNR",
         "propietario": "Piero Ruiz",
         "celular": "929901124",
         "fecha_inicio_contrato": "06/07/2021",
-        "fecha_fin_contrato":"06/08/2021",
+        "fecha_fin_contrato": "06/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
       },
       {
         "id": 5,
+        "useriduser": 2,
         "marca": "MERCEDES",
         "modelo": "VNRVINR",
         "propietario": "Tony Campos",
         "celular": "9723322424",
         "fecha_inicio_contrato": "30/07/2021",
-        "fecha_fin_contrato":"30/08/2021",
+        "fecha_fin_contrato": "30/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
-
       },
       {
         "id": 6,
+        "useriduser": 1,
         "marca": "HYUNDAI",
         "modelo": "CCRRC",
         "propietario": "Hernan Salas",
         "celular": "9999293234",
         "fecha_inicio_contrato": "12/07/2021",
-        "fecha_fin_contrato":"12/08/2021",
+        "fecha_fin_contrato": "12/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
-
       }
-    ],
+    ]
+  },
+  "owner": {
     "rented_owner": [
       {
         "id": 1,
+        "useriduser": 1,
         "marca": "HONDA",
         "modelo": "CEE23",
         "propietario": "Marco Polo",
         "celular": "9024242424",
         "fecha_inicio_contrato": "23/07/2021",
-        "fecha_fin_contrato":"23/08/2021",
+        "fecha_fin_contrato": "23/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
       },
       {
         "id": 2,
+        "useriduser": 1,
         "marca": "NISSAN",
         "modelo": "GRRE23",
         "propietario": "Carlos Perez",
         "celular": "90343445424",
         "fecha_inicio_contrato": "12/07/2021",
-        "fecha_fin_contrato":"12/08/2021",
+        "fecha_fin_contrato": "12/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
       },
       {
         "id": 3,
+        "useriduser": 1,
         "marca": "KIA",
         "modelo": "CEE23",
         "propietario": "Erick Tato",
         "celular": "9982992424",
         "fecha_inicio_contrato": "03/07/2021",
-        "fecha_fin_contrato":"03/08/2021",
+        "fecha_fin_contrato": "03/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
       },
       {
         "id": 4,
+        "useriduser": 1,
         "marca": "HONDA",
         "modelo": "CRICNR",
         "propietario": "Piero Ruiz",
         "celular": "929901124",
         "fecha_inicio_contrato": "06/07/2021",
-        "fecha_fin_contrato":"06/08/2021",
+        "fecha_fin_contrato": "06/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
       },
       {
         "id": 5,
+        "useriduser": 2,
         "marca": "MERCEDES",
         "modelo": "VNRVINR",
         "propietario": "Tony Campos",
         "celular": "9723322424",
         "fecha_inicio_contrato": "30/07/2021",
-        "fecha_fin_contrato":"30/08/2021",
+        "fecha_fin_contrato": "30/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
-
       },
       {
         "id": 6,
+        "useriduser": 2,
         "marca": "HYUNDAI",
         "modelo": "CCRRC",
         "propietario": "Hernan Salas",
         "celular": "9999293234",
         "fecha_inicio_contrato": "12/07/2021",
-        "fecha_fin_contrato":"12/08/2021",
+        "fecha_fin_contrato": "12/08/2021",
         "img_src": "https://automundo.pe/wp-content/uploads/2022/05/369756-el-nuevo-honda-civic-e-hev-llegar-a-espa-a-en-octubre-de-2022-e1653584216717.jpg"
-
       }
     ]
-
-}
-
+  }
 }

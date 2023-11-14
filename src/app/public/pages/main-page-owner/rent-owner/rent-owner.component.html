@@ -18,19 +18,16 @@
         </mat-card-title>
       </mat-card>
       <mat-card-content>
-        <p-carousel [value]="rented" [numVisible]="3" [numScroll]="1" [circular]="true"  [responsiveOptions]="responsiveOptions" >
+        <p-carousel [value]="user" [numVisible]="3" [numScroll]="1" [circular]="true"  [responsiveOptions]="responsiveOptions" >
           <ng-template let-rent pTemplate="item" >
             <div class="border-1 surface-border border-round m-2 text-center py-5 px-3" >
               <div class="mb-3" style="border-radius: 10px;text-align: center;justify-content: center">
-                <img src="{{ rent.img_src }}" class="img_vehicule" />
-                <h4 class="mb-1"><b>MARCA:</b>{{ rent.marca }}</h4>
-                <h4 class="mt-0 mb-3"><b>MODELO:</b>{{ rent.modelo }}</h4>
-                <h4 class="mt-0 mb-3"><b>PROPIETARIO:</b>{{ rent.propietario }}</h4>
-                <h4 class="mt-0 mb-3"><b>CELULAR:</b>{{ rent.celular }}</h4>
-                <h4 class="mt-0 mb-3"><b>FECHA INICIO CONTRATO :</b>{{ rent.fecha_inicio_contrato }}</h4>
-                <h4 class="mt-0 mb-3"><b>FECHA FIN CONTRATO :</b>{{ rent.fecha_fin_contrato }}</h4>
-                <h4 class="mt-0 mb-3"><b>ESTADO SOLICITUD :</b>EN ESPERA</h4>
-                <button mat-button style="background-color:#14131B ;color: white" [routerLink]="['/tenant/share-auto-tenant']">Eliminar Publiccación</button>
+                <img src="{{rent.imageUrl}}" class="img_vehicule" />
+                <h4 class="mb-1"><b>MARCA:</b>{{ rent.brand}}</h4>
+                <h4 class="mt-0 mb-3"><b>MODELO:</b>{{ rent.model }}</h4>
+                <h4 class="mt-0 mb-3"><b>ESTATUS :</b>{{ rent.rentStatus }}</h4>
+                <button mat-button style="background-color:#14131B; color: white" (click)="eliminarVehiculo(rent.ownerId, rent.id)">Eliminar Vehículo</button>
+
               </div>
             </div>
           </ng-template>

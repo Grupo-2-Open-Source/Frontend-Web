@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {RegisterOwnerService} from "../../../services/register-owner.service";
+import {Router} from "@angular/router";
+import {RegisterTenantService} from "../../../services/register-tenant.service";
 
 @Component({
   selector: 'app-register-tenant',
@@ -6,10 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./register-tenant.component.css']
 })
 export class RegisterTenantComponent {
-  name='';
-  lastname='';
-  birthdate='';
-  phone='';
-  email='';
-  password='';
+  user = {email: '', password: '',lastName:'',firstName:'',birthDate:'',phoneNumber:'' };
+  constructor(private userService: RegisterTenantService, private router: Router) {}
+  onSubmit() {
+    this.userService.addUsertenant(this.user).subscribe((data:any) => {
+      console.log('Usuario creado:', data);
+      this.user = {email: '', password: '',lastName:'',firstName:'',birthDate:'',phoneNumber:'' };
+      this.userService.setCurrentUserId(data.id);
+    //  this.router.navigate(['/validation']);
+    });
+  }
 }

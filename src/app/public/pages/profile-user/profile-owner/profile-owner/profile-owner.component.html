@@ -11,13 +11,14 @@
         </mat-card-header>
 
         <mat-card-content class="letter3-ow" >
-          <mat-list role="list">
-            <mat-list role="list"><p> Nombre: Erik Hernan</p></mat-list>
-            <mat-list role="list">Apellido: Ruiz Torres</mat-list>
-            <mat-list role="list">celular: 9224433992</mat-list>
-            <mat-list role="list">Correo: erik@gmail.com</mat-list>
-            <mat-list role="list">Can. de veh. alquilado: 1</mat-list>
-          </mat-list>
+          <div *ngIf="user">
+            <h2>Detalles del Usuario</h2>
+            <p><strong>Nombre y Apellidos:</strong> {{ user.lastName +" "+user.firstName}}</p>
+            <p><strong>Telefono:</strong> {{ user.phoneNumber }}</p>
+            <p><strong>Fecha de Nacimiento:</strong> {{ user.birthDate }}</p>
+            <p><strong>Correo:</strong> {{ user.email }}</p>
+            <!-- Otros detalles del usuario -->
+          </div>
         </mat-card-content>
         <div class="boton_Profile-owner" fxLayout="column">
           <button mat-button  style="background-color: #14131B; color: white;">Actualizar Datos</button>
