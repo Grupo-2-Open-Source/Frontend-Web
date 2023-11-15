@@ -16,7 +16,6 @@ export class RegisterOwnerComponent {
       console.log('Usuario creado:', data);
       this.user = {email: '', password: '',lastName:'',firstName:'',birthDate:'',phoneNumber:'' };
       this.userService.setCurrentUserId(data.id);
-      this.router.navigate(['/validation']);
     });
   }
 }
