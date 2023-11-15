@@ -43,14 +43,23 @@
               <input matInput [(ngModel)]="user.weight"  name="weight" placeholder="Peso">
             </mat-form-field>
 
-            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins', sans-serif;">
               <mat-label>Clase</mat-label>
-              <input matInput [(ngModel)]="user.carClass"  name="carClass" placeholder="Clase">
+              <mat-select [(ngModel)]="user.carClass" name="carClass" placeholder="Selecciona una clase">
+                <mat-option value="MICRO">MICRO</mat-option>
+                <mat-option value="CARGOCAR">CARGOCAR</mat-option>
+                <mat-option value="SPORTCAR">SPORTCAR</mat-option>
+                <mat-option value="FAMILIAR">FAMILIAR</mat-option>
+                <mat-option value="SUV">SUV</mat-option>
+              </mat-select>
             </mat-form-field>
 
-            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins', sans-serif;">
               <mat-label>Transmisión</mat-label>
-              <input matInput [(ngModel)]="user.carTransmission" name="carTransmission" placeholder="Transmisión">
+              <mat-select [(ngModel)]="user.carTransmission" name="carTransmission" placeholder="Selecciona una transmisión">
+                <mat-option value="AUTOMATIC">AUTOMATIC</mat-option>
+                <mat-option value="MANUAL">MANUAL</mat-option>
+              </mat-select>
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
