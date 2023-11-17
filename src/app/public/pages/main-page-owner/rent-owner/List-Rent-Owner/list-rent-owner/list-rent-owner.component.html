@@ -1,4 +1,3 @@
-
 <div style="height: 100vh;">
 
 
@@ -8,13 +7,11 @@
       <mat-card-header>
         <mat-card-title class="letter1">
           <mat-label class="title1" ><b>ALQUILER</b></mat-label>
-          <mat-label class="subtitle">Autos Compartidos</mat-label>
+          <mat-label class="subtitle">Auto Solicitado</mat-label>
         </mat-card-title>
       </mat-card-header>
       <mat-card style="box-shadow: none;border: none;margin-bottom: 20px">
         <mat-card-title style="text-align: end;margin-right: 30px">
-          <button mat-button style="background-color:#14131B ;color: white" [routerLink]="['/owner/vehicle-registration-owner',userId]">Registrar nuevo vehículo</button> <br><br>
-
         </mat-card-title>
       </mat-card>
       <mat-card-content>
@@ -25,10 +22,9 @@
                 <img src="{{rent.imageUrl}}" class="img_vehicule" />
                 <h4 class="mb-1"><b>MARCA:</b>{{ rent.brand}}</h4>
                 <h4 class="mt-0 mb-3"><b>MODELO:</b>{{ rent.model }}</h4>
-                <h4 class="mt-0 mb-3"><b>ESTATUS :</b>{{ rent.rentStatus }}</h4>
-                <button mat-button style="background-color:#14131B; color: white" (click)="eliminarVehiculo(rent.ownerId, rent.id); reloadPage()">Eliminar Vehículo</button>
-                <button mat-button style="background-color:#14131B; color: white" (click)="seerequests(rent.id)" [routerLink]="['/owner/list-rent-owner',userId]">Ver Solicitud</button>
-
+                <h4 class="mt-0 mb-3"><b>ESTATUS :</b>{{ rent.rentStatus}}</h4>
+                <button mat-button style="background-color:#14131B; color: white" (click)="confirmrequest(rent.rentId, rent.tenantId);reloadPage()">Confirmar Solicitud</button>
+                <button mat-button style="background-color:#14131B; color: white" (click)="cancelrequest(rent.rentId, rent.tenantId); reloadPage()">Cancelar Solicitud</button>
               </div>
             </div>
           </ng-template>

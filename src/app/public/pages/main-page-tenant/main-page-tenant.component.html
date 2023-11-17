@@ -1,14 +1,5 @@
 
 
-<!--<mat-toolbar-tenant class="toolbarr">-->
-
-<!--&lt;!&ndash;  <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">&ndash;&gt;-->
-<!--&lt;!&ndash;  <div class="mat-spacer"></div>&ndash;&gt;-->
-
-<!--  <a mat-button *ngFor="let option of options"-->
-<!--     [routerLink]="option.path" class="buttonnav">{{option.title}}</a>-->
-<!--</mat-toolbar-tenant>-->
-<!--<router-outlet></router-outlet>-->
 
 <div style="height: 100vh;">
 
@@ -26,7 +17,7 @@
 <!--          <mat-form-field >-->
 <!--            <input matInput [(ngModel)]="country" type="text" placeholder="Ubicación" class="input" >-->
 <!--          </mat-form-field>-->
-        <button mat-button style="background-color: #14131B;color: white" [routerLink]="['/tenant/share-auto-tenant']"> BUSCAR UN AUTO</button>
+        <button mat-button style="background-color: #14131B;color: white" [routerLink]="['/tenant/share-auto-tenant',userId]"> BUSCAR UN AUTO</button>
 
       </mat-card-content>
     </mat-card>

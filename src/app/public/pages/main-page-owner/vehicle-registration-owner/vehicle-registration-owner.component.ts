@@ -10,11 +10,18 @@ import {finalize} from "rxjs";
   styleUrls: ['./vehicle-registration-owner.component.css']
 })
 export class VehicleRegistrationOwnerComponent {
-  selectedFile: File | null = null;
+  userId: number | null;
+  vehicleId: string| null;
+
   constructor(
+
     private storage: Storage,
     private userService: RegisterOwnerService
-  ) {}
+  ) {
+    this.userId = this.userService.getOwnerId();
+    this.vehicleId = null;
+
+  }
 
   user = {brand: '', model: '',maxVelocity:0,fuelConsumption:0,dimensions:'',
     weight:0,carClass:'',carTransmission:'',rentStatus:'WAITING', location:'',price:0,time:'',amoutthetime:0,ownerId:0,imageUrl:'urll'};
@@ -39,17 +46,17 @@ export class VehicleRegistrationOwnerComponent {
       }
     }
   }
-
+  reloadPage() {
+    window.location.reload();
+  }
   onSubmitVehicule() {
     const ownerId = this.userService.getOwnerId();
 
     if (ownerId !== null) {
       this.user.ownerId = ownerId;
 
-      // Aquí puedes llamar al servicio para guardar los datos del vehículo en tu base de datos
       this.userService.addVehiculesOwner(this.user).subscribe((data: any) => {
-        console.log('Vehículo creado:', data);
-
+        console.log('Vehículo creado:', data.id);
         this.user = {
           brand: '',
           model: '',
@@ -67,42 +74,13 @@ export class VehicleRegistrationOwnerComponent {
           ownerId: ownerId,
           imageUrl: ''
         };
-
-        this.userService.setOwnerId(data.ownerId);
+        this.vehicleId = data.id;
+        this.userService.setOwnerVehicleId(data.id);
       });
     } else {
       console.error('Error: ownerId es nulo');
     }
   }
 
-  // onSubmitVehicule() {
-  //   const ownerId = this.userService.getOwnerId(); // Obtiene el ownerId almacenado en el servicio
-  //   if (ownerId !== null) { // Verifica que ownerId no sea nulo
-  //     this.user.ownerId = ownerId;
-  //     this.userService.addVehiculesOwner(this.user).subscribe((data: any) => {
-  //       console.log('Vehiculo creado:', data);
-  //       this.user = {
-  //         brand: '',
-  //         model: '',
-  //         maxVelocity: 0,
-  //         fuelConsumption: 0,
-  //         dimensions: '',
-  //         weight: 0,
-  //         carClass: '',
-  //         carTransmission: '',
-  //         rentStatus: 'WAITING',
-  //         location: '',
-  //         price: 0,
-  //         time: '',
-  //         amoutthetime: 0,
-  //         ownerId: ownerId,
-  //         imageUrl:''
-  //       };
-  //       this.userService.setOwnerId(data.ownerId);
-  //     });
-  //   } else {
-  //     console.error('Error: ownerId es nulo');
-  //   }
-  // }
 
 }

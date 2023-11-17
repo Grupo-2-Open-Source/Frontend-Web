@@ -12,11 +12,13 @@ import {RegisterOwnerService} from "../../../services/register-owner.service";
 })
 export class RentOwnerComponent implements OnInit, AfterViewInit{
   Rented_Vehicles: RentedVehicles;
+  userId: number | null;
   rented: RentedVehicles[] = [];
   responsiveOptions: any[] | undefined;
   user: any;
   constructor(private route: ActivatedRoute,private userService:RegisterOwnerService) {
     this.Rented_Vehicles = {} as RentedVehicles;
+    this.userId = this.userService.getOwnerId();
   }
   ngAfterViewInit() {
     throw new Error('Method not implemented.');
@@ -59,6 +61,12 @@ export class RentOwnerComponent implements OnInit, AfterViewInit{
         }
       });
   }
+  seerequests(vehicleId: string){
+    this.userService.setOwnerVehicleId(vehicleId);
+  }
 
+  reloadPage() {
+    window.location.reload();
+  }
 
 }
