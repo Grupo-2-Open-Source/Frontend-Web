@@ -198,3 +198,24 @@ h1 {
   font-size: 24px;
   margin-top: 0;
 }
+.rectangle {
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  /* Ajusta la altura según sea necesario */
+}
+
+.pdf-viewer {
+  width: 600px;
+  height:500px;/* O ajusta el ancho según sea necesario */
+}
+@media all and (max-width: 840px) {
+
+  .pdf-viewer{
+
+    width: 300px;
+    height: 200px
+  }
+}

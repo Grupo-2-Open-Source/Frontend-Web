@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.card-share{
+  /*width: 35%;*/
+  /*height: 110vh;*/
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  opacity: 100%;
+  box-shadow:none;
+  border:none;
+
+}
+.letter1{
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 700;
+  margin-left: 20px;
+}
+.title1{
+  padding:0;
+  grid-area: label;
+  font-size: 40px;
+  color: #FF7A00;
+  font-family: 'Poppins', sans-serif;
+
+}
+.subtitle{
+  margin-top:30px;
+  grid-area: button;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: row;
+
+}
+.carousel{
+  width: 100px;
+}
+.card{
+  margin-top:30px;
+  background-color:red;
+}
+.mat-spacer{
+  flex: 1.1 auto;
+
+  box-shadow: #14131B;
+}
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.img_vehicule{
+  width:400px;
+}
+@media all and (max-width: 840px) {
+
+  .img_vehicule{
+    width:250px;
+  }
+}

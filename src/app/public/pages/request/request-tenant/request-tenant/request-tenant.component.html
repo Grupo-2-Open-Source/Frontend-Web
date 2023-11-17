@@ -1,16 +1,29 @@
-<div class="container">
-  <div *ngFor="let bundle of request" >
+<div style="height: 100vh;">
+<mat-card style="border-radius: 0;box-shadow: none">
+  <mat-card-content class="contenedor2">
+    <br>
+    <mat-label style="font-size: 30px;color:#FF7A00 "> <b> SOLICITUDES</b></mat-label><br>
+   <div class="container">
+  <div *ngFor="let bundle of user" >
     <mat-card class="container_1">
       <mat-card-content class="container_2">
         <div class="description_request">
-          <label  aria-label="descriptions" style="margin-right: 20px"> {{ bundle.descriptions }}</label>
+          <label  aria-label="descriptions" style="margin-right: 20px">
+            Solicitud de Alquiler del vehículo {{bundle.vehicleBrand}} {{bundle.vehicleModel}}
+
+          </label>
         </div>
         <div  >
-          <img src='{{ bundle.img_src }}' width="150px">
-          <p aria-label="status"><strong>Status:</strong> {{ bundle.status }}</p>
+          <img src='{{ bundle.imageurl}}' width="150px">
+          <p aria-label="status"><strong>Status:</strong> {{ bundle.rentstatus }}</p>
         </div>
       </mat-card-content>
     </mat-card>
     <br>
   </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
 </div>
+
