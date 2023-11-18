@@ -20,11 +20,17 @@
             <div class="border-1 surface-border border-round m-2 text-center py-5 px-3" >
               <div class="mb-3" style="border-radius: 10px;text-align: center;justify-content: center">
                 <img src="{{rent.imageUrl}}" class="img_vehicule" />
+                <h4 class="mb-1"><b>SOLICITANTE:</b>{{ rent.nametenant}}</h4>
+                <h4 class="mb-1"><b>TELÉFONO DE SOLICITANTE:</b>{{ rent.phonenumber}}</h4>
                 <h4 class="mb-1"><b>MARCA:</b>{{ rent.brand}}</h4>
                 <h4 class="mt-0 mb-3"><b>MODELO:</b>{{ rent.model }}</h4>
                 <h4 class="mt-0 mb-3"><b>ESTATUS :</b>{{ rent.rentStatus}}</h4>
-                <button mat-button style="background-color:#14131B; color: white" (click)="confirmrequest(rent.rentId, rent.tenantId);reloadPage()">Confirmar Solicitud</button>
-                <button mat-button style="background-color:#14131B; color: white" (click)="cancelrequest(rent.rentId, rent.tenantId); reloadPage()">Cancelar Solicitud</button>
+                <button mat-button style="background-color:#14131B; color: white" (click)="profiletenant(rent.rentId, rent.tenantId)"  [routerLink]="['/owner/profile-rent-tenant',userId]">Ver Perfil del solicitante</button>
+
+
+
+<!--                <button mat-button style="background-color:#14131B; color: white" (click)="confirmrequest(rent.rentId, rent.tenantId);reloadPage()">Confirmar Solicitud</button>-->
+<!--                <button mat-button style="background-color:#14131B; color: white" (click)="cancelrequest(rent.rentId, rent.tenantId); reloadPage()">Cancelar Solicitud</button>-->
               </div>
             </div>
           </ng-template>

@@ -63,6 +63,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 import { ListRentOwnerComponent } from './public/pages/main-page-owner/rent-owner/List-Rent-Owner/list-rent-owner/list-rent-owner.component';
+import { ProfileRentTenantComponent } from './public/pages/main-page-owner/rent-owner/profile-rent-tenant/profile-rent-tenant.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +95,7 @@ import { ListRentOwnerComponent } from './public/pages/main-page-owner/rent-owne
     ToolbarOwnerComponent,
     NuevoComponent,
     ListRentOwnerComponent,
+    ProfileRentTenantComponent,
 
 
   ],

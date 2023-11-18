@@ -26,7 +26,7 @@ export class RentOwnerComponent implements OnInit, AfterViewInit{
   ngOnInit() {
 
     this.route.params.subscribe((params) => {
-      const ownerId = params['id']; // Obtén el id del usuario de la URL
+      const ownerId = params['onid']; // Obtén el id del usuario de la URL
       this.userService.getAlldata(ownerId).subscribe((data:any) => {
         this.user= data;
       });
