@@ -23,7 +23,7 @@ export class ListRentOwnerComponent implements OnInit , AfterViewInit{
   ngOnInit() {
 
     this.route.params.subscribe((params) => {
-      const ownerId = params['id']; // Obtén el id del usuario de la URL
+      const ownerId = params['onid']; // Obtén el id del usuario de la URL
       if (this.userId != null) {
         if (this.vehicleId != null) {
           this.userService.getAllRents(this.userId, this.vehicleId).subscribe((data: any) => {
@@ -51,17 +51,24 @@ export class ListRentOwnerComponent implements OnInit , AfterViewInit{
     ];
   }
 
+  profiletenant(rentId:number,tenantId:number){
+    this.userService.setRentalId(rentId);
+    this.userService.setTenantId(tenantId);
+  }
+
+
+
   //cambiar a confirmar y solicitar alquiler
-  confirmrequest(rentalId: number, tenantId:number) {
-    this.userService.confirmrequest(rentalId, tenantId).subscribe((response: any) =>{
-      console.log('Solicitud confirmada:', response.id);
-      });
-  }
-  cancelrequest(rentalId: number, tenantId:number) {
-    this.userService.cancelrequest(rentalId, tenantId).subscribe((response: any) =>{
-      console.log('Solicitud cancelada:', response.id);
-    });
-  }
+  // confirmrequest(rentalId: number, tenantId:number) {
+  //   this.userService.confirmrequest(rentalId, tenantId).subscribe((response: any) =>{
+  //     console.log('Solicitud confirmada:', response.id);
+  //     });
+  // }
+  // cancelrequest(rentalId: number, tenantId:number) {
+  //   this.userService.cancelrequest(rentalId, tenantId).subscribe((response: any) =>{
+  //     console.log('Solicitud cancelada:', response.id);
+  //   });
+  // }
   reloadPage() {
     window.location.reload();
   }

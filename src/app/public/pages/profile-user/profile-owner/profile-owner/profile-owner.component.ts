@@ -19,14 +19,14 @@ export class ProfileOwnerComponent implements OnInit{
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
-      const userId = params['id']; // Obtén el id del usuario de la URL
+      const userId = params['onid']; // Obtén el id del usuario de la URL
       this.userService.getUserById(userId).subscribe((data:any) => {
         this.user = data;
 
       });
     });
     this.route.params.subscribe((params) => {
-      const userId = params['id']; // Obtén el id del usuario de la URL
+      const userId = params['onid']; // Obtén el id del usuario de la URL
       this.userService.getimageprofile(userId).subscribe((data:any) => {
         this.imageprofile = data;
 

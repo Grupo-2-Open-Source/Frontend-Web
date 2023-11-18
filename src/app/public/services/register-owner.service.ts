@@ -30,6 +30,10 @@ export class RegisterOwnerService{
 
   private apiUrlcalcelrequest='http://localhost:8080/api/v1/rentals/cancel';
 
+  private  apiUrlprofilerent='http://localhost:8080/api/v1/profiles/tenant';
+
+  private  apiUrlgetimageUrlrent ='http://localhost:8080/api/v1/profiles/tenant/image-url/get';
+
   private currentUserId: number = 0;
   private users: any[] = [];
   private dataLoaded = true;
@@ -130,6 +134,18 @@ export class RegisterOwnerService{
   }
 
 
+//data para profile de rent
+  getProfileByrent(userId: string) {
+    const url = `${this.apiUrlprofilerent}/${userId}`;
+    return this.http.get(url);
+  }
+  //data para profile de rent -imagenprofile
+
+  getimageprofilerent(tenantId:string){
+    const  url=`${this.apiUrlgetimageUrlrent}/${tenantId}`;
+    return this.http.get(url);
+  }
+
 
 
   setCurrentUserId(userId: number) {
@@ -142,12 +158,31 @@ export class RegisterOwnerService{
 
 //GUARGA LOS DATOS DEL ID DEL OWNER
   getOwnerId(): number | null {
-    const ownerId = localStorage.getItem('id');
+    const ownerId = localStorage.getItem('onid');
     return ownerId ? +ownerId : null;
   }
   setOwnerId(id: number): void {
-    localStorage.setItem('id', id.toString());
+    localStorage.setItem('onid', id.toString());
   }
+
+
+  //GUARGA LOS DATOS DEL ID DEL tenant
+  getTenantId(): number | null {
+    const id = localStorage.getItem('tenantId');
+    return id ? +id : null;
+  }
+  setTenantId(id: number): void {
+    localStorage.setItem('tenantId', id.toString());
+  }
+  //GUARGA LOS DATOS DE LA RENTA
+  getRentalId(): number | null {
+    const id = localStorage.getItem('rentalId');
+    return id ? +id : null;
+  }
+  setRentalId(id: number): void {
+    localStorage.setItem('rentalId', id.toString());
+  }
+
 //GUARGA LOS DATOS DEL ID DEL VEHICULO
   getOwnerVehicleId(): string | null {
     const vehicleId = localStorage.getItem('vehicleId');
