@@ -17,7 +17,7 @@
         </div>
       </mat-card-content>
     <div class="boton_Profile" fxLayout="column" fxShow="true" fxHide.lt-md="true" >
-      <button mat-button  style="background-color: #14131B; color: white;">Actualizar Datos</button>
+      <button mat-button  style="background-color: #14131B; color: white;" [routerLink]="['/tenant/perfil-tenant-update', userId]">Actualizar Datos</button>
       <br>
       <h4>Subir Documentos de Antecedente Penales</h4>
       <div style="  text-align: center;align-items: center;">
