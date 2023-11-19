@@ -1,38 +1,18 @@
 
-
-<!--<mat-toolbar-tenant class="toolbarr">-->
-
-<!--&lt;!&ndash;  <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">&ndash;&gt;-->
-<!--&lt;!&ndash;  <div class="mat-spacer"></div>&ndash;&gt;-->
-
-<!--  <a mat-button *ngFor="let option of options"-->
-<!--     [routerLink]="option.path" class="buttonnav">{{option.title}}</a>-->
-<!--</mat-toolbar-tenant>-->
-<!--<router-outlet></router-outlet>-->
-
 <div style="height: 100vh;">
 
     <mat-card style="border-radius: 0;box-shadow: none">
       <mat-card-content class="contenedor2">
         <br>
         <mat-label style="font-size: 30px;color:#FF7A00 "> <b> NOTIFICACIONES</b></mat-label><br>
-        <mat-card>
-          <mat-card-content style="box-shadow:#14131B;border-radius: 5px;background-color: whitesmoke;">
-            <mat-card-title style="  font-family: 'Poppins',sans-serif;">Piero Torres Arias envio una solicitud de alquiler del
-              vehículo Toyota Prius  </mat-card-title>
-            <mat-card-subtitle style="text-align: end"><a mat-button [routerLink]="['/owner/rent-owner']" style="color: #FF7A00">VER SOLICITUD</a></mat-card-subtitle>
-          </mat-card-content>
-        </mat-card><br><br>
-
-        <mat-card>
-          <mat-card-content style="box-shadow:#14131B;border-radius: 5px;background-color: whitesmoke;">
-            <mat-card-title style="  font-family: 'Poppins',sans-serif;">Jorge Paredes Cano envio una solicitud de alquiler del
-              vehículo Toyota Prius  </mat-card-title>
-            <mat-card-subtitle style="text-align: end"><a mat-button [routerLink]="['/owner/rent-owner']" style="color: #FF7A00">VER SOLICITUD</a></mat-card-subtitle>
-          </mat-card-content>
-        </mat-card>
-        <br><br>
-        <!--        <mat-label  style="font-size: 50px;text-align: center;color:#14131B "><b>PUBLICIDAD</b></mat-label><br><br>-->
+        <div *ngFor="let bundle of user" class="student-card">
+          <mat-card class="container_2">
+            <mat-card-content>
+              <p aria-label="rating"> {{ bundle.tenantName }} envio una solitud una solicitud de Alquiler del Vehículo {{bundle.vehicleBrand}}, {{bundle.vehicleModel}}</p>
+            </mat-card-content>
+          </mat-card>
+          <br>
+        </div>
       </mat-card-content>
     </mat-card>
 

@@ -1,0 +1,40 @@
+<div style="height: 120vh;flex-direction: row">
+
+  <div style="flex-direccion: column">
+    <mat-card style="border-radius: 0;box-shadow: none">
+      <mat-card-content >
+        <br>
+        <mat-label style="font-size: 35px;color:#FF7A00 "> <b> ALQUILER</b></mat-label><br><br><br>
+        <mat-label style="font-size: 20px;color:#14131B "> <b> Datos del Solicitante</b></mat-label><br><br><br>
+        <div *ngIf="user">
+          <h1><strong>Nombre y Apellidos:</strong> {{ user.firstName + " "+user.lastName }}</h1>
+          <h1><strong>Telefono:</strong> {{ user.phoneNumber }}</h1>
+          <h1><strong>Fecha de Nacimiento:</strong> {{ user.birthDate }}</h1>
+          <h1><strong>Correo:</strong> {{ user.email }}</h1>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+<div style="align-content: center;justify-content: center;text-align: center;-webkit-align-content: center">
+  <mat-card class="photo_perfil" >
+    <div *ngIf="imagetenant">
+      <img class="img" mat-card-image src="{{imagetenant.imageUrl}}" alt="Photo del usuario" width="500px" >
+    </div>
+    <mat-card-actions style="justify-content: center;align-content: center">
+      <div style="margin:10px;flex-direction: column;">
+        <h4>Confirma o Cancela la Renta del vehículo</h4>
+        <div style="margin-top:10px">
+          <!--          //BOTONES-->
+          <button mat-button style="background-color:#FF7A00; color: black;margin:10px" >Ver Antedentes Penales</button>
+          <button mat-button style="background-color:#14131B; color: white;margin:10px" (click)="confirmrequest()">Confirmar Solicitud</button>
+          <button mat-button style="background-color:#14131B; color: white;margin:10px" (click)="cancelrequest()">Cancelar Solicitud</button>
+
+        </div>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+</div>

@@ -17,7 +17,7 @@ export class ToolbarComponent {
   }
   goToProfile() {
     const userId = this.authService.getTenantId()
-    this.router.navigate(['/owner/perfil-owner', userId]);
+    this.router.navigate(['/tenant/perfil-tenant', userId]);
   }
 
 }

@@ -39,6 +39,12 @@ import {RequestTenantComponent} from "./public/pages/request/request-tenant/requ
 import {ToolbarComponent} from "./public/pages/component/toolbar-tenant/toolbar.component";
 import {ToolbarOwnerComponent} from "./public/pages/component/toolbar-owner/toolbar-owner.component";
 import {NuevoComponent} from "./public/pages/prueba/nuevo/nuevo.component";
+import {
+  ListRentOwnerComponent
+} from "./public/pages/main-page-owner/rent-owner/List-Rent-Owner/list-rent-owner/list-rent-owner.component";
+import {
+  ProfileRentTenantComponent
+} from "./public/pages/main-page-owner/rent-owner/profile-rent-tenant/profile-rent-tenant.component";
 
 
 
@@ -62,23 +68,23 @@ const routes:Routes=[
         component:MainPageTenantComponent
       },
       {
-        path:'share-auto-tenant',
+        path:'share-auto-tenant/:id',
         component:ShareAutoTenantComponent
       },
       {
-        path:'maintenance-tenant',
+        path:'maintenance-tenant/:id',
         component: MaintenanceTenantComponent
       },
       {
-        path:'rent-tenant',
+        path:'rent-tenant/:id',
         component: RentTenantComponent
       },
       {
-        path: 'pay-car-rental',
+        path: 'pay-car-rental/:id',
         component: PayCarRentalComponent
       },
       {
-        path:'requests-tenant',
+        path:'requests-tenant/:id',
         component: RequestTenantComponent
       },
       {
@@ -91,12 +97,14 @@ const routes:Routes=[
   {path:'owner',
   component:ToolbarOwnerComponent,
   children:[
-    {path: 'main-page-owner/:id',component:MainPageOwnerComponent},
-    {path: 'notifications-owner',component:NotificationsOwnerComponent},
-    {path: 'vehicle-registration-owner/:id', component: VehicleRegistrationOwnerComponent},
-    {path: 'create-contract-owner', component: CreateContractOwnerComponent},
-    {path: 'rent-owner/:id', component: RentOwnerComponent},
-    {path:'perfil-owner/:id',component: ProfileOwnerComponent},
+    {path: 'main-page-owner/:onid',component:MainPageOwnerComponent},
+    {path: 'notifications-owner/:onid',component:NotificationsOwnerComponent},
+    {path: 'vehicle-registration-owner/:onid', component: VehicleRegistrationOwnerComponent},
+    {path: 'create-contract-owner/:onid/:vehiculeId', component: CreateContractOwnerComponent},
+    {path: 'rent-owner/:onid', component: RentOwnerComponent},
+    {path: 'list-rent-owner/:onid', component: ListRentOwnerComponent},
+    {path: 'profile-rent-tenant/:onid', component: ProfileRentTenantComponent},
+    {path:'perfil-owner/:onid',component: ProfileOwnerComponent},
   ]
   },
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},

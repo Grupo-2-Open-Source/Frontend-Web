@@ -3,6 +3,8 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {RequestTenant} from "../../../../model/request-tenant";
 
 import {RequestTenantService} from "../../../../services/request-tenant.service";
+import {ActivatedRoute} from "@angular/router";
+import {RegisterTenantService} from "../../../../services/register-tenant.service";
 
 @Component({
   selector: 'app-request-tenant',
@@ -10,20 +12,21 @@ import {RequestTenantService} from "../../../../services/request-tenant.service"
   styleUrls: ['./request-tenant.component.css']
 })
 export class RequestTenantComponent implements OnInit, AfterViewInit {
-  Request: RequestTenant;
-  request: RequestTenant[] = [];
-  constructor(private requestService: RequestTenantService ) {
-    this.Request = {} as RequestTenant;
+  user: any;
+  constructor(private route: ActivatedRoute,private userService: RegisterTenantService) {
   }
   ngAfterViewInit() {
     throw new Error('Method not implemented.');
   }
   ngOnInit() {
-    this.getAllRequestVehicule();
-  }
-  private getAllRequestVehicule(){
-    this.requestService.getAll().subscribe((response: any) =>{
-      this.request = response.request_tenant;
+    this.route.params.subscribe((params) => {
+      const userId = params['id']; // Obtén el id del usuario de la URL
+      this.userService.getrentrequests(userId).subscribe((data:any) => {
+        this.user = data;
+
+      });
     });
+
+
   }
 }

@@ -58,8 +58,12 @@ import {ImageModule} from "primeng/image";
 import {RequestTenantService} from "./public/services/request-tenant.service";
 import {FileUploadModule} from "primeng/fileupload";
 import {RegisterOwnerService} from "./public/services/register-owner.service";
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
+import { ListRentOwnerComponent } from './public/pages/main-page-owner/rent-owner/List-Rent-Owner/list-rent-owner/list-rent-owner.component';
+import { ProfileRentTenantComponent } from './public/pages/main-page-owner/rent-owner/profile-rent-tenant/profile-rent-tenant.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +94,8 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     ToolbarComponent,
     ToolbarOwnerComponent,
     NuevoComponent,
+    ListRentOwnerComponent,
+    ProfileRentTenantComponent,
 
 
   ],
@@ -115,6 +121,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     HttpClientModule,
     CardModule,
     ImageModule,
+    PdfViewerModule,
     FileUploadModule,
     //"locationId":"northamerica-northeast1"
     provideFirebaseApp(() => initializeApp({"projectId":"autoyadeploy-324fd","appId":"1:135558029592:web:7199f449cbc52662153e6d","storageBucket":"autoyadeploy-324fd.appspot.com","apiKey":"AIzaSyBFENhb7mn8C0qMqS8WQgnhRd4jwg9rKuY","authDomain":"autoyadeploy-324fd.firebaseapp.com","messagingSenderId":"135558029592"})),
@@ -127,5 +134,6 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
   providers: [RentdTenantService,RequestTenantService,RegisterOwnerService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }

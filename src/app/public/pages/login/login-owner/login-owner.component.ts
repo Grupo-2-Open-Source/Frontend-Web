@@ -27,7 +27,7 @@ export class LoginOwnerComponent {
           this.router.navigate(['/owner/main-page-owner', response.id]).then(() => {
             console.log('Navegación exitosa');
           });
-          localStorage.setItem('id', response.id.toString());
+          localStorage.setItem('onid', response.id.toString());
         } else {
           alert("Vuelve a ingresar tus datos");
         }

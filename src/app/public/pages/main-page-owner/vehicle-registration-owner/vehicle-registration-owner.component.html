@@ -25,12 +25,12 @@
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Velocidad máxima</mat-label>
-              <input matInput [(ngModel)]="user.maxVelocity" name="maxVelocity" placeholder="Velocidad máxima">
+              <input matInput [(ngModel)]="user.maxVelocity" type="number" name="maxVelocity" placeholder="Velocidad máxima">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Consumo de combustible</mat-label>
-              <input matInput [(ngModel)]="user.fuelConsumption" name="fuelConsumption" placeholder="Consumo de combustible">
+              <input matInput [(ngModel)]="user.fuelConsumption" type="number" name="fuelConsumption" placeholder="Consumo de combustible">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
@@ -40,47 +40,63 @@
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Peso</mat-label>
-              <input matInput [(ngModel)]="user.weight"  name="weight" placeholder="Peso">
+              <input matInput [(ngModel)]="user.weight" type="number" name="weight" placeholder="Peso">
             </mat-form-field>
 
-            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins', sans-serif;">
               <mat-label>Clase</mat-label>
-              <input matInput [(ngModel)]="user.carClass"  name="carClass" placeholder="Clase">
+              <mat-select [(ngModel)]="user.carClass" name="carClass" placeholder="Selecciona una clase">
+                <mat-option value="MICRO">MICRO</mat-option>
+                <mat-option value="CARGOCAR">CARGOCAR</mat-option>
+                <mat-option value="SPORTCAR">SPORTCAR</mat-option>
+                <mat-option value="FAMILIAR">FAMILIAR</mat-option>
+                <mat-option value="SUV">SUV</mat-option>
+              </mat-select>
             </mat-form-field>
 
-            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+            <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins', sans-serif;">
               <mat-label>Transmisión</mat-label>
-              <input matInput [(ngModel)]="user.carTransmission" name="carTransmission" placeholder="Transmisión">
+              <mat-select [(ngModel)]="user.carTransmission" name="carTransmission" placeholder="Selecciona una transmisión">
+                <mat-option value="AUTOMATIC">AUTOMATIC</mat-option>
+                <mat-option value="MANUAL">MANUAL</mat-option>
+              </mat-select>
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Tiempo de alquiler</mat-label>
-              <input matInput [(ngModel)]="user.time" name="time" placeholder="Tiempo de alquiler">
+              <input matInput [(ngModel)]="user.time"  name="time" placeholder="Tiempo de alquiler">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Tiempo de alquiler</mat-label>
-              <input matInput [(ngModel)]="user.amoutthetime" name="amoutthetime" placeholder="Tiempo de alquiler">
+              <input matInput [(ngModel)]="user.amoutthetime"type="number" name="amoutthetime" placeholder="Tiempo de alquiler">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Costo de alquiler al mes</mat-label>
-              <input matInput [(ngModel)]="user.price"  name="price" placeholder="Costo de alquiler al mes">
+              <input matInput [(ngModel)]="user.price"  type="number" name="price" placeholder="Costo de alquiler al mes">
             </mat-form-field>
 
             <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
               <mat-label>Lugar de recojo del vehículo</mat-label>
               <input matInput [(ngModel)]="user.location" name="location" placeholder="Costo de alquiler al mes">
             </mat-form-field>
-
+<!--            [routerLink]="['/owner/main-page-owner',userId]"-->
 <!--            <button mat-raised-button fxFlex="100%" class="registrar-button" mat-button style="background-color: #FF7A00;color: white;font-family: 'Poppins',sans-serif;">Registro</button>-->
-            <button mat-raised-button fxFlex="100%" class="registrar-button" mat-button style="background-color: #FF7A00; color: white; font-family: 'Poppins', sans-serif;" (click)="onSubmitVehicule()">Registro</button>
+            <button mat-raised-button fxFlex="100%" class="registrar-button" mat-button style="background-color: #FF7A00; color: white; font-family: 'Poppins', sans-serif;" (click)="onSubmitVehicule(); "   >Registro</button>
           </form>
         </div>
 
         <div class="button-container">
-          <input type="file" (change)="onFileSelected($event)" accept="image/*">
-          <button mat-raised-button class="center-button-crear-contrato" mat-button style="background-color: #14131B;color: white;font-family: 'Poppins',sans-serif;" [routerLink]="['/owner/create-contract-owner']">Crear Contrato de Alquiler</button>
+          <div style="margin:10px"><b>SUBE LA IMAGEN DEL VEHICULO </b></div>
+          <div style="margin:10px">
+            <input type="file" (change)="onFileSelected($event)" accept="image/*">
+          </div>
+          <div style="margin:30px">
+                  <button mat-raised-button class="center-button-crear-contrato" mat-button style="background-color: #14131B;color: white;font-family: 'Poppins',sans-serif;" [routerLink]="['/owner/create-contract-owner',userId,vehicleId]">Crear Contrato de Alquiler</button>
+          </div>
+
+
         </div>
       </div>
     </mat-card>

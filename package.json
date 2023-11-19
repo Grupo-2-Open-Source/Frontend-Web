@@ -29,6 +29,7 @@
     "jquery": "^3.7.1",
     "mdb-angular-ui-kit": "^5.0.0",
     "mdb-ui-kit": "^6.4.1",
+    "ng2-pdf-viewer": "^10.0.0",
     "ngx-slick-carousel": "^15.0.0",
     "primeng": "^16.4.1",
     "rxjs": "~7.8.0",
