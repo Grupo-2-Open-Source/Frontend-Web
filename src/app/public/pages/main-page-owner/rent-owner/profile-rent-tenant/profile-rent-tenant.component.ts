@@ -10,6 +10,7 @@ import {RegisterOwnerService} from "../../../../services/register-owner.service"
 export class ProfileRentTenantComponent implements  OnInit{
   user:any;
   imagetenant:any;
+  datacriminal:any;
   ownerId: number | null;
   tenantId: number| null;
   constructor(private route: ActivatedRoute, private userService: RegisterOwnerService) {
@@ -25,6 +26,9 @@ export class ProfileRentTenantComponent implements  OnInit{
       this.userService.getimageprofilerent(tenantIdAsString).subscribe((response:any)=>{
         this.imagetenant=response;
       });
+      this.userService.getdocumenttenant((tenantIdAsString)).subscribe((dataresponse:any)=>{
+        this.datacriminal=dataresponse;
+      })
   }
 
   confirmrequest() {

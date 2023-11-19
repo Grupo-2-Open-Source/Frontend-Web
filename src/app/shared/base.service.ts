@@ -41,13 +41,6 @@ export class BaseService<T> {
   }
 
 
-  // postuser<T>(data:T):Observable<T>{
-  //   return this.http.post<T>(this.resourceEndpoint, data, this.httpOptions)
-  //     .pipe(
-  //       retry(2), // Intentará la solicitud dos veces en caso de error
-  //       catchError(this.handleError) // Manejo de errores personalizado
-  //     );
-  // }
 }
 
 

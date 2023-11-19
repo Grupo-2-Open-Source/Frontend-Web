@@ -1,7 +1,4 @@
 <div style="height: 100vh;">
-
-
-
   <div >
     <mat-card class="card-share">
       <mat-card-header>
@@ -27,17 +24,12 @@
                 <h4 class="mt-0 mb-3"><b>ESTATUS :</b>{{ rent.rentStatus}}</h4>
                 <button mat-button style="background-color:#14131B; color: white" (click)="profiletenant(rent.rentId, rent.tenantId)"  [routerLink]="['/owner/profile-rent-tenant',userId]">Ver Perfil del solicitante</button>
 
-
-
-<!--                <button mat-button style="background-color:#14131B; color: white" (click)="confirmrequest(rent.rentId, rent.tenantId);reloadPage()">Confirmar Solicitud</button>-->
-<!--                <button mat-button style="background-color:#14131B; color: white" (click)="cancelrequest(rent.rentId, rent.tenantId); reloadPage()">Cancelar Solicitud</button>-->
               </div>
             </div>
           </ng-template>
         </p-carousel>
       </mat-card-content>
     </mat-card>
-
 
   </div>
 </div>

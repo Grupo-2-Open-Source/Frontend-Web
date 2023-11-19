@@ -23,11 +23,12 @@
           <br><br><br><br>
           <mat-label style="font-size: 20px;color: #14131B;font-family: 'Poppins',sans-serif;"><b>Vehiculo a compartir</b></mat-label><br>
           <img src="{{getvehicule.imageurl}}" alt="Imagen del vehículo">
-          <p style="margin-top: 20px;font-family: 'Poppins',sans-serif;flex-direction: column">Marca:{{getvehicule.brand}} <br> Modelo: {{getvehicule.model}}</p>
+          <label style="margin-top: 20px;font-family: 'Poppins',sans-serif;flex-direction: column"> <b>MARCA: </b> {{getvehicule.brand}}</label>
+          <label style="margin-top: 20px;margin-bottom: 20px; font-family: 'Poppins',sans-serif;flex-direction: column"><b>MODELO: </b> {{getvehicule.model}}</label>
+
         </div>
       </mat-card>
 
-      <!-- Segunda columna -->
       <mat-card fxFlex="50%" style="background-color: darkgray">
         <div class="rectangle" style="font-family: 'Poppins',sans-serif">
           <br>
@@ -41,18 +42,15 @@
                           class="pdf-viewer"
 
               ></pdf-viewer>
-
           </div>
           <br><br>
           <div style="text-align: center; font-family: 'Poppins',sans-serif;">
-            <button mat-raised-button  style="background-color: #FF7A00;color: white" (click)="onSubmitVehicule()"   >Subir Contrato</button>
+            <button mat-raised-button  style="background-color: #FF7A00;color: white" (click)="onSubmitVehicule()" *ngIf="vehicleId !== null" >Subir Contrato</button>
 
           </div>
           <br><br>
         </div>
       </mat-card>
-
-
 
 
     </div>

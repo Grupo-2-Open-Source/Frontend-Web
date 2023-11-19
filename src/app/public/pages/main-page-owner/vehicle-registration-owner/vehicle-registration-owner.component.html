@@ -1,6 +1,4 @@
 <div style="height: 100vh;">
-
-
     <mat-card>
       <mat-card-header>
         <mat-card-title class="letter1" style="font-family: 'Poppins',sans-serif;">
@@ -81,8 +79,6 @@
               <mat-label>Lugar de recojo del vehículo</mat-label>
               <input matInput [(ngModel)]="user.location" name="location" placeholder="Costo de alquiler al mes">
             </mat-form-field>
-<!--            [routerLink]="['/owner/main-page-owner',userId]"-->
-<!--            <button mat-raised-button fxFlex="100%" class="registrar-button" mat-button style="background-color: #FF7A00;color: white;font-family: 'Poppins',sans-serif;">Registro</button>-->
             <button mat-raised-button fxFlex="100%" class="registrar-button" mat-button style="background-color: #FF7A00; color: white; font-family: 'Poppins', sans-serif;" (click)="onSubmitVehicule(); "   >Registro</button>
           </form>
         </div>

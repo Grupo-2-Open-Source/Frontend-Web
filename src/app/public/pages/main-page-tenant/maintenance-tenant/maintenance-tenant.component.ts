@@ -38,7 +38,6 @@ export class MaintenanceTenantComponent implements OnInit{
   }
 
   onUpload() {
-    // Aquí puedes manejar la carga del archivo, por ejemplo, enviarlo al servidor
     if (this.selectedFile) {
 
     }

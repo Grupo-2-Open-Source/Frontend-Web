@@ -27,37 +27,40 @@
 
 
       <mat-card class="card-share2">
-        <mat-card-content>
-          <mat-card-title style="margin-bottom: 20px;">Seleccionar nombre del propietario del auto alquilado</mat-card-title>
+        <mat-card-content >
 
-          <mat-form-field>
-            <mat-label>Seleccionar nombre del propietario del auto alquilado</mat-label>
-            <mat-select [(ngModel)]="selectedOption" name="selectedOwner">
-              <mat-option *ngFor="let option of user" [value]="option">{{ option }}</mat-option>
-            </mat-select>
-          </mat-form-field>
+          <mat-card-title style="margin-bottom: 20px;justify-content: center;align-content: center">Seleccionar nombre del propietario del auto alquilado</mat-card-title>
+          <div style="justify-content: center;align-content: center;text-align:center">
+            <mat-form-field style="width:50%;" >
+              <mat-label>Seleccionar nombre del propietario del auto alquilado</mat-label>
+              <mat-select [(ngModel)]="selectedOption" name="selectedOwner" >
+                <mat-option *ngFor="let option of user" [value]="option">{{ option }}</mat-option>
+              </mat-select>
+            </mat-form-field>
 
-          <mat-card-title style="margin-bottom: 20px;">Tipo de problema</mat-card-title>
-          <mat-form-field>
-            <input matInput placeholder="Problema">
-          </mat-form-field>
+            <mat-card-title style="margin-bottom: 20px;">Tipo de problema</mat-card-title>
+            <mat-form-field style="width:50%;">
+              <input matInput placeholder="Problema">
+            </mat-form-field>
 
-          <mat-card-title style="margin-bottom: 20px;">Descripción</mat-card-title>
-          <textarea class="input2" matInput placeholder="Descripción" style="width: 50%;"></textarea>
-
-
-          <div>
-            <input type="file" (change)="onFileSelected($event)" style="display: none;" #fileInput>
-            <button mat-raised-button color="primary" class="button2" (click)="fileInput.click()">
-              Seleccionar archivo
-            </button>
-            <span *ngIf="selectedFile">{{ selectedFile.name }}</span>
-            <button mat-raised-button color="primary" class="button2" (click)="onUpload()" [disabled]="!selectedFile">
-              Subir archivo
-            </button>
+            <mat-card-title style="margin-bottom: 20px;">Descripción</mat-card-title>
+            <textarea class="input2" matInput placeholder="Descripción" ></textarea>
           </div>
 
-          <button mat-button class="button2" style="background-color: #FF7A00; color: white;" (click)="openSnackBar('¡Se ha enviado el mensaje de mantenimiento al correo del propietario del auto correctamente!', 'Cerrar')">Enviar</button>
+
+<mat-card style="background-color: transparent;box-shadow: none">
+  <mat-card-content style="display:flex;justify-content: center;align-content: center;-webkit-align-content: center;justify-items: center">
+    <div style="flex-direction: column;">
+      <input type="file" (change)="onFileSelected($event)" style="display: none;" #fileInput>
+      <button mat-raised-button color="primary" class="button2" (click)="fileInput.click()">Seleccionar archivo</button>
+
+      <span *ngIf="selectedFile">{{ selectedFile.name }}</span>
+      <button mat-raised-button color="primary" class="button2" (click)="onUpload()" [disabled]="!selectedFile">Subir archivo</button>
+      <button mat-button class="button2" style="background-color: #FF7A00; color: white;" (click)="openSnackBar('¡Se ha enviado el mensaje de mantenimiento al correo del propietario del auto correctamente!', 'Cerrar')">Enviar</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
         </mat-card-content>
       </mat-card>
 
