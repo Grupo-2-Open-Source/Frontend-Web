@@ -90,7 +90,6 @@ export class ProfileTenantComponent implements OnInit{
   //Update de imagen de perfil
   onSubmitProfileTenant() {
     const tenantId  = this.userService.getTenantId();
-
     if (tenantId !== null) {
       this.profile.tenantId = tenantId ;
 

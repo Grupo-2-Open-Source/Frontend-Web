@@ -22,10 +22,14 @@
       <h4>Subir Documentos de Antecedente Penales</h4>
       <div style="  text-align: center;align-items: center;">
         <input type="file" (change)="onFileSelectedAntecedent($event)" accept="DocAntecedentPenal/*"  style="border: 1px solid transparent; padding: 8px; border-radius: 4px; background-color: #8c8c8c; cursor: pointer;"><br>
+
       </div>
+
       <button mat-button  [routerLink]="['/login-tenant']" style="background-color: #14131B; color: white;margin-top:10px">Cerrar Sesión</button>
     </div>
     </mat-card>
+
+
 
     <mat-card class="photo_perfil" fxLayout.xs="column">
       <div *ngIf="imageprofile">

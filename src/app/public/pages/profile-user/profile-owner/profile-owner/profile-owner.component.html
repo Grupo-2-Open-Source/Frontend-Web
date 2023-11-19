@@ -16,8 +16,8 @@
             <!-- Otros detalles del usuario -->
           </div>
         </mat-card-content>
-        <div class="boton_Profile-owner" fxLayout="column">
-          <button mat-button  style="background-color: #14131B; color: white;">Actualizar Datos</button>
+        <div class="boton_Profile-owner" fxLayout="column" fxShow="true" fxHide.lt-md="true" >
+          <button mat-button  style="background-color: #14131B; color: white;" [routerLink]="['/owner/perfil-owner-update', userId]">Actualizar Datos</button>
           <br>
           <button mat-button [routerLink]="['/login-owner']" style="background-color: #14131B; color: white;">Cerrar Sesión</button>
         </div>

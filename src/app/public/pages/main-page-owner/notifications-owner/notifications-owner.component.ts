@@ -19,7 +19,7 @@ export class NotificationsOwnerComponent implements OnInit{
   }
   ngOnInit() {
     this.route.params.subscribe((params) => {
-      const userId = params['onid']; // Obtén el id del usuario de la URL
+      const userId = params['onid'];
       this.userService.getnotificationsowner(userId).subscribe((data:any) => {
         this.user = data;
 

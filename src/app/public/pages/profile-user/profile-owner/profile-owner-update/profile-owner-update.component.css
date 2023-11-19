@@ -35,9 +35,9 @@
   flex: 1 1 auto;
 }
 
-.Profile-owner{
-  width: 40%;
-  height: 100vh;
+.Profile-tenant{
+  width: 40px;
+  height: 120vh;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@
   opacity: 100%;
 
 }
-.letter1-ow{
+.letter1{
   text-align: center;
   font-size: 40px;
   display: flex;
@@ -58,7 +58,7 @@
   margin-left: 50px;
 }
 
-.letter2-ow{
+.letter2{
   font-size: 20px;
   flex-flow: column;
   display: flex;
@@ -70,6 +70,18 @@
   margin-left: 50px;
 }
 
+.letter3{
+  font-size: 25px;
+  flex-flow: column;
+  display: flex;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 500;
+  margin-left: 30px;
+  margin-top: 50px;
+  justify-content: space-evenly;
+  padding: 1px 8px;
+  margin-left: 80px;
+}
 .letter3-ow{
   font-size: 25px;
   flex-flow: column;
@@ -86,8 +98,7 @@
 
 .photo_perfil{
   width: 50%;
-  height: 100vh;
-
+  height: 120vh;
   display: flex;
   flex-direction: column;
   background-color:whitesmoke ;
@@ -99,17 +110,19 @@
   justify-content: space-evenly;
 }
 
-.boton_Profile-owner{
+.boton_Profile{
   width: 50%;
   margin-left: 150px;
   margin-top: 100px;
   display: flex;
+
 }
 
 .button_Image{
   background-color: black;
   width: 300px;
   padding: 20px;
+  flex: 1.1 auto;
 }
 .photo_perfil .img{
   width:300px;
@@ -136,3 +149,4 @@
     margin-left: 25%;
   }
 }
+

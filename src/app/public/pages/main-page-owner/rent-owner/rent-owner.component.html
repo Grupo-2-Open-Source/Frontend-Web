@@ -26,8 +26,8 @@
                 <h4 class="mb-1"><b>MARCA:</b>{{ rent.brand}}</h4>
                 <h4 class="mt-0 mb-3"><b>MODELO:</b>{{ rent.model }}</h4>
                 <h4 class="mt-0 mb-3"><b>ESTATUS :</b>{{ rent.rentStatus }}</h4>
-                <button mat-button style="background-color:#14131B; color: white" (click)="eliminarVehiculo(rent.ownerId, rent.id); reloadPage()">Eliminar Vehículo</button>
-                <button mat-button style="background-color:#14131B; color: white" (click)="seerequests(rent.id)" [routerLink]="['/owner/list-rent-owner',userId]">Ver Solicitud</button>
+                <button mat-button style="background-color:#14131B; color: white;margin: 10px" (click)="eliminarVehiculo(rent.ownerId, rent.id); reloadPage()">Eliminar Vehículo</button>
+                <button mat-button style="background-color:#14131B; color: white;margin: 10px" (click)="seerequests(rent.id)" [routerLink]="['/owner/list-rent-owner',userId]">Ver Solicitud</button>
 
               </div>
             </div>

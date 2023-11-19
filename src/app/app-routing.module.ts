@@ -48,6 +48,9 @@ import {
 import {
   ProfileTenantUpdateComponent
 } from "./public/pages/profile-user/profile-tenant/profile-tenant-update/profile-tenant-update.component";
+import {
+  ProfileOwnerUpdateComponent
+} from "./public/pages/profile-user/profile-owner/profile-owner-update/profile-owner-update.component";
 
 
 
@@ -112,6 +115,7 @@ const routes:Routes=[
     {path: 'list-rent-owner/:onid', component: ListRentOwnerComponent},
     {path: 'profile-rent-tenant/:onid', component: ProfileRentTenantComponent},
     {path:'perfil-owner/:onid',component: ProfileOwnerComponent},
+    {path:'perfil-owner-update/:onid',component: ProfileOwnerUpdateComponent},
   ]
   },
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},
