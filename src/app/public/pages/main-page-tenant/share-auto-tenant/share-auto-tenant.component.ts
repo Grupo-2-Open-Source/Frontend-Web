@@ -26,6 +26,7 @@ export class ShareAutoTenantComponent   implements OnInit, AfterViewInit{
   }
   ngOnInit() {
     this.getAllRentedVehicule();
+    this.onSubmitSearch();
     this.responsiveOptions = [
       {
         breakpoint: '1199px',

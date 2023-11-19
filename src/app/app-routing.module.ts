@@ -45,6 +45,9 @@ import {
 import {
   ProfileRentTenantComponent
 } from "./public/pages/main-page-owner/rent-owner/profile-rent-tenant/profile-rent-tenant.component";
+import {
+  ProfileTenantUpdateComponent
+} from "./public/pages/profile-user/profile-tenant/profile-tenant-update/profile-tenant-update.component";
 
 
 
@@ -91,6 +94,10 @@ const routes:Routes=[
         path:'perfil-tenant/:id',
         component: ProfileTenantComponent
       },
+      {
+        path:'perfil-tenant-update/:id',
+        component: ProfileTenantUpdateComponent
+      }
     ]
   },
 

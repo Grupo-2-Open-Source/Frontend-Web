@@ -8,7 +8,7 @@ import {map, Observable, tap} from "rxjs";
 export class RegisterTenantService {
   private apiUrl = 'http://localhost:8080/api/v1/user/register/tenant';
   private apiUrllogin='http://localhost:8080/api/v1/user/login/tenant';
-  private  apiUrlprofile='http://localhost:8080/api/v1/profiles/tenant';
+  private apiUrlprofile='http://localhost:8080/api/v1/profiles/tenant';
 
   //vehiculos alquilados por arrendatario
   private  apiUrlgetAllvehiculesRent='http://localhost:8080/api/v1/vehicles/tenant/rent';
@@ -28,6 +28,9 @@ export class RegisterTenantService {
   private apiUrlvehiculesearch='http://localhost:8080/api/v1/vehicles/tenant/search';
 
   private  apiUrlpayment='http://localhost:8080/api/v1/rentals/payment';
+
+  private apiUrlProfileTenantUpdate = 'http://localhost:8080/api/v1/profiles/tenant/update/data/profile';
+  private apiUrlGetOwnersByTenant = 'http://localhost:8080/api/v1/maintenances/tenant/list-owners';
 
   private currentUserId: number = 0;
   private users: any[] = [];
@@ -95,8 +98,10 @@ export class RegisterTenantService {
     return this.http.get(url);
   }
   //Mantenimeinto
-
-
+  getOwnersByTenantId(tenantId:string){
+    const  url=`${this.apiUrlGetOwnersByTenant}/%7Bid%7D?tenantId=${tenantId}`;
+    return this.http.get(url);
+  }
 
 //Mostrar una lista de vehiculo de todos los owners
   getAllvehiculesowner(){
@@ -123,25 +128,14 @@ export class RegisterTenantService {
     return this.http.get(url);
   }
 
-
-
-
-
-
-
-
-
+  //Actualizar datos de tenant
+  updateProfileTenant(tenantData:any){
+    return this.http.put(this.apiUrlProfileTenantUpdate,tenantData);
+  }
 
   setCurrentUserId(userId: number) {
     this.currentUserId = userId;
   }
-
-
-
-
-
-
-
   getCurrentUserId() {
     return this.currentUserId;
   }
