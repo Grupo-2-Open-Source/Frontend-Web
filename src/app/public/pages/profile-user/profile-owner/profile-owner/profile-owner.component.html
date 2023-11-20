@@ -1,36 +1,4 @@
 <div  style="height: 100vh; background-color: white; ">
-  <mat-sidenav-container fxFlexFill class="profile-container">
-
-    <mat-toolbar class="toolbarr">
-      <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
-      <div class="mat-spacer"></div>
-
-      <span class="example-spacer"></span>
-      <div fxShow="true" fxHide.lt-md="true">
-        <a  class="buttonnav" mat-button [routerLink]="['/main-page-owner']">INICIO</a>
-        <a  class="buttonnav" mat-button [routerLink]="['/vehicle-registration-owner']">REGISTRO VEHICULAR</a>
-        <a class="buttonnav" mat-button [routerLink]="['/notifications-owner']">NOTIFICACIONES</a>
-        <a class="buttonnav" mat-button [routerLink]="['/rent-owner']">ALQUILER</a>
-        <a mat-button  [routerLink]="['/perfil-owner']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
-      </div>
-
-      <div fxShow="true" fxHide.gt-sm="true">
-        <a  (click)="sidenav.toggle()"><mat-icon>home</mat-icon></a>
-      </div>
-      <router-outlet></router-outlet>
-    </mat-toolbar>
-
-    <mat-sidenav #sidenav fxLayout="column">
-      <div fxLayout="column">
-        <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
-        <a  class="buttonnav" mat-button [routerLink]="['/main-page-owner']">INICIO</a>
-        <a  class="buttonnav" mat-button [routerLink]="['/vehicle-registration-owner']">REGISTRO VEHICULAR</a>
-        <a class="buttonnav" mat-button [routerLink]="['/notifications-owner']">NOTIFICACIONES</a>
-        <a class="buttonnav" mat-button [routerLink]="['/rent-owner']">ALQUILER</a>
-        <a class="buttonnav" mat-button [routerLink]="['/perfil-owner']">PERFIL</a>
-      </div>
-    </mat-sidenav>
-
     <div style="display: flex; height: 100vh; background-color: white;">
       <mat-card class="Profile-owner" style="width: 1000px">
         <mat-card-header>
@@ -39,30 +7,42 @@
         </mat-card-header>
 
         <mat-card-content class="letter3-ow" >
-          <mat-list role="list">
-            <mat-list role="list"><p> Nombre: Erik Hernan</p></mat-list>
-            <mat-list role="list">Apellido: Ruiz Torres</mat-list>
-            <mat-list role="list">celular: 9224433992</mat-list>
-            <mat-list role="list">Correo: erik@gmail.com</mat-list>
-            <mat-list role="list">Can. de veh. alquilado: 1</mat-list>
-          </mat-list>
+          <div *ngIf="user">
+            <h2>Detalles del Usuario</h2>
+            <p><strong>Nombre y Apellidos:</strong> {{ user.firstName + " "+user.lastName }}</p>
+            <p><strong>Telefono:</strong> {{ user.phoneNumber }}</p>
+            <p><strong>Fecha de Nacimiento:</strong> {{ user.birthDate }}</p>
+            <p><strong>Correo:</strong> {{ user.email }}</p>
+            <!-- Otros detalles del usuario -->
+          </div>
         </mat-card-content>
-        <div class="boton_Profile-owner" fxLayout="column">
-          <button mat-button  style="background-color: #14131B; color: white;">Actualizar Datos</button>
+        <div class="boton_Profile-owner" fxLayout="column" fxShow="true" fxHide.lt-md="true" >
+          <button mat-button  style="background-color: #14131B; color: white;" [routerLink]="['/owner/perfil-owner-update', userId]">Actualizar Datos</button>
           <br>
           <button mat-button [routerLink]="['/login-owner']" style="background-color: #14131B; color: white;">Cerrar Sesión</button>
         </div>
       </mat-card>
 
-      <mat-card class="photo_perfil" >
-        <img class="img" mat-card-image src="https://imgur.com/YP2XnZT.png" alt="Photo del usuario" width="500px" >
+
+      <mat-card class="photo_perfil" fxLayout.xs="column">
+        <div *ngIf="imageprofile">
+          <img class="img" mat-card-image src="{{imageprofile.imageUrl}}" alt="Photo del usuario" width="500px" >
+        </div>
         <mat-card-actions>
-          <button class="button_Image" mat-button style="background-color: #14131B; color: white;">Cambiar foto perfil</button>
+          <div style="margin:10px">
+            <h4>Cambia tu foto perfil</h4>
+            <div>
+              <input type="file" (change)="onFileSelected($event)" accept="imagesprofile/*"  style="border: 1px solid transparent; padding: 8px; border-radius: 4px; background-color: #FF7A00; cursor: pointer;"><br>
+            </div>
+            <div style="margin-top:10px">
+              <button mat-raised-button fxFlex="100%"  mat-button style="background-color: #FF7A00; color: white; font-family: 'Poppins', sans-serif;" (click)="onSubmitVehicule(); ">Cargar imagen</button>
+            </div>
+          </div>
         </mat-card-actions>
       </mat-card>
 
 
     </div>
-  </mat-sidenav-container>
+
 
 </div>

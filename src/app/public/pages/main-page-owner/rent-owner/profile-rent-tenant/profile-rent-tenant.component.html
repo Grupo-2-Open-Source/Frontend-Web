@@ -1,0 +1,58 @@
+<div class="container">
+  <mat-label style="font-size: 35px;color:#FF7A00 "> <b> ALQUILER</b></mat-label><br><br><br>
+  <div class="column-container">
+    <mat-label style="font-size: 20px;color:#14131B "> <b> Datos del Solicitante</b></mat-label><br><br><br>
+    <div class="row-container">
+      <div style="background-color: transparent; padding: 10px;">
+                <mat-card style="box-shadow: none;background-color: transparent">
+                  <mat-card-content  >
+                    <div >
+                      <div *ngIf="user">
+                        <h1><strong>Nombre y Apellidos:</strong> {{ user.firstName + " "+user.lastName }}</h1>
+                        <h1><strong>Telefono:</strong> {{ user.phoneNumber }}</h1>
+                        <h1><strong>Fecha de Nacimiento:</strong> {{ user.birthDate }}</h1>
+                        <h1><strong>Correo:</strong> {{ user.email }}</h1>
+                      </div>
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+      </div>
+
+      <div style="background-color:transparent; padding: 10px;">
+
+              <mat-card style="background-color: transparent;box-shadow: none">
+                <mat-card-content >
+                  <div *ngIf="datacriminal">
+                    <img class="img" mat-card-image src="{{datacriminal.pdf}}" alt="Criminal Records" width="500px" >
+                  </div>
+                </mat-card-content>
+              </mat-card>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="column-container">
+    <div style="background-color:transparent; padding: 10px;">
+
+        <mat-card  class="photo_perfil" >
+          <div *ngIf="imagetenant" style="  margin-top:10px;">
+            <img class="img" mat-card-image src="{{imagetenant.imageUrl}}" alt="Photo del usuario" width="500px" >
+          </div>
+          <mat-card-actions style="justify-content: center;align-content: center">
+            <div style="margin:10px;flex-direction: column;">
+              <h4>Confirma o Cancela la Renta del vehículo</h4>
+              <div style="margin-top:10px">
+                <button mat-button style="background-color:#FF7A00; color: black;margin:10px" >Ver Antedentes Penales</button>
+                <button mat-button style="background-color:#14131B; color: white;margin:10px" (click)="confirmrequest()">Confirmar Solicitud</button>
+                <button mat-button style="background-color:#14131B; color: white;margin:10px" (click)="cancelrequest()">Cancelar Solicitud</button>
+              </div>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+
+
+    </div>
+  </div>
+</div>

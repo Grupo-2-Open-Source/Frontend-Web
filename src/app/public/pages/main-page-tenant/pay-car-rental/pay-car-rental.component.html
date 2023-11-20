@@ -1,79 +1,58 @@
-<div style="height: 100vh;">
-
-  <mat-sidenav-container fxFlexFill class="example-container">
-
-    <mat-toolbar class="toolbarr">
-      <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
-      <div class="mat-spacer"></div>
-
-      <span class="example-spacer"></span>
-      <div fxShow="true" fxHide.lt-md="true">
-        <a  class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
-        <a  class="buttonnav" mat-button [routerLink]="['/share-auto-tenant']">BUSCAR AUTOS</a>
-        <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
-        <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
-        <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
-        <a mat-button  [routerLink]="['/perfil-tenant']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
-      </div>
-
-      <div fxShow="true" fxHide.gt-sm="true">
-        <a  (click)="sidenav.toggle()"><mat-icon>home</mat-icon></a>
-      </div>
-      <router-outlet></router-outlet>
-    </mat-toolbar>
-
-    <mat-sidenav #sidenav fxLayout="column">
-      <div fxLayout="column">
-        <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
-        <a class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
-        <a  class="buttonnav" mat-button [routerLink]="['/share-tenant']">BUSCAR AUTOS</a>
-        <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
-        <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
-        <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
-        <a class="buttonnav" mat-button [routerLink]="['/perfil-tenant']">PERFIL</a>
-      </div>
-    </mat-sidenav>
+<div style="height: 100vh; flex-direction: row">
 
     <mat-card fxFlex="100%" style="min-height: 15vh; display: grid; grid-template-areas:
   'label p'
   'button button';">
 
-      <mat-label style="grid-area: label; font-size: 20px; color: #14131B; font-family: 'Poppins', sans-serif; margin: 20px;"><b>Pago de alquiler</b></mat-label>
+      <mat-label style="grid-area: label; font-size: 30px; color: #FF7A00; font-family: 'Poppins', sans-serif; margin: 20px;"><b>PAGO DE ALQUILER</b></mat-label>
 
     </mat-card>
 
-    <mat-card>
-      <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px">
-        <div fxFlex="50" fxFlex.lt-md="100">
-          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Precio de alquiler: S/ 800.00 x mes</p>
-          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Tiempo de alquiler: 1 mes</p>
-          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Fecha de inicio de contrato: 31 de agosto de 2023</p>
-          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Fecha de fin del contrato: 31 de setiembre de 2023</p>
-          <p style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;">Lugar de recojo y entrega del vehículo: Surco - Av. Tomas Marsano</p>
-          <mat-label style="grid-area: label; font-size: 20px; color: #14131B; font-family: 'Poppins', sans-serif; margin: 20px;"><b>Monto a pagar: S/ 800.00</b></mat-label>
+    <mat-card style="margin: 30px">
+      <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="100px" style="margin: 30px">
+        <div fxFlex="50" fxFlex.lt-md="200" style="margin-right: 30px">
+        <div *ngIf="user">
+          <h2>Detalles para el Pago</h2>
+          <p><strong>Precio de alquiler: </strong> <b>{{ user.price }} soles</b> </p>
+          <p><strong>Tiempo de Alquiler </strong> {{ user.amountthetime }} {{ user.time }}</p>
+          <p><strong>Lugar de recojo y entrega del vehículo:</strong> {{ user.location }}</p>
         </div>
-
+        </div>
         <div fxFlex="50" fxFlex.lt-md="100">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0HbJoi3q8SuPYSM9VcLUpLFMKGMh4bjTTNw" alt="Imagen" style="max-width: 100%; max-height: 100%;"/>
+          <div *ngIf="user">
+          <img src="{{user.imageurl }}" alt="Imagen" style="max-width: 70%; max-height: 70%;"/>
+          </div>
         </div>
       </div>
     </mat-card>
 
-    <mat-card fxFlex="100%" style="min-height: 15vh">
-      <h1 style="text-align: left; font-family: 'Poppins', sans-serif; margin: 20px;"><br><br>¿Cómo desea pagar?</h1>
-      <div fxLayout="row" fxLayoutGap="20vw" fxLayoutAlign="center center" style="margin:40px">
+    <mat-card fxFlex="100%" style="min-height: 5vh">
+      <h1 style="text-align: center; font-family: 'Poppins', sans-serif; margin: 20px;"><br><br>Coloca el dia, mes y hora para el recojo del vehiculo</h1>
+
+      <div fxLayout="column" fxLayoutGap="1vw" fxLayoutAlign="center center" style="margin:5px">
+
+        <mat-form-field appearance="fill" fxFlex="calc(20% - 10px)" style="font-family: 'Poppins',sans-serif;">
+          <mat-label>DIA</mat-label>
+          <input matInput [(ngModel)]="user" type="number" name="amoutthetime" placeholder="Dia">
+        </mat-form-field>
+        <mat-form-field appearance="fill" fxFlex="calc(20% - 10px)" style="font-family: 'Poppins',sans-serif;">
+          <mat-label>MES</mat-label>
+          <input matInput [(ngModel)]="user" type="number" name="amoutthetime" placeholder="Mes">
+        </mat-form-field>
+        <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+          <mat-label>HORA</mat-label>
+          <input matInput [(ngModel)]="user" type="number" name="amoutthetime" placeholder="HORA">
+        </mat-form-field>
+        <mat-form-field appearance="fill" fxFlex="calc(50% - 20px)" style="font-family: 'Poppins',sans-serif;">
+          <mat-label>AM/PM</mat-label>
+          <input matInput [(ngModel)]="user" type="number" name="amoutthetime" placeholder="AM/PM">
+        </mat-form-field>
+
         <button mat-raised-button style="background-color: #14131B; color: white; font-family: 'Poppins', sans-serif">
-          Efectivo
-        </button>
-        <button mat-raised-button style="background-color: #14131B; color: white; font-family: 'Poppins', sans-serif">
-          Online
+          Confirmar Fecha y hora de Alquiler
         </button>
       </div>
     </mat-card>
-
-  </mat-sidenav-container>
-
-
 
 </div>
 

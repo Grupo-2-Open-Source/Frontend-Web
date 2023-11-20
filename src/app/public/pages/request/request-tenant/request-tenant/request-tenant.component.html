@@ -1,53 +1,29 @@
-<div  style="height: 100vh; background-color: white; ">
-  <mat-sidenav-container fxFlexFill class="request_principal" >
+<div style="height: 100vh;">
+<mat-card style="border-radius: 0;box-shadow: none">
+  <mat-card-content class="contenedor2">
+    <br>
+    <mat-label style="font-size: 30px;color:#FF7A00 "> <b> SOLICITUDES</b></mat-label><br>
+   <div class="container">
+  <div *ngFor="let bundle of user" >
+    <mat-card class="container_1">
+      <mat-card-content class="container_2">
+        <div class="description_request">
+          <label  aria-label="descriptions" style="margin-right: 20px">
+            Solicitud de Alquiler del vehículo {{bundle.vehicleBrand}} {{bundle.vehicleModel}}
 
-    <mat-toolbar class="toolbarr">
-      <img src="https://i.postimg.cc/vmZh3LGv/logotransparent-26-06.png" width="100px">
-      <div class="mat-spacer"></div>
-
-      <span class="example-spacer"></span>
-      <div fxShow="true" fxHide.lt-md="true">
-        <a  class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
-        <a  class="buttonnav" mat-button [routerLink]="['/share-auto-tenant']">BUSCAR AUTOS</a>
-        <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
-        <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
-        <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
-        <a mat-button  [routerLink]="['/perfil-tenant']"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
-      </div>
-
-      <div fxShow="true" fxHide.gt-sm="true">
-        <a  (click)="sidenav.toggle()"><mat-icon>home</mat-icon></a>
-      </div>
-
-    </mat-toolbar>
-
-    <div >
-      <div class="titulo">
-        <h1 class="txt-1">SOLICITUDES</h1>
-      </div>
-
-      <div class="car">
-        <div class="title_derecha">
-          <h3 >Solicitud de alquiler del alquiler del vehiculo Toyota Prius</h3>
+          </label>
         </div>
-        <div class="izquierda">
-          <img class="img" mat-card-image src="https://imgur.com/xWEj5ZJ.png" alt="photo-car" width="200px">
-          <h5>ESTATUS: EN ESPERA</h5>
+        <div  >
+          <img src='{{ bundle.imageurl}}' width="150px">
+          <p aria-label="status"><strong>Status:</strong> {{ bundle.rentstatus }}</p>
         </div>
-      </div>
-
-
-      <mat-sidenav #sidenav fxLayout="column">
-        <div fxLayout="column">
-          <a (click)="sidenav.toggle()" mat-button > <b style="color: #FF7A00;font-size: 20px">Close</b></a>
-          <a class="buttonnav" mat-button [routerLink]="['/main-page-tenant']">INICIO</a>
-          <a  class="buttonnav" mat-button [routerLink]="['/share-tenant']">BUSCAR AUTOS</a>
-          <a class="buttonnav" mat-button [routerLink]="['/maintenance-tenant']">MANTENIMIENTO</a>
-          <a class="buttonnav" mat-button [routerLink]="['/rent-tenant']">ALQUILER</a>
-          <a class="buttonnav" mat-button [routerLink]="['/requests-tenant']">SOLICITUDES</a>
-          <a class="buttonnav" mat-button [routerLink]="['/perfil-tenant']">PERFIL</a>
-        </div>
-      </mat-sidenav>
+      </mat-card-content>
+    </mat-card>
+    <br>
+  </div>
     </div>
-  </mat-sidenav-container>
+  </mat-card-content>
+</mat-card>
+
 </div>
+

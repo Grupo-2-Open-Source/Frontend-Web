@@ -29,12 +29,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ShareAutoTenantComponent } from './public/pages/main-page-tenant/share-auto-tenant/share-auto-tenant.component';
-import {MyRoutingModule} from "./public/pages/main-page-tenant/my-routing.module";
+
 
 import { MaintenanceTenantComponent } from './public/pages/main-page-tenant/maintenance-tenant/maintenance-tenant.component';
-import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
-import {NgbCarousel, NgbCarouselModule, NgbModule, NgbSlide} from '@ng-bootstrap/ng-bootstrap';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+
+
+
 import { MainPageOwnerComponent } from './public/pages/main-page-owner/main-page-owner.component';
 import { NotificationsOwnerComponent } from './public/pages/main-page-owner/notifications-owner/notifications-owner.component';
 import { VehicleRegistrationOwnerComponent } from './public/pages/main-page-owner/vehicle-registration-owner/vehicle-registration-owner.component';
@@ -46,6 +46,26 @@ import {ProfileOwnerComponent} from "./public/pages/profile-user/profile-owner/p
 import {ProfileTenantComponent} from "./public/pages/profile-user/profile-tenant/profile-tenant.component";
 import {MatListModule} from "@angular/material/list";
 import {RequestTenantComponent} from "./public/pages/request/request-tenant/request-tenant/request-tenant.component";
+import { ToolbarComponent } from './public/pages/component/toolbar-tenant/toolbar.component';
+import { ToolbarOwnerComponent } from './public/pages/component/toolbar-owner/toolbar-owner.component';
+import {CarouselModule} from "primeng/carousel";
+import {ButtonModule} from "primeng/button";
+import {RentdTenantService} from "./public/services/rentd-tenant.service";
+import { NuevoComponent } from './public/pages/prueba/nuevo/nuevo.component';
+import {HttpClientModule} from "@angular/common/http";
+import {CardModule} from "primeng/card";
+import {ImageModule} from "primeng/image";
+import {RequestTenantService} from "./public/services/request-tenant.service";
+import {FileUploadModule} from "primeng/fileupload";
+import {RegisterOwnerService} from "./public/services/register-owner.service";
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getStorage, provideStorage } from '@angular/fire/storage';
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
+import { ListRentOwnerComponent } from './public/pages/main-page-owner/rent-owner/List-Rent-Owner/list-rent-owner/list-rent-owner.component';
+import { ProfileRentTenantComponent } from './public/pages/main-page-owner/rent-owner/profile-rent-tenant/profile-rent-tenant.component';
+import { ProfileTenantUpdateComponent } from './public/pages/profile-user/profile-tenant/profile-tenant-update/profile-tenant-update.component';
+import { ProfileOwnerUpdateComponent } from './public/pages/profile-user/profile-owner/profile-owner-update/profile-owner-update.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +93,13 @@ import {RequestTenantComponent} from "./public/pages/request/request-tenant/requ
     RequestTenantComponent,
     ProfileOwnerComponent,
     ProfileTenantComponent,
+    ToolbarComponent,
+    ToolbarOwnerComponent,
+    NuevoComponent,
+    ListRentOwnerComponent,
+    ProfileRentTenantComponent,
+    ProfileTenantUpdateComponent,
+    ProfileOwnerUpdateComponent,
 
 
   ],
@@ -90,22 +117,27 @@ import {RequestTenantComponent} from "./public/pages/request/request-tenant/requ
     FormsModule,
     FlexLayoutModule,
     MatSidenavModule,
-    MyRoutingModule,
-    NgbCarousel,
-    NgbCarouselModule,
     NgIf,
-    NgbSlide,
-    NgbModule,
-    SlickCarouselModule,
     MatSnackBarModule,
-    MatListModule
+    MatListModule,
+    CarouselModule,
+    ButtonModule,
+    HttpClientModule,
+    CardModule,
+    ImageModule,
+    PdfViewerModule,
+    FileUploadModule,
+    //"locationId":"northamerica-northeast1"
+    provideFirebaseApp(() => initializeApp({"projectId":"autoyadeploy-324fd","appId":"1:135558029592:web:7199f449cbc52662153e6d","storageBucket":"autoyadeploy-324fd.appspot.com","apiKey":"AIzaSyBFENhb7mn8C0qMqS8WQgnhRd4jwg9rKuY","authDomain":"autoyadeploy-324fd.firebaseapp.com","messagingSenderId":"135558029592"})),
+    provideStorage(() => getStorage()),
   ],
   exports:[
   MatButtonModule,
   MatIconModule,
   ],
-  providers: [MatSnackBarModule],
+  providers: [RentdTenantService,RequestTenantService,RegisterOwnerService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }

@@ -1,0 +1,35 @@
+<div  style="height: 100vh; background-color: white; ">
+
+  <div style="display: flex; height: 100vh; background-color: white;">
+    <mat-card class="Profile-tenant" style="width: 100%">
+      <mat-card-header>
+        <mat-card-title class="letter1">Actualice sus datos</mat-card-title>
+      </mat-card-header>
+      <mat-form-field appearance="fill" class="custom-mat-field">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="profileData.firstName" name="name" placeholder="Nombre">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="custom-mat-field">
+        <mat-label>Apellido</mat-label>
+        <input matInput [(ngModel)]="profileData.lastName" name="lastName" placeholder="Apellido">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="custom-mat-field">
+        <mat-label>Telefono</mat-label>
+        <input matInput [(ngModel)]="profileData.phoneNumber" name="phone" placeholder="Teléfono">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="custom-mat-field">
+        <mat-label>Correo</mat-label>
+        <input matInput [(ngModel)]="profileData.email" name="email" placeholder="Correo">
+      </mat-form-field>
+      <mat-card-footer>
+        <button mat-raised-button fxFlex="100%"  mat-button style="background-color: #FF7A00; color: white; font-family: 'Poppins', sans-serif;" (click)="onSubmitProfileData();" [routerLink]="['/owner/perfil-owner', userId]">Actualizar datos</button>
+      </mat-card-footer>
+
+    </mat-card>
+
+  </div>
+
+</div>

@@ -36,6 +36,21 @@ import {PayCarRentalComponent} from "./public/pages/main-page-tenant/pay-car-ren
 import {ProfileOwnerComponent} from "./public/pages/profile-user/profile-owner/profile-owner/profile-owner.component";
 import {ProfileTenantComponent} from "./public/pages/profile-user/profile-tenant/profile-tenant.component";
 import {RequestTenantComponent} from "./public/pages/request/request-tenant/request-tenant/request-tenant.component";
+import {ToolbarComponent} from "./public/pages/component/toolbar-tenant/toolbar.component";
+import {ToolbarOwnerComponent} from "./public/pages/component/toolbar-owner/toolbar-owner.component";
+import {NuevoComponent} from "./public/pages/prueba/nuevo/nuevo.component";
+import {
+  ListRentOwnerComponent
+} from "./public/pages/main-page-owner/rent-owner/List-Rent-Owner/list-rent-owner/list-rent-owner.component";
+import {
+  ProfileRentTenantComponent
+} from "./public/pages/main-page-owner/rent-owner/profile-rent-tenant/profile-rent-tenant.component";
+import {
+  ProfileTenantUpdateComponent
+} from "./public/pages/profile-user/profile-tenant/profile-tenant-update/profile-tenant-update.component";
+import {
+  ProfileOwnerUpdateComponent
+} from "./public/pages/profile-user/profile-owner/profile-owner-update/profile-owner-update.component";
 
 
 
@@ -49,22 +64,62 @@ const routes:Routes=[
   {path: 'restore-owner',component:RestoreOwnerComponent},
   {path: 'restore-tenant',component:RestoreTenantComponent},
   {path: 'validation',component:ValidationComponent},
-  {path: 'main-page-tenant',component:MainPageTenantComponent},
-  {path: 'main-page-owner',component:MainPageOwnerComponent},
-  {path: 'notifications-owner',component:NotificationsOwnerComponent},
-  {path: 'share-auto-tenant', component: ShareAutoTenantComponent},
-  {path: 'maintenance-tenant', component: MaintenanceTenantComponent},
-  {path: 'vehicle-registration-owner', component: VehicleRegistrationOwnerComponent},
-  {path: 'create-contract-owner', component: CreateContractOwnerComponent},
-  {path: 'rent-owner', component: RentOwnerComponent},
-  {path: 'rent-tenant', component: RentTenantComponent},
-  {path: 'pay-car-rental', component: PayCarRentalComponent},
-  {path:'requests-tenant', component: RequestTenantComponent},
-  {path:'perfil-owner',component: ProfileOwnerComponent},
-  {path:'perfil-tenant', component: ProfileTenantComponent },
+  {path: 'prueba',component:NuevoComponent},
+
+  {path: 'tenant',
+    component:ToolbarComponent,
+    children:[
+      {
+        path:'main-page-tenant/:id',
+        component:MainPageTenantComponent
+      },
+      {
+        path:'share-auto-tenant/:id',
+        component:ShareAutoTenantComponent
+      },
+      {
+        path:'maintenance-tenant/:id',
+        component: MaintenanceTenantComponent
+      },
+      {
+        path:'rent-tenant/:id',
+        component: RentTenantComponent
+      },
+      {
+        path: 'pay-car-rental/:id',
+        component: PayCarRentalComponent
+      },
+      {
+        path:'requests-tenant/:id',
+        component: RequestTenantComponent
+      },
+      {
+        path:'perfil-tenant/:id',
+        component: ProfileTenantComponent
+      },
+      {
+        path:'perfil-tenant-update/:id',
+        component: ProfileTenantUpdateComponent
+      }
+    ]
+  },
+
+  {path:'owner',
+  component:ToolbarOwnerComponent,
+  children:[
+    {path: 'main-page-owner/:onid',component:MainPageOwnerComponent},
+    {path: 'notifications-owner/:onid',component:NotificationsOwnerComponent},
+    {path: 'vehicle-registration-owner/:onid', component: VehicleRegistrationOwnerComponent},
+    {path: 'create-contract-owner/:onid/:vehiculeId', component: CreateContractOwnerComponent},
+    {path: 'rent-owner/:onid', component: RentOwnerComponent},
+    {path: 'list-rent-owner/:onid', component: ListRentOwnerComponent},
+    {path: 'profile-rent-tenant/:onid', component: ProfileRentTenantComponent},
+    {path:'perfil-owner/:onid',component: ProfileOwnerComponent},
+    {path:'perfil-owner-update/:onid',component: ProfileOwnerUpdateComponent},
+  ]
+  },
   {path:'',redirectTo:'login-tenant',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent},
-  // al final colocar pagenout
 ]
 
 @NgModule({
